@@ -1,6 +1,6 @@
 # **Trainee 2023.2**
 
-# **Nome do seu blog**
+# **Sexta Marcha**
 
 ## **Projeto Trainee, Code Jr, Grupo 000, 2023.2**
 
@@ -17,17 +17,17 @@
 * Trainee 2
 * Trainee 3
 * Trainee 4
+* Trainee 5
 
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github, se quiser).
+* [Rayssa Amaral](https://github.com/amrlrayssa)
 
 #### Links Úteis:
 
-* [Trello]()
+* [Trello](https://trello.com/b/uVQc3uRc)
 
-* [Drive com ID Visual]()
 
 
 
