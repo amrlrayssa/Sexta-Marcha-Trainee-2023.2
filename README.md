@@ -13,11 +13,11 @@
 
 #### Desenvolvedores:
 
-* Trainee 1
-* Trainee 2
-* Trainee 3
-* Trainee 4
-* Trainee 5
+* Breno Furtado
+* Davi Pacheco
+* Felipe Nogueira
+* Isaac Kapela
+* João Victor Wayand
 
 
 #### Scrum Master:
