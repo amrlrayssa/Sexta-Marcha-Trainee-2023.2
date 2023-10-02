@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <title>Login Sexta marcha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Mono:ital,wght@1,100;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/public/css/login.css">
+  <title>Sexta Marcha</title>
 </head>
+
 <body>
-  <section>
-    <div class="form-box">
-      <div class="form-value">
-        <form action="">
-          <h2>Login</h2>
-          <div class="inputbox">
-            <i class="ph ph-envelope-simple"></i>
-            <input type="email" name="" id="" required>
-            <label for>Email</label>
-          </div>
-          <div class="inputbox">
-            <i class="ph ph-lock-simple"></i>
-            <input type="password" name="" id="" required>
-            <label for>Password</label>
-          </div>
-          <div class="forget">
-            <label for=""><input type="checkbox">Remember Me <a href="#">Forget Password</a></label>
-          </div>
-          <button>Log In</button>
-          <div class="register">
-            <p>Dont have an account? <a href="#">Register</a></p>
-          </div>
-        </form>
+  <div class="main">
+
+    <div class="login_esquerda">
+      <img src="/public/assets/carro ayrton.jpg" class="img_login" alt="Pista de corrida">
+    </div>
+    <div class="login_direita">
+      <div class="card_login">
+        <img src="" alt="Logo">
+        <div class="formulario">
+          <label for="E-mail">Digite o seu e-mail</label>
+          <input type="text" name="Email" placeholder="Email">
+        </div>
+
+        <div class="formulario">
+          <label for="Senha">Digite a sua senha</label>
+          <input type="password" name="Senha" placeholder="Senha">
+        </div>
+        <button class="btn_login">Entrar</button>
+
+
       </div>
     </div>
-  </section>
+
+
+  </div>
 </body>
+
 </html>
