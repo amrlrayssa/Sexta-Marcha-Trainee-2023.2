@@ -32,6 +32,7 @@ html, body{
     padding-right: 30px;
     margin-top: 25px;
     text-decoration: underline;
+    text-shadow: black 4px 2px 8px;
 }
 
 .logo img{
@@ -48,6 +49,7 @@ html, body{
 
 .botao{
     background-color: transparent;
+    box-shadow: 4px 4px 8px black;
     color: white;
     font-size: 18px;
     width: 140px;
@@ -56,6 +58,7 @@ html, body{
     font-weight: bold;
     border-radius: 15px;
     border-color: white;
+    text-shadow: black 6px 3px 8px;
 }
 
 
@@ -69,6 +72,7 @@ html, body{
     color: white;
     font-family: 'Quicksand', sans-serif;
     margin-top: 1000px;
+    box-shadow: 0 -6px 10px grey;
 }
 
 .rodape div{
@@ -99,14 +103,15 @@ html, body{
     padding-left: 0px;
     text-align: left;
     font-size: 25px;
-
 }
 
 .redes-sociais img{
-    width: 50px;
-    height: 50px;
-    padding-right: 20px;
+    width: 40px;
+    height: 40px;
+    padding-right: 10px;
+    margin-top: 5px;
 }
+
 
 .redes-sociais{
     margin-left: 250px;
