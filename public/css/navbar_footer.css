@@ -1,7 +1,55 @@
-body{
-    font-family: 'Montserrat', sans-serif;
+html, body{
+    margin-top: 0px;
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .cabecalho{
-    background-color: red;
+    background-color: #831C21;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: white;
+    height: 120px;
+    box-shadow: 0 6px 8px grey;
+}
+
+.navegacao{
+    margin-top: 0px;
+    list-style: none;
+    padding-left: 0px;
+    text-align: left;
+    height: 50px;
+    font-size: 20px;
+    margin-left: 35px;
+}
+
+.navegacao li{
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 25px;
+    text-decoration: underline;
+}
+
+.logo img{
+    width: 380px;
+    height: 220px;
+    
+}
+
+.logo{
+    margin-top: -115px;
+    display: block;
+    text-align: center;   
+}
+
+.botao{
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    width: 100px;
+    height: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
 }
