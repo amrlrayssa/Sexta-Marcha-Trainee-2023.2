@@ -91,6 +91,7 @@ html, body{
     margin-top: 80px;
     margin-left: 130px;
     line-height: 30px;
+    text-shadow: black 4px 2px 8px;
 }
 
 .rodape h2{
@@ -117,4 +118,5 @@ html, body{
     margin-left: 250px;
     vertical-align: top;
     margin-top: 80px;
+    text-shadow: black 4px 2px 8px;
 }
