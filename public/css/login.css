@@ -245,17 +245,35 @@ body {
         border: none;
         color: #FFFFFF;
     }
-
     .icons {
         position: relative;
     }
-
+    
+    /* Estilo para o ícone dentro dos campos de entrada */
     .icons i {
         position: absolute;
-        left: 10px;
-        /* Ajuste a distância do ícone em relação à borda esquerda */
+        right: 10px;
+        /* Ajuste a distância do ícone em relação à borda direita */
         top: 50%;
         transform: translateY(-50%);
-        color: #666;
+        color: #080808;
+        /* Cor do ícone */
+    }
+    
+    /* Estilo para o texto dentro dos campos de entrada */
+    .icons input {
+        padding-right: 30px;
+        /* Espaço para o ícone */
+        padding-left: 10px;
+        /* Espaço para o texto */
+        align-items: center;
+        display: flex;
+        /* Para centralizar verticalmente */
+    }
+    
+    /* Estilo para o texto de espaço reservado nos campos de entrada */
+    .icons input::placeholder {
+        color: #080808;
+        /* Cor do texto de espaço reservado */
     }
 }
