@@ -22,7 +22,16 @@ body {
     flex: 1;
     justify-content: center;
     align-items: center;
-    margin: 10%;
+    width: 100%;
+
+}
+
+.container{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 /* Estilo para a parte esquerda do formulário de login */
@@ -34,6 +43,7 @@ body {
 /* Estilo para a imagem na parte esquerda do formulário */
 .login_esquerda img {
     border-radius: 10px;
+    
 }
 
 /* Estilo para o container principal da parte esquerda do formulário */
@@ -84,6 +94,7 @@ body {
     outline: none;
     box-sizing: border-box;
     margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 /* Estilo para um elemento de span no formulário */
@@ -95,7 +106,7 @@ body {
 .btn_login {
     padding: 25px;
     width: 30%;
-    padding: 16px 0px;
+    padding: 10px;
     border: none;
     border-radius: 10px;
     outline: none;
@@ -120,7 +131,11 @@ body {
     border: none;
     color: #FFFFFF;
     align-items: center;
+    text-align: center;
     justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+ 
+    
 }
 
 /* Estilo para o container da logo */
@@ -131,6 +146,7 @@ body {
     background-color: #831C21;
     border-radius: 20px;
     display: flex;
+    
     flex-direction: column;
     /* Alinhar verticalmente os elementos */
     align-items: center;
@@ -314,16 +330,17 @@ body {
 
 }
 
-@media only screen and (max-width: 320) { 
+@media only screen and (max-width: 320px) { 
     
 }
 
 
 
 
-@media only screen and (max-width: 413) {
+@media only screen and (max-width: 413px) {
+    
     .login_direita{
-        margin-top: 50%;
+        margin-top: 40%;
     }
     
     
