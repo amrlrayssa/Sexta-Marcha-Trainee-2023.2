@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Mono:ital,wght@1,100;1,400&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="/public/css/login.css">
   <title>Sexta Marcha</title>
 </head>
@@ -26,24 +27,33 @@
     <div class="login_direita">
       <div class="container">
         <div class="logo">
-          <img src="/public/assets/logo_quadrada_-_fundo_transparente.png" alt="Logo"
-          width="300px" height="300px" >
+          <img class="img-logo" src="/public/assets/logo_quadrada_-_fundo_transparente.png" alt="Logo" width="250px"
+            height="230px">
         </div>
 
         <div class="dados">
           <div class="formulario">
-
-
             <label for="E-mail">Digite o seu e-mail</label>
+            <div class="icons">
+              <i class="fa fa-envelope"></i>
             <input type="text" name="Email" placeholder="Email">
+          </div>
+
+
           </div>
 
 
           <div class="formulario">
             <label for="Senha">Digite a sua senha</label>
+            <div class="icons">
+              <i class="fa fa-lock"></i>
             <input type="password" name="Senha" placeholder="Senha">
+            </div>
+
           </div>
-          <button class="btn_login">Entrar</button>
+          <div class="btn_login">
+            <button>Entrar</button>
+          </div>
         </div>
 
       </div>
