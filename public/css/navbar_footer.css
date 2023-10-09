@@ -134,6 +134,10 @@ html, body{
     text-shadow: black 4px 2px 8px;
 }
 
+.sobre-nos h3{
+    display: none;
+}
+
 .rodape h2{
     font-size: 30px;
 }
@@ -190,7 +194,8 @@ html, body{
     }
     .sobre-nos h3{
         font-size: 30px;
-        margin-left: -35px
+        margin-left: -35px;
+        display: block;
     }
     .sobre-nos li{
         text-align: left;
@@ -211,4 +216,5 @@ html, body{
         margin-left: 6px;
         padding-right: 5px;
     }
+    
 }
