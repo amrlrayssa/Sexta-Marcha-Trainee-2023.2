@@ -31,6 +31,61 @@
 }
 
 
+.Postlist .Searchbar {
+    width: 700px;
+    height: 46px;
+    left: 64px;
+    top: 200px;
+    position: absolute;
+  }
+  
+  .Postlist .Searchbar .icons {
+    position: relative;
+    width: 100%;
+  }
+  
+  .Postlist .Searchbar .icons i {
+    position: absolute;
+    right: 10px; 
+    top: 100%; 
+    transform: translateY(-50%); 
+    color: #FFFFFF; 
+    font-size: 24px; 
+    z-index: 1;
+  }
+  
+  .Postlist .Searchbar .icons input {
+    padding-right: 20px; /* Espaço para o ícone */
+    padding-left: 20px; /* Espaço para o texto */
+    align-items: center;
+    display: flex;
+    width: 100%; /* ajusta automaticamente à largura */
+    height: 46px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: rgba(131, 28, 33, 0.98);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+    border: 1px solid #d9d9d9;
+    border-radius: 40px;
+    color: white; 
+    font-size: 18px; 
+  }
+
+  .Postlist .Searchbar .icons input:focus {
+    border: 1px solid #ffffff; /* Cor da borda ao receber foco */
+  }
+  
+  .Postlist .Searchbar .icons input::placeholder {
+    color: #d9d9d9;
+    font-size: 18px;
+  }
+  
+  .Postlist .Searchbar .icons input:hover {
+    cursor: pointer;
+  }
+  
+
 
 .Postlist .PostFixed{
     width: 389px; 
@@ -119,11 +174,12 @@
     /*word-wrap: break-word*/
 }
 
-.Postlist .Post h3{
+.Postlist .Post .LeiaMais{
     width: 82px; 
     height: 18px; 
     left: 636px; 
-    top: 162px; 
+    top: 162px;
+    cursor: pointer;
     position: absolute; 
     color: rgba(21.13, 24.55, 106.50, 0.80); 
     font-size: 16px; 
@@ -153,7 +209,7 @@
     height: 203px; 
     left: 64px; 
     top: 567px; 
-    position: absolute;
+    position: relative;
 }
 
 .Postlist .Post2 .F1LeClerc{
@@ -189,17 +245,19 @@
     /*word-wrap: break-word*/
 }
 
-.Postlist .Post2 h3{
+.Postlist .Post2 .LeiaMais{
     width: 82px; 
     height: 18px; 
     left: 636px; 
     top: 157px; 
+    /*bottom: 0;
+    right: 0;*/
+    cursor: pointer;
     position: absolute; 
     color: rgba(21.13, 24.55, 106.50, 0.80); 
     font-size: 16px; 
     font-family: Quicksand; 
     font-weight: 500; 
-    /*word-wrap: break-word*/
 }
 
 .Postlist .Post2 p{
