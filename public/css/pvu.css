@@ -51,7 +51,10 @@ img {
     border-radius: 20px;
     width: 45.36%;
     height: 38.15%;
+    max-width: 520px;
+    max-height: 270px;
     margin-bottom: 3%;
+    
 }
 
 .cardposit {
