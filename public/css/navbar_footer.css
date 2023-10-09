@@ -208,7 +208,7 @@ html, body{
     }
     .redes-sociais img{
         text-align: center;
-        margin-left: 5px;
-        padding-left: 0px;
+        margin-left: 6px;
+        padding-right: 5px;
     }
 }
