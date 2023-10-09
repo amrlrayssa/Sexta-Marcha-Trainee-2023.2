@@ -77,6 +77,44 @@ html, body{
     display: none;
 }
 
+@media (max-width: 1024px){
+    .navegacao{
+        margin-top: 0px;
+        list-style: none;
+        padding-left: 0px;
+        text-align: left;
+        height: 50px;
+        font-size: 20px;
+        margin-left: 0px;
+    }
+    .nav{
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 40px;
+        margin-left: 60px;
+        text-decoration: underline;
+        text-shadow: black 4px 2px 8px;
+    }
+    .logo img{
+        width: 380px;
+        height: 220px;
+    }
+    
+    .logo{
+        margin-top: -115px;
+        display: block;
+        text-align: center; 
+        margin-left: 260px;  
+    }
+    .entrar-button {
+        float: right;
+        margin-top: -35px;
+        margin-right: 50px;
+    }
+
+}
+
 @media (max-width: 1000px) {
     .cabecalho li{
         display: none;
@@ -86,8 +124,8 @@ html, body{
         float: right;
         margin-top: 38px;
         margin-right: 20px;
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
     }
     .logo img{
         width: 320px;
@@ -99,6 +137,54 @@ html, body{
         display: inline-block;
         text-align: left; 
         margin-left: 5px;  
+    }
+}
+
+@media (max-width: 375px){
+    .logo img{
+        width: 320px;
+        height: 190px;   
+        max-width: 100%; 
+    }
+    .logo{
+        margin-top: px;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 368px){
+    .logo img{
+        width: 200px;
+        height: 130px;   
+        max-width: 100%; 
+        margin-top: 15px;
+    }
+    .logo{
+        margin-left: 0px;
+    }
+    .cabecalho li.threeline-icon{
+        display: inline-block;
+        float: right;
+        margin-top: 26px;
+        margin-right: 20px;
+        width: 30px;
+        height: 30px;
+    }
+    .cabecalho{
+        background-color: #831C21;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        color: white;
+        height: 80px;
+        box-shadow: 0 6px 8px grey;
+    }
+}
+@media (max-width: 280px){
+    .logo img{
+        width: 210px;
+        height: 130px;   
+        max-width: 100%; 
+        margin-top: 15px;
     }
 }
 
@@ -217,4 +303,44 @@ html, body{
         padding-right: 5px;
     }
     
+}
+
+@media (max-width: 375px){
+    .rodape{
+        background-color: #831C21;
+        width: 375px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+        margin-top: 1000px;
+        box-shadow: 0 -6px 10px grey;
+    }
+    .logo2 img{
+        width: 350px;
+        height: 350px;
+        margin-left: -28px;
+    }
+    .sobre-nos h3{
+        text-align: center;
+    }
+    .sobre-nos{
+        margin-left: 111px;
+        margin-top: -80px;
+    }
+    .sobre-nos h2{
+        text-align: center;
+        margin-left: 5px;
+        display: none;
+    }
+    .sobre-nos h3{
+        font-size: 30px;
+        margin-left: -35px;
+        display: block;
+    }
+    .sobre-nos li{
+        text-align: center;
+        margin-left: 10px;
+        display: none;
+    }
 }
