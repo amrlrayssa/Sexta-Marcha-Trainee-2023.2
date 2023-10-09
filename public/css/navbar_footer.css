@@ -73,6 +73,34 @@ html, body{
     text-shadow: black 6px 3px 8px;
 }
 
+.cabecalho li.threeline-icon{
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .cabecalho li{
+        display: none;
+    }
+    .cabecalho li.threeline-icon{
+        display: inline-block;
+        float: right;
+        margin-top: 38px;
+        margin-right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .logo img{
+        width: 320px;
+        height: 190px;   
+        max-width: 100%;  
+    }
+    .logo{
+        margin-top: -100px;
+        display: inline-block;
+        text-align: left; 
+        margin-left: 5px;  
+    }
+}
 
 
 /*CSS de footer.html*/
@@ -139,4 +167,48 @@ html, body{
     margin-top: 80px;
     text-shadow: black 4px 2px 8px;
     margin-left: 550px;
+}
+
+@media (max-width: 1000px){
+    .logo2{
+        margin-left: 40px;
+        margin-top: -40px;
+    }
+    .logo2 img{
+        width: 90x;
+        height: 350px;
+        margin-left: 40px;
+    }
+    .sobre-nos{
+        margin-left: 175px;
+        margin-top: -50px;
+    }
+    .sobre-nos h2{
+        text-align: center;
+        margin-left: 5px;
+        display: none;
+    }
+    .sobre-nos h3{
+        font-size: 30px;
+        margin-left: -35px
+    }
+    .sobre-nos li{
+        text-align: left;
+        margin-left: 10px;
+        display: none;
+    }
+    .redes-sociais{
+        margin-left: 120px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+    .redes-sociais h2{
+        text-align: center;
+        display: none;
+    }
+    .redes-sociais img{
+        text-align: center;
+        margin-left: 5px;
+        padding-left: 0px;
+    }
 }
