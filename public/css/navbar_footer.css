@@ -305,6 +305,22 @@ html, body{
     
 }
 
+@media (max-width: 390px){
+    .logo2{
+        margin-left: 30px;
+        margin-top: -40px;
+    }
+    .sobre-nos h3{
+        font-size: 30px;
+        margin-left: -45px;
+    }
+    .redes-sociais img{
+        text-align: center;
+        margin-left: 3px;
+        padding-right: 5px;
+    }
+}
+
 @media (max-width: 375px){
     .rodape{
         background-color: #831C21;
@@ -316,31 +332,45 @@ html, body{
         margin-top: 1000px;
         box-shadow: 0 -6px 10px grey;
     }
-    .logo2 img{
-        width: 350px;
-        height: 350px;
-        margin-left: -28px;
-    }
-    .sobre-nos h3{
-        text-align: center;
-    }
-    .sobre-nos{
-        margin-left: 111px;
-        margin-top: -80px;
-    }
-    .sobre-nos h2{
-        text-align: center;
-        margin-left: 5px;
-        display: none;
+    .logo2{
+        margin-left: 15px;
+        margin-top: -40px;
     }
     .sobre-nos h3{
         font-size: 30px;
-        margin-left: -35px;
-        display: block;
+        margin-left: -58px;
     }
-    .sobre-nos li{
+    .redes-sociais img{
         text-align: center;
-        margin-left: 10px;
-        display: none;
+        margin-left: -0px;
+        padding-right: 5px;
     }
 }
+
+@media (max-width: 414px){
+    .rodape{
+        background-color: #831C21;
+        width: 430px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+        margin-top: 1000px;
+        box-shadow: 0 -6px 10px grey;
+    }
+    .logo2 img{
+        width: 350px;
+        height: 350px;
+        margin-left: 10px;
+    }
+    .sobre-nos{
+        margin-left: 145px;
+        margin-top: -80px;
+    }
+    .redes-sociais{
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+}
+
