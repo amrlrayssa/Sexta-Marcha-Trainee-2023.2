@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;   
+}
+
+/*CSS da NavBar*/
+
+a {
+    text-decoration: none;
+}
+
+.header{
+    background: #831C21;
+    padding-inline: 16px;
+    box-shadow: 0 6px 8px grey;
+}
+
+.nav{
+    max-width: 1280px;
+    height: 100px;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: white;
+}
+
+.nav-list{
+    display: flex;
+    gap: 32x;
+    list-style: none;
+    padding-block: 16px;
+}
+
+.nav-list a{
+    position: relative;
+    font-size: 22px;
+    color: white;
+    padding-block: 16px;
+    font-weight: bold;
+    margin-left: 40px;
+    text-shadow: black 4px 4px 8px;  
+}
+
+.log-in{
+    text-align: center;
+    width: 180px;
+    font-size: 22px;
+    background-color: transparent;
+    border-radius: 15px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border-color: white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 4px 4px 8px black;
+}
+
+
+
+/*Animação do sublinado da lista de páginas*/
+
+.page a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: white;
+}
+
+.page a:hover::before{
+    width: 100%;
+}
+
+
+/*Animação Menu de Hamburguer*/
+
+.hamburger{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid white;
+    cursor: pointer;
+}
+
+.hamburger::before, .hamburger::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-top: 5px;
+}
+
+/*Resposividade da Navbar*/
+
+@media (max-width: 750px){
+    .hamburger{
+        display: block;
+        z-index: 1;
+        float: right;
+    }
+
+
+    .nav-list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #831C21;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .nav.active .nav-list{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+}
+
+
+
+/*CSS do Footer*/
+
+
+footer{
+    width: 100%;
+    min-height: 250px;
+    background: #831C21;
+    display: flex;
+}
+
+footer .footer-box{
+    width: 320px;
+    min-height: 150px;
+    padding: 45px;
+    color: white;
+    margin-right: 100px;
+}
+
+.footer-box h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-box h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.footer-box img{
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+
+.footer-box li{
+    list-style: none;
+    font-size: 25px;
+    margin: 5px 0px;
+    width: 140px;
+}
+
+.footer-box a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Responsividade do Footer*/
+
+@media (max-width: 792px){
+    footer{
+        flex-direction: column;   
+    }
+    footer .footer-box{
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+        margin-top: 40px;
+        
+    }
+    .footer-box h2{
+        display: none;
+    }
+    .footer-box li{
+        display: none;
+    }
+    .footer-box h3{
+        display: block;
+    }
+    .footer-box img{
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+    }
+    .redes{
+        margin-left: 15px;
+    }
+    
+}
+
+@media (max-width: 280px){
+    .footer-box img{
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+    }
+    .footer-box h3{
+        font-size: 25px;
+        display: block;
+    }
+}
