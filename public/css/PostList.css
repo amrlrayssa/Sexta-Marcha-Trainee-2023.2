@@ -1,16 +1,22 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+}
+
 .Postlist{
     width: 1410px;
     height: 870px; 
     position: relative;
-    background: #d9d9d9; 
-    border-radius: 20px; 
+    display: flex;
+    background: rgb(217, 217, 217);  
     overflow: hidden;
 }
 
 .Postlist  h1{
     width: 444px;
     height: 37px; 
-    left: 210px; 
+    left: 15%; 
     top: 82px; 
     position: absolute;
     color: #C60000; 
@@ -32,7 +38,7 @@
 
 
 .Postlist .Searchbar {
-    width: 700px;
+    width: 710px;
     height: 46px;
     left: 64px;
     top: 200px;
@@ -46,8 +52,8 @@
   
   .Postlist .Searchbar .icons i {
     position: absolute;
-    right: 10px; 
-    top: 100%; 
+    right: 1px; 
+    top: 25px; 
     transform: translateY(-50%); 
     color: #FFFFFF; 
     font-size: 24px; 
@@ -55,7 +61,7 @@
   }
   
   .Postlist .Searchbar .icons input {
-    padding-right: 20px; /* Espaço para o ícone */
+    padding-right: 1px; /* Espaço para o ícone */
     padding-left: 20px; /* Espaço para o texto */
     align-items: center;
     display: flex;
@@ -273,3 +279,17 @@
     font-weight: 600; 
     /*word-wrap: break-word*/
 }
+
+@media (max-width: 650px) {
+
+    .Postlist  h1{
+        /*display: flex;
+        align-items: center;
+        justify-content: center;*/
+        width: 250px;
+    }
+
+  }
+
+
+  
