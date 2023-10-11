@@ -61,6 +61,18 @@ a {
     box-shadow: 4px 4px 8px black;
 }
 
+/*Animação do botão*/
+
+.log-in:hover{
+    scale: 1.05;
+    color: black;
+    background-color: white;
+}
+
+.log-in, .log-in:hover{
+    transition: 0.3s;
+}
+
 
 
 /*Animação do sublinado da lista de páginas*/
@@ -77,6 +89,10 @@ a {
 
 .page a:hover::before{
     width: 100%;
+}
+
+.page a::before, .page a:hover::before{
+    transition: 0.3s;
 }
 
 
@@ -97,6 +113,8 @@ a {
     height: 3px;
     background: white;
     margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
 }
 
 /*Resposividade da Navbar*/
@@ -129,6 +147,22 @@ a {
     .nav.active .nav-list{
         clip-path: circle(1500px at 90% -15%);
         pointer-events: all;
+    }
+
+    .nav.active .hamburger{
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    .nav.active .hamburger::before{
+        transform: rotate(135deg);
+    }
+
+    .nav.active .hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
     }
 }
 
