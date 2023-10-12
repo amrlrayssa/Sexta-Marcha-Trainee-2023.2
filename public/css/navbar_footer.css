@@ -10,24 +10,23 @@ a {
     text-decoration: none;
 }
 
-.header{
-    background: #831C21;
-    padding-inline: 16px;
-    box-shadow: 0 6px 8px grey;
-}
 
 .nav{
-    max-width: 1280px;
-    height: 100px;
-    margin-inline: auto;
-
+    background-color: #831C21;
+    width: 100%;
+    height: 80px;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
+    box-shadow: 0 6px 8px grey;
 }
 
-.logo{
-    color: white;
+.nav img{
+    height: 80%;
+    margin-left: 20px;
+
 }
 
 .nav-list{
@@ -35,6 +34,7 @@ a {
     gap: 32x;
     list-style: none;
     padding-block: 16px;
+    margin-right: 20px;
 }
 
 .nav-list a{
@@ -124,6 +124,7 @@ a {
         display: block;
         z-index: 1;
         float: right;
+        margin-right: 18px;
     }
 
 
@@ -173,13 +174,18 @@ a {
 
 footer{
     width: 100%;
-    min-height: 250px;
+    bottom: 0px;
     background: #831C21;
     display: flex;
+    box-shadow: 8px 0 10px grey;
+}
+
+footer img{
+    width: 100%;
 }
 
 footer .footer-box{
-    width: 320px;
+    width: 100%;
     min-height: 150px;
     padding: 45px;
     color: white;
@@ -193,11 +199,9 @@ footer .footer-box{
 
 .footer-box h3{
     font-size: 30px;
-    margin-bottom: 20px;
-    display: none;
 }
 
-.footer-box img{
+.footer-box .redes img{
     width: 35px;
     height: 35px;
     margin-right: 15px;
@@ -208,7 +212,6 @@ footer .footer-box{
     list-style: none;
     font-size: 25px;
     margin: 5px 0px;
-    width: 140px;
 }
 
 .footer-box a{
@@ -216,41 +219,44 @@ footer .footer-box{
     color: white;
 }
 
+.main{
+    height: 500px;
+}
+
+
 /*Responsividade do Footer*/
 
-@media (max-width: 792px){
+@media (max-width: 1000px){
     footer{
         flex-direction: column;   
     }
     footer .footer-box{
         width: 100%;
+        height: 45%;
         text-align: center;
         padding: 0px;
-        margin-top: 40px;
-        
-    }
-    .footer-box h2{
-        display: none;
+        margin-top: 40px;  
     }
     .footer-box li{
-        display: none;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
     .footer-box h3{
         display: block;
     }
-    .footer-box img{
+    .footer-box .redes img{
         width: 35px;
         height: 35px;
         margin-right: 15px;
     }
     .redes{
         margin-left: 15px;
-    }
-    
+    }   
 }
 
 @media (max-width: 280px){
-    .footer-box img{
+    .footer-box .redes img{
         width: 30px;
         height: 30px;
         margin-right: 15px;
