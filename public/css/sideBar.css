@@ -21,11 +21,14 @@ body {
     display: flex; /* Define o modelo de exibição flexível */
     justify-content: center; /* Alinha os elementos horizontalmente ao centro */
     align-items: center; /* Alinha os elementos verticalmente ao centro */
+            border-radius: 15px;
+
 }
 
 /* Estilos para a barra de navegação quando está aberta */
 .navegacao.open {
-    width: 250px; /* Amplia a largura quando a barra de navegação está aberta */
+    width: 230px; /* Amplia a largura quando a barra de navegação está aberta */
+    height: 500px;
 }
 
 /* Estilos para o botão de alternância da barra de navegação */
@@ -93,7 +96,12 @@ body {
     height: 60px;
     padding: 0 10px;
     transition: 0.5s; /* Adiciona uma transição suave */
+    
+    display: none;
+    align-items: center;
+    white-space: nowrap; /* Impede a quebra de texto em várias linhas */
 }
+
 
 /* Estilos para o item de lista ativo */
 .navegacao ul li.ativa {
@@ -166,9 +174,37 @@ body {
 .navegacao.open ul li a .text {
     opacity: 1; /* Define a opacidade para tornar o texto visível */
     visibility: visible; /* Torna o texto visível */
+    display: inline;
 }
 
 /* Estilos para o texto do item de lista quando o item está ativo */
 .navegacao ul li.ativa a .text {
     color: var(--clr); /* Usa uma variável CSS como cor do texto */
+}
+
+@media (max-width: 1100px) { 
+    .navegacao {
+        height: 60px;
+        border-radius: 15px;
+    }
+    .navegacao.open {
+        height: auto;
+        
+        margin-bottom: 900px;
+    }
+    .navegacao li {
+        display: none;
+    }
+    .navegacao.open li {
+        display: flex;
+        align-items: center; /* Centraliza verticalmente o conteúdo */
+    }
+    .navigation.open .text {
+        margin-top: 10px; 
+
+    }
+    .navegacao ul li  a .text {
+        margin-top: 35px;
+    }
+
 }
