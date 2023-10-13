@@ -77,3 +77,26 @@
     padding-left: 4%;
     padding-right: 4%;
 }
+
+#Excluir{
+    border-radius: 20px; /* Raio de borda de 20px */
+    background-color: rgba(131, 28, 33, 0.98) !important; 
+    color: white;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+#conteudo{
+    text-align: justify;
+}
+
+.form-del {
+    text-align: center; 
+}
+
+.form-del label {
+    display: block; 
+    text-align: center; 
+    padding-top: 2%;
+    margin-bottom: 10px; 
+}

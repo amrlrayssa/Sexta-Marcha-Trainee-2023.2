@@ -16,7 +16,7 @@
         <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
         
             <div class = "form-group" >
-                <label for = "nome" > Titulo:</label>
+                <label for = "titulo" > Titulo:</label>
                 <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required>
             </div>
 
@@ -42,6 +42,75 @@
             
             <div class = "botoes" >
                 <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
+                <button type = "Cancelar" class = "btn btn-primary" id = "Cancelar" > Cancelar </button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class = "container" >
+        <h2 class = "Cadastro" > Edição de Posts </h2>
+
+        <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
+        
+            <div class = "form-group" >
+                <label for = "titulo" > Titulo:</label>
+                <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required>
+            </div>
+
+            <div class = "form-group" >
+                <label for = "autor" > Autor:</label>
+                <input type = "autor" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
+            </div>
+
+            <div class = "form-group" >
+                <label for = "data"> Data de Criação:</label>
+                <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" required style="width: 55%;">
+            </div>
+
+            <div class = "form-group">
+                <label for = "conteudo" id = "label-centered" > Conteudo:</label>
+                <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 100%; width: 100%;"></textarea>
+            </div>
+
+            <div class = "form-group" id = "Imagem" >
+                <label for = "imagem" id = "label-centered" > Imagem:</label>
+                <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" required>
+            </div>
+            
+            <div class = "botoes" >
+                <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
+                <button type = "Cancelar" class = "btn btn-primary" id = "Cancelar" > Cancelar </button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class = "container" >
+        <h2 class = "Cadastro" > Deleção de Posts </h2>
+
+        <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
+        
+            <div class = "form-group" >
+                <label for = "titulo" id = "label-centered" > Titulo:</label>
+                <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required style = "width: 100%" >
+            </div>
+
+            <div class = "form-group" >
+                <label for = "autor" id = "label-centered" > Autor:</label>
+                <input type = "autor" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required style = "width: 100%" >
+            </div>
+
+            <div class = "form-group">
+                <label for = "conteudo" id = "label-centered" >Conteúdo:</label>
+                <textarea class = "form-control" id = "conteudo" name = "conteudo" readonly style = "height: 100%; width: 100%;">
+                    Max Emilian Verstappen é um automobilista neerlandês. Ele é piloto de Fórmula 1 desde 2015, tendo feito sua estreia pela equipe Toro Rosso. Foi três vezes campeão da Fórmula 1 em 2021, 2022 e 2023.
+                </textarea>
+            </div>
+            
+            <div class = "form-del" >
+                <label for = "verifica" id = "verifica" > Deseja Deletar Esse Post? </label>
+                <button type = "Excluir" class = "btn btn-primary" id = "Excluir" > Deletar </button>
                 <button type = "Cancelar" class = "btn btn-primary" id = "Cancelar" > Cancelar </button>
             </div>
 
