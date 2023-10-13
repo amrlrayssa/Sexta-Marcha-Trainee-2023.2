@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "/public/css/FormPosts.css">
+    <title> SM Forms de Posts </title>
+</head>
+
+<body>
+    <div class = "container" >
+        <h2 class = "Cadastro" > Criação de Posts </h2>
+
+        <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
+        
+            <div class = "form-group" >
+                <label for = "nome" > Titulo:</label>
+                <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required>
+            </div>
+
+            <div class = "form-group" >
+                <label for = "autor" > Autor:</label>
+                <input type = "autor" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
+            </div>
+
+            <div class = "form-group" >
+                <label for = "data"> Data de Criação:</label>
+                <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" required style="width: 55%;">
+            </div>
+
+            <div class = "form-group">
+                <label for = "conteudo" id = "label-centered" > Conteudo:</label>
+                <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 100%; width: 100%;"></textarea>
+            </div>
+
+            <div class = "form-group" id = "Imagem" >
+                <label for = "imagem" id = "label-centered" > Imagem:</label>
+                <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" required>
+            </div>
+            
+            <div class = "botoes" >
+                <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
+                <button type = "Cancelar" class = "btn btn-primary" id = "Cancelar" > Cancelar </button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
