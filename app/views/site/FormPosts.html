@@ -117,6 +117,30 @@
         </form>
     </div>
 
+    <div class = "container" >
+        <h2 class = "Cadastro" > Visualização de Posts </h2>
+
+        <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
+            
+            <div class = "form-view" >
+                <label for = "titulo" >Titulo:</label>
+                <input type = "text" id = "titulo" name = "titulo" value = "Verstappen é Tri!" readonly class = "text-view">
+        
+                <label for = "autor"> Autor:</label>
+                <input type = "text" id = "autor" name = "autor" value = "RBR Brazil" readonly class = "text-view">
+
+                <label for = "data"> Data de Criação:</label>
+                <input type = "text" id = "data" name = "data" value = "10/10/2023" readonly class = "text-view">
+        
+                <label for = "conteudo-static" > Conteudo:</label>
+                <input type = "text" id = "conteudo-static" name = "conteudo-static" value = "Scuderia Ferrari é uma equipe de automobilismo da montadora italiana Ferrari que compete no campeonato da Fórmula 1. É a equipe mais antiga em atividade na categoria. A Ferrari é a equipe mais vitoriosa e bem-sucedida da história da F1." readonly class = "text-view" >
+
+                <label for = "mensagem" id = "Mensagem"> Este Formulário não permite alterações! </label>
+            </div>
+
+        </form>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
