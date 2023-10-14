@@ -90,23 +90,6 @@
         <h2 class = "Cadastro" > Deleção de Posts </h2>
 
         <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
-        
-            <div class = "form-group" >
-                <label for = "titulo" id = "label-centered" > Titulo:</label>
-                <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required style = "width: 100%" >
-            </div>
-
-            <div class = "form-group" >
-                <label for = "autor" id = "label-centered" > Autor:</label>
-                <input type = "autor" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required style = "width: 100%" >
-            </div>
-
-            <div class = "form-group">
-                <label for = "conteudo" id = "label-centered" >Conteúdo:</label>
-                <textarea class = "form-control" id = "conteudo" name = "conteudo" readonly style = "height: 100%; width: 100%;">
-                    Max Emilian Verstappen é um automobilista neerlandês. Ele é piloto de Fórmula 1 desde 2015, tendo feito sua estreia pela equipe Toro Rosso. Foi três vezes campeão da Fórmula 1 em 2021, 2022 e 2023.
-                </textarea>
-            </div>
             
             <div class = "form-del" >
                 <label for = "verifica" id = "verifica" > Deseja Deletar Esse Post? </label>
@@ -133,7 +116,7 @@
                 <input type = "text" id = "data" name = "data" value = "10/10/2023" readonly class = "text-view">
         
                 <label for = "conteudo-static" > Conteudo:</label>
-                <input type = "text" id = "conteudo-static" name = "conteudo-static" value = "Scuderia Ferrari é uma equipe de automobilismo da montadora italiana Ferrari que compete no campeonato da Fórmula 1. É a equipe mais antiga em atividade na categoria. A Ferrari é a equipe mais vitoriosa e bem-sucedida da história da F1." readonly class = "text-view" >
+                <input type = "text" id = "conteudo-static" name = "conteudo-static" value = "Ferrari!" readonly class = "text-view" >
 
                 <label for = "mensagem" id = "Mensagem"> Este Formulário não permite alterações! </label>
             </div>
