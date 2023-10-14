@@ -16,3 +16,14 @@ lista.forEach((item) => // Adiciona um evento de clique a todos os elementos com
     item.addEventListener('click',ativaLink)
 )
 
+// const logout = document.querySelectorAll('.logout'); // Seleciona todos os elementos com a classe "lista"
+// function ativaLink(){ // Define uma função para ativar um link na barra de navegação
+//     lista.forEach((item) => // Itera por todos os elementos com a classe "lista"
+//         item.classList.remove('ativa') // Remove a classe "ativa" de todos os elementos
+//     );
+//     this.classList.add('ativa'); // Adiciona a classe "ativa" ao elemento clicado (destacando-o visualmente)
+// }
+// lista.forEach((item) => // Adiciona um evento de clique a todos os elementos com a classe "lista"
+//     item.addEventListener('click',ativaLink)
+// )
+
