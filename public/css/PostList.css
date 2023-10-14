@@ -1,56 +1,46 @@
 *{
     margin: 0%;
+    margin-bottom: 100px;
     padding: 0%;
     border: 0%;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.Postlist{
-    width: 1410px;
-    height: 870px; 
-    position: relative;
-    display: flex;
-    background: rgb(217, 217, 217);  
-    overflow: hidden;
+body{
+    background-image: url(/public/assets/309862.png);
+    background-repeat: repeat;
+    background-color: #d9d9d9;
+    z-index: -1;
 }
 
-.Postlist  h1{
-    width: 444px;
-    height: 37px; 
+ h1{
+    width: 31.49%;
+    height: 4.25%;
+    top: 9.43%;
     left: 15%; 
-    top: 82px; 
     position: absolute;
     color: #C60000; 
     font-size: 36px; 
-    font-family: Quicksand; 
     font-weight: 700;
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     /*word-wrap: break-word*/
 }
 
-.InstitutoAyrtonSenna{
-    width: 246px; 
-    height: 102px; 
-    left: 1002px; 
-    top: 50px; 
-    position: absolute; 
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
-
-.Postlist .Searchbar {
-    width: 710px;
-    height: 46px;
-    left: 64px;
-    top: 200px;
+.Searchbar {
+    width: 52.41%;
+    height: 5.29%;
+    left: 4.54%;
+    top: 22.99%;
     position: absolute;
-  }
+}
   
-  .Postlist .Searchbar .icons {
+ .Searchbar .icons {
     position: relative;
-    width: 100%;
+    width: 93%;
   }
   
-  .Postlist .Searchbar .icons i {
+.Searchbar .icons i {
     position: absolute;
     right: 1px; 
     top: 25px; 
@@ -60,7 +50,7 @@
     z-index: 1;
   }
   
-  .Postlist .Searchbar .icons input {
+  .Searchbar .icons input {
     padding-right: 1px; /* Espaço para o ícone */
     padding-left: 20px; /* Espaço para o texto */
     align-items: center;
@@ -78,30 +68,29 @@
     font-size: 18px; 
   }
 
-  .Postlist .Searchbar .icons input:focus {
+  .Searchbar .icons input:focus {
     border: 1px solid #ffffff; /* Cor da borda ao receber foco */
   }
   
-  .Postlist .Searchbar .icons input::placeholder {
+  .Searchbar .icons input::placeholder {
     color: #d9d9d9;
     font-size: 18px;
   }
   
-  .Postlist .Searchbar .icons input:hover {
+  .Searchbar .icons input:hover {
     cursor: pointer;
   }
   
 
-
-.Postlist .PostFixed{
-    width: 389px; 
-    height: 570px; 
-    left: 930px; 
-    top: 200px; 
+.PostFixed{
+    width: 27.66%;
+    height: 65.52%;
+    left: 66.02%;
+    top: 14.43%;
     position: absolute;
 }
 
-.Postlist .PostFixed .AyrtonPodium{
+.PostFixed .AyrtonPodium{
     width: 305px; 
     height: 355px; 
     left: 42px; 
@@ -111,7 +100,7 @@
     border-radius: 30px;
 }
 
-.Postlist .PostFixed .BGRedFixed{
+.PostFixed .BGRedFixed{
     width: 570px; 
     height: 389px; 
     left: 0px; 
@@ -123,7 +112,7 @@
     border-radius: 30px;
 }
 
-.Postlist .PostFixed h2{
+.PostFixed h2{
     width: 264px; 
     height: 23px; 
     left: 63px; 
@@ -132,22 +121,20 @@
     text-align: center; 
     color: #D9D9D9; 
     font-size: 24px; 
-    font-family: Quicksand; 
     font-weight: 700; 
     /*word-wrap: break-word;*/
 }
 
 
-
-.Postlist .Post{
-    width: 738px; 
-    height: 203px; 
-    left: 64px; 
-    top: 300px; 
+.Post{
+    width: 52.41%;
+    height: 23.45%;
+    left: 4.25%;
+    top: 34.48%;
     position: absolute;
 }
 
-.Postlist .Post .AyrtonPensativo{
+.Post .AyrtonPensativo{
     width: 220px; 
     height: 203px; 
     left: 0px; 
@@ -156,7 +143,7 @@
     border-radius: 10px;
 }
 
-.Postlist .Post .BGPost{
+.Post .BGPost{
     width: 737px; 
     height: 203px; 
     left: 1px; 
@@ -167,7 +154,7 @@
     border-radius: 10px;
 }
 
-.Postlist .Post h2{
+.Post h2{
     width: 500px; 
     height: 42px; 
     left: 234px; 
@@ -175,12 +162,11 @@
     position: absolute; 
     color: #C60000; 
     font-size: 24px; 
-    font-family: Quicksand; 
     font-weight: 600; 
     /*word-wrap: break-word*/
 }
 
-.Postlist .Post .LeiaMais{
+.Post .LeiaMais{
     width: 82px; 
     height: 18px; 
     left: 636px; 
@@ -189,12 +175,11 @@
     position: absolute; 
     color: rgba(21.13, 24.55, 106.50, 0.80); 
     font-size: 16px; 
-    font-family: Quicksand; 
     font-weight: 500; 
     /*word-wrap: break-word*/
 }
 
-.Postlist .Post p{
+.Post p{
     width: 480px; 
     height: 91px; 
     left: 236px; 
@@ -203,22 +188,20 @@
     text-align: justify; 
     color: black; 
     font-size: 16px; 
-    font-family: Quicksand; 
     font-weight: 600; 
     /*word-wrap: break-word*/
 }
 
 
-
-.Postlist .Post2{
-    width: 738px; 
-    height: 203px; 
-    left: 64px; 
-    top: 567px; 
-    position: relative;
+.Post2{
+    width: 52.41%;
+    height: 23.45%;
+    left: 4.25%;
+    top: 65.17%;
+    position: absolute;
 }
 
-.Postlist .Post2 .F1LeClerc{
+.Post2 .F1LeClerc{
     width: 220px; 
     height: 203px; 
     left: 0px; 
@@ -227,7 +210,7 @@
     border-radius: 10px;
 }
 
-.Postlist .Post2 .BGPost2{
+.Post2 .BGPost2{
     width: 737px; 
     height: 203px; 
     left: 0px; 
@@ -238,7 +221,7 @@
     border-radius: 10px;
 }
 
-.Postlist .Post2 h2{
+.Post2 h2{
     width: 504px; 
     height: 42px; 
     left: 234px; 
@@ -246,27 +229,23 @@
     position: absolute; 
     color: #C60000; 
     font-size: 24px; 
-    font-family: Quicksand; 
     font-weight: 600; 
     /*word-wrap: break-word*/
 }
 
-.Postlist .Post2 .LeiaMais{
+.Post2 .LeiaMais{
     width: 82px; 
     height: 18px; 
     left: 636px; 
     top: 157px; 
-    /*bottom: 0;
-    right: 0;*/
     cursor: pointer;
     position: absolute; 
     color: rgba(21.13, 24.55, 106.50, 0.80); 
     font-size: 16px; 
-    font-family: Quicksand; 
     font-weight: 500; 
 }
 
-.Postlist .Post2 p{
+.Post2 p{
     width: 480px; 
     height: 91px; 
     left: 236px; 
@@ -275,21 +254,8 @@
     text-align: justify; 
     color: black; 
     font-size: 16px; 
-    font-family: Quicksand; 
     font-weight: 600; 
     /*word-wrap: break-word*/
 }
-
-@media (max-width: 650px) {
-
-    .Postlist  h1{
-        /*display: flex;
-        align-items: center;
-        justify-content: center;*/
-        width: 250px;
-    }
-
-  }
-
 
   
