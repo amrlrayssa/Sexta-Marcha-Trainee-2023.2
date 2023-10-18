@@ -44,7 +44,6 @@ a {
     padding-block: 16px;
     font-weight: bold;
     margin-left: 40px;
-    text-shadow: black 4px 4px 8px;  
 }
 
 .log-in{
@@ -58,7 +57,6 @@ a {
     border-color: white;
     cursor: pointer;
     font-weight: bold;
-    box-shadow: 4px 4px 8px black;
 }
 
 /*Animação do botão*/
@@ -198,6 +196,7 @@ footer .footer-box{
 
 .footer-box h3{
     font-size: 30px;
+    padding-top: 3.5px;
 }
 
 .footer-box .redes img{
@@ -219,7 +218,8 @@ footer .footer-box{
 }
 
 .footer-box .logo-c{
-    width: 250px;
+    margin-top: 10px;
+    width: 200px;
 }
 
 .main{
@@ -247,6 +247,10 @@ footer .footer-box{
     }
     .footer-box h3{
         display: block;
+    }
+    .footer-box img{
+        width: 100%;
+        width: 250px;
     }
     .footer-box .redes img{
         width: 35px;
