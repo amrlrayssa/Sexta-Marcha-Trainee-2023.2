@@ -31,6 +31,26 @@ body {
     border-radius: 17px;
 }
 
+.button2{
+    display: none;
+    float: right;
+    font-size: 20px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    border-radius: 17px;
+    line-height: 40px;
+    background-color: transparent;
+    color: #ffc107;
+    border-color: #ffc107;
+}
+
+.button2:hover{
+    background-color: #ffc107;
+    color: black;
+    transition: 0.3s;
+    border-color: transparent;
+}
+
 .cardtitle {
     display: inline-block;
     background-image: url(/public/assets/Tiretexture.png);
@@ -84,6 +104,7 @@ body {
 
 .tb thead {
     background-color: #212529;
+    
 
 }
 
@@ -133,9 +154,37 @@ body {
     margin-right: 1.5%;
 }
 
+
+@media(max-width: 915px)
+{
+    .btn-outline-warning{
+        display: none;
+    }
+
+    .button2{
+        display: block;
+        width: 40px;
+    }
+    .t1th{
+        padding-right: 20px;
+    }
+}
+
+
 @media only screen and (max-width: 540px) and (max-height: 915px){
     /**Compaatibilidade com celular**/
 
+    .t1th{
+        display: none;
+    }
+    .tbb .t2th{
+        font-size: 14px;
+    }
+    .tbb .t1_5th{
+        font-size: 14px;
+        padding-right: 10px;
+    }
+    
     .btn-outline-light{
         margin-top: 5%;
     }
