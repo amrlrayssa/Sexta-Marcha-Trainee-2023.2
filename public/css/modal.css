@@ -1,0 +1,108 @@
+/* Reset de estilos padrão do navegador */
+body, h1, h2, h3, p, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos globais */
+body {
+    background-color: #f2f2f2;
+}
+
+.container {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2.Cadastro {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+/* Estilos dos campos de entrada e rótulos */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Estilos para o botão "Salvar" */
+.btn-primary {
+    background-color: #831C21;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Estilos para o botão "Cancelar" */
+#Cancelar {
+    background-color: #ccc;
+}
+
+/* Estilos para a seção de deleção de posts */
+.form-del {
+    text-align: center;
+}
+
+#verifica {
+    font-weight: bold;
+}
+
+#Excluir {
+    background-color: #FF0000;
+}
+
+/* Estilos para a seção de visualização de posts */
+.form-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-view {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#Mensagem {
+    text-align: center;
+    color: #888;
+}
+
+/* Estilos para a imagem de fundo */
+#Imagem {
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
