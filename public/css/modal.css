@@ -1,0 +1,60 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Estilos para o modal de fundo */
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fundo semi-transparente */
+    z-index: 1;
+    overflow: hidden;
+    
+    
+    
+}
+
+/* Estilos para o conteúdo do modal */
+.conteudo_modal {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    border-radius: 15px;
+
+}
+
+/* Estilos para o botão de fechar o modal */
+.fechar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+.conteudo_modal button{
+    background-color:  #831C21;
+    margin-top: 20px;
+    border-radius:5px;
+    width: 60px;
+
+}
+
+.conteudo_modal p {
+    margin-top: 20px;
+}
