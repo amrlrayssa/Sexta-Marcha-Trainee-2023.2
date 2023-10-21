@@ -1,0 +1,52 @@
+.nome_area_adm {
+  transform: translateX(10px) !important;
+  font-size: 20px;
+  opacity: 60%
+}
+
+.formato_area_adm {
+  padding: 0px !important;
+}
+
+.sexta_titulo_adm {
+  font-family: 'Quicksand', sans-serif;
+  color: #000000;
+  background-image: linear-gradient(to right, #A50E11, #831C21);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bolder;
+}
+
+.cor_fundo_adm {
+  background-color: #FFFFFF;
+}
+
+.colunas_adm {
+  transform: translateY(300px) !important;
+  border-radius: 10px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin-top: 4%;
+  box-shadow: 1px 1px 5px black !important;
+  background-image: linear-gradient(to right, #000000, #242222);
+}
+
+.tamanho_icone_adm {
+  font-size: 80px !important;
+  color: #C60000;
+}
+
+.tamanho_icone_adm:hover {
+  font-size: 80px !important;
+  color: #A50E11;
+  opacity: 85%;
+}
+
+.tamanho_fonte_adm {
+  font-size: 20px;
+  text-align: center !important;
+  transform: translateY(20px) !important;
+  margin-bottom: 30px !important;
+  font-family: 'Quicksand', sans-serif;
+  color: #C60000;
+}
