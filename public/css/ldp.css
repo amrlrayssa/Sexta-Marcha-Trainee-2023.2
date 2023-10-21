@@ -142,6 +142,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
+
+
 label {
     font-weight: bold;
     color: #831C21;
@@ -205,6 +207,115 @@ textarea {
 
 .close {
     cursor: pointer;
+}
+
+.modaledit {
+    display: none;
+    width: 40%;
+    height: 76.37%;
+    background-color: #fff;
+    position: fixed;
+    left: 30%;
+    top: 5%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    
+}
+
+h2.Cadastro {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.form-groupe {
+    margin-top: 20px;
+}
+
+.modaldeit label {
+    font-weight: bold;
+    font-weight: bold;
+    display: block; /* Mostra o rótulo em uma nova linha */
+    margin-bottom: 5px; /* Adicione margem inferior para espaçamento */
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Estilos para o botão "Salvar" */
+.btn-primary {
+    background-color: #831C21;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Estilos para o botão "Cancelar" */
+#Cancelar {
+    background-color: #ccc;
+}
+
+/* Estilos para a seção de deleção de posts */
+.form-del {
+    text-align: center;
+}
+
+#verifica {
+    font-weight: bold;
+}
+
+#Excluir {
+    background-color: #FF0000;
+}
+
+.form-control textarea{
+    width: 2px;
+}
+
+
+
+/* Estilos para a imagem de fundo */
+#Imageme {
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.ModalHeade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+}
+
+.edit-Post {
+    color: #831C21;
+    font-size: 24px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 32px;
+    color: #c60000; 
 }
 
 @media only screen and (min-width: 920px) {
