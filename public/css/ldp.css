@@ -4,19 +4,36 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
-    background-image: url(/public/assets/309862.png);
-    background-repeat: repeat;
-    background-color: #d9d9d9;
+    
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.page {
+    width: 100%;
+    height: 100%;
+    background-image: url(/public/assets/309862.png);
+    background-repeat: repeat;
+    background-color: #d9d9d9;
+    transition: 0.35s;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .p {
@@ -130,15 +147,14 @@ body {
 }
 
 .modal {
-    display: none;
     width: 40%;
-    height: 76.37%;
+    height: 90%;
     background-color: #fff;
     position: fixed;
     left: 30%;
     top: 5%;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
@@ -178,6 +194,7 @@ textarea {
 /* Estilos para o botão "Cancelar" */
 #Cancelar {
     background-color: #ccc;
+    font-size: 16px;
 }
 
 /* Estilos para a imagem de fundo */
@@ -210,7 +227,6 @@ textarea {
 }
 
 .modaledit {
-    display: none;
     width: 40%;
     height: 76.37%;
     background-color: #fff;
@@ -267,9 +283,7 @@ textarea {
 }
 
 /* Estilos para o botão "Cancelar" */
-#Cancelar {
-    background-color: #ccc;
-}
+
 
 /* Estilos para a seção de deleção de posts */
 .form-del {
@@ -288,7 +302,9 @@ textarea {
     width: 2px;
 }
 
-
+.botoes {
+    font-size: 15px;
+}
 
 /* Estilos para a imagem de fundo */
 #Imageme {
