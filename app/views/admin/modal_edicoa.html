@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Mono:ital,wght@1,100;1,400&display=swap"
+      rel="stylesheet">
+    <link rel = "stylesheet" href = "/Modal-edição/styles/modal.css">
+    <title> SM Forms de Posts </title>
+</head>
+
+<body>
+    
+    <div>
+        <button class="open-editar" id="edicao"> Editar Post </button>
+    </div>
+    
+    <div class = "modal" id = "modal_edicao" style="display: none;">
+    
+    <div class = "container" >
+        
+        <div class = "ModalHead">
+            <h2 class = "Cadastro-Post" >Edição de Posts </h2>
+            <span class = "close">&times;</span>
+        </div>
+        
+        <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
+        
+            <div class = "form-group" >
+                <label for = "titulo" > Titulo:</label>
+                <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required>
+            </div>
+
+            <div class = "form-group" >
+                <label for = "autor" > Autor:</label>
+                <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
+            </div>
+
+            <div class = "form-group" >
+                <label for = "data"> Data de Criação:</label>
+                <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" required style="width: 70%;">
+            </div>
+
+            <div class = "form-group">
+                <label for = "conteudo" id = "label-centered" > Conteudo:</label>
+                <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 70%; width: 70%;"></textarea>
+            </div>
+
+            <div class = "form-group" id = "Imagem" >
+                <label for = "imagem" id = "label-centered" > Imagem:</label>
+                <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" required>
+            </div>
+            
+            <div class = "botoes" >
+                <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
+                <button type = "Cancelar" class = "btn btn-primary" id = "Cancelar" > Cancelar </button>
+            </div>
+
+        </form>
+    
+    </div>
+    
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/Modal-edição/js/modal.js"></script>
+
+</body>
+    
+</html>
