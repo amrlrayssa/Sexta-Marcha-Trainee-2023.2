@@ -10,9 +10,20 @@
 </head>
 
 <body>
+    
+    <div>
+        <button class="open-create" id="create"> Criar Post </button>
+    </div>
+    
+    <div class = "modal" id = "modal">
+    
     <div class = "container" >
-        <h2 class = "Cadastro" > Criação de Posts </h2>
-
+        
+        <div class = "ModalHead">
+            <h2 class = "Cadastro-Post" > Criação de Posts </h2>
+            <span class = "close">&times;</span>
+        </div>
+        
         <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
         
             <div class = "form-group" >
@@ -46,86 +57,15 @@
             </div>
 
         </form>
+    
     </div>
-
-    <div class = "container" >
-        <h2 class = "Cadastro" > Edição de Posts </h2>
-
-        <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
-        
-            <div class = "form-group" >
-                <label for = "titulo" > Titulo:</label>
-                <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required>
-            </div>
-
-            <div class = "form-group" >
-                <label for = "autor" > Autor:</label>
-                <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
-            </div>
-
-            <div class = "form-group" >
-                <label for = "data"> Data de Criação:</label>
-                <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" required style="width: 55%;">
-            </div>
-
-            <div class = "form-group">
-                <label for = "conteudo" id = "label-centered" > Conteudo:</label>
-                <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 100%; width: 100%;"></textarea>
-            </div>
-
-            <div class = "form-group" id = "Imagem" >
-                <label for = "imagem" id = "label-centered" > Imagem:</label>
-                <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" required>
-            </div>
-            
-            <div class = "botoes" >
-                <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
-                <button type = "Cancelar" class = "btn btn-primary" id = "Cancelar" > Cancelar </button>
-            </div>
-
-        </form>
-    </div>
-
-    <div class = "container" >
-        <h2 class = "Cadastro" > Deleção de Posts </h2>
-
-        <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
-            
-            <div class = "form-del" >
-                <label for = "verifica" id = "verifica" > Deseja Deletar Esse Post? </label>
-                <button type = "Excluir" class = "btn btn-primary" id = "Excluir" > Deletar </button>
-                <button type = "Cancelar" class = "btn btn-primary" id = "Cancelar" > Cancelar </button>
-            </div>
-
-        </form>
-    </div>
-
-    <div class = "container" >
-        <h2 class = "Cadastro" > Visualização de Posts </h2>
-
-        <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
-            
-            <div class = "form-view" >
-                <label for = "titulo" >Titulo:</label>
-                <input type = "text" id = "titulo" name = "titulo" value = "Verstappen é Tri!" readonly class = "text-view">
-        
-                <label for = "autor"> Autor:</label>
-                <input type = "text" id = "autor" name = "autor" value = "RBR Brazil" readonly class = "text-view">
-
-                <label for = "data"> Data de Criação:</label>
-                <input type = "text" id = "data" name = "data" value = "10/10/2023" readonly class = "text-view">
-        
-                <label for = "conteudo-static" > Conteudo:</label>
-                <input type = "text" id = "conteudo-static" name = "conteudo-static" value = "Ferrari!" readonly class = "text-view" >
-
-                <label for = "mensagem" id = "Mensagem"> Este Formulário não permite alterações! </label>
-            </div>
-
-        </form>
+    
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/public/js/modal.js"></script>
 
 </body>
+    
 </html>
