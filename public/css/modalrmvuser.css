@@ -1,0 +1,52 @@
+
+.modal {
+    width: 30%;
+    background-color: #fff;
+    position: fixed;
+    left: 30%;
+    top: 5%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.warning {
+    color: #831C21;
+    font-size: 19px;
+}
+
+/* Estilos para o botão "Salvar" */
+.btn-primary {
+    background-color: #831C21;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Estilos para o botão "Cancelar" */
+#Cancelar {
+    background-color: #ccc;
+}
+
+.ModalHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+}
+
+.Cadastro-Post {
+    font-weight: bold;
+    color: #831C21;
+    font-size: 28px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.close {
+    cursor: pointer;
+}
