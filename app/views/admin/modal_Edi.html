@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Edição Usuário</title>
+    <link rel="stylesheet" href="/public/css/modal_Edi.css">
+</head>
+
+<body>
+    <h2>Modal Javascript</h2>
+    <button class="open-modal" id="open-modal">Abrir</button>
+    
+
+        <div class="modal" id="modal">   
+            
+            <div class="modal-content">
+                
+                <div class="modal-head">
+                    <h2>Edição de Usuários</h2>
+                </div>
+                
+            
+                    <form action="processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
+                    
+                        <div clas = "form-group" >
+                            <label for = "nome" > Nome:</label>
+                            <input type = "text" class = "form-control" id = "nome" name ="nome" placeholder = "Digite o nome" required>
+                        </div>
+            
+                        <div class = "form-group" id = "Imagem" >
+                            <label for = "imagem" > Imagem:</label>
+                            <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" required>
+                        </div>
+            
+                        <div class = "form-group" >
+                            <label for = "email" > Email:</label>
+                            <input type = "email" class = "form-control" id = "email" name = "email" placeholder = "Digite o e-mail" required>
+                        </div>
+            
+                        <div class = "form-group" >
+                            <label for = "senha" > Senha:</label>
+                            <input type = "password " class = "form-control" id = "senha" name = "senha" placeholder = "Digite a senha" required>
+                        </div>
+            
+                        <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
+                        <button type = "Cancelar" class = "btn btn-primary close" id = "Cancelar" > Cancelar </button>
+                    </form>
+            </div>
+            
+        </div>
+
+
+    <script src="/public/js/modais.js" defer></script>
+</body>
+</html>
