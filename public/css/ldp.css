@@ -129,6 +129,82 @@ body {
     margin-right: 1.5%;
 }
 
+.modal {
+    width: 40%;
+    height: 76.37%;
+    background-color: #fff;
+    position: fixed;
+    left: 30%;
+    top: 5%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    color: #831C21;
+    font-size: 21px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Estilos para o botão "Salvar" */
+.btn-primary {
+    background-color: #831C21;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Estilos para o botão "Cancelar" */
+#Cancelar {
+    background-color: #ccc;
+}
+
+/* Estilos para a imagem de fundo */
+#Imagem {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: #d9d9d9;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.ModalHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+}
+
+.Cadastro-Post {
+    color: #831C21;
+    font-size: 24px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.close {
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 920px) {
     .btnr {
         display: none;
@@ -154,7 +230,16 @@ body {
         display: none;
     }
 
+    .modal {
+        width: 70%;
+        height: 72%;
+        left: 15%;
+        top: 5%;
+    }
 
+    label, .Cadastro-Post{
+        font-size: 30px;
+    }
 } 
   
 @media only screen and (max-width: 280px) and (max-height: 653px){
@@ -178,6 +263,17 @@ body {
     .btnd {
         display: none;
     }
+
+    .modal {
+        width: 95%;
+        height: 80%;
+        left: 2.5%;
+        top: 5%;
+    }
+
+    label, .Cadastro-Post {
+        font-size: 16px;
+
 } 
 
 @media only screen and (min-width: 541px) and (max-width: 912px) {
@@ -195,8 +291,18 @@ body {
         margin-top: 5%;
     }
 
-
     .btnd {
         display: none;
+    }
+
+    .modal {
+        width: 80%;
+        height: 46.5%;
+        left: 10%;
+        top: 5%;
+    }
+
+    label, .Cadastro-Post{
+        font-size: 30px;
     }
 }
