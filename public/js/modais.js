@@ -1,13 +1,17 @@
+
+var page = document.getElementById("page");
 var modal = document.getElementById("modal");
 var btn = document.getElementById("edit");
 var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function (){
     modal.style.display = "block";
+    page.style.filter = "brightness(30%)";
 }
 
 span.onclik = function (){
     modal.style.display = "none";
+    page.style.filter = "brightness(100%)";
 }
 
 
@@ -18,10 +22,12 @@ var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function (){
     modal_view.style.display = "block";
+    page.style.filter = "brightness(30%)";
 }
 
 span.onclik = function (){
     modal_view.style.display = "none";
+    page.style.filter = "brightness(100%)";
 }
 
 window.onclick = function(event){
