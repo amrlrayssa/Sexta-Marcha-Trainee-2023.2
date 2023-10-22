@@ -219,7 +219,11 @@ footer .footer-box{
 
 .footer-box .logo-c{
     margin-top: 10px;
-    width: 200px;
+    width: 130px;
+}
+
+.footer-box .p-c{
+    font-size: 15px;
 }
 
 .main{
