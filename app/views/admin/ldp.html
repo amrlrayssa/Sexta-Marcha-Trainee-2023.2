@@ -42,10 +42,10 @@
                         <td class="t3th">
                             <button type="button" class="btn btn-outline-light btnd">Visualizar</button>
                             <button type="button" class="btn btn-outline-info btnd" id="openEditPost">Editar</button>
-                            <button type="button"class="btn btn-outline-danger btnd">Excluir</button>
+                            <button type="button"class="btn btn-outline-danger btnd" id="openRmvPost">Excluir</button>
                             <button type="button" class="btn btn-outline-light btnr">👁</button>
                             <button type="button" class="btn btn-outline-info btnr" id="openEditPostM">✎</button>
-                            <button type="button"class="btn btn-outline-danger btnr"><ion-icon name="trash-outline"></ion-icon></button>
+                            <button type="button"class="btn btn-outline-danger btnr" id="openRmvPostM"><ion-icon name="trash-outline"></ion-icon></button>
                         </td>
                     </tr>
                     <tr>
@@ -161,8 +161,25 @@
             </form>
         
         
-        </div>
+    </div>
     
+    <div class = "modal" id = "modal_rmv">
+                    
+        <div class = "ModalHead">
+            <h2 class = "Cadastro-Post excluir_post" > Excluir post </h2>
+        </div>
+        
+            <div class = "warning" >
+                <h2>Atenção, uma vez que essa ação for concluida, não é possivel desfazela.</h2>
+                <h3>Tem certeza que deseja excluir esse post?</h3>
+            </div>
+            
+            <div class = "botoes" >
+                <button type = "excluir" class = "btn btn-primary" id = "excluir" > Exlcuir </button>
+                <button type = "Cancelar" class = "btn btn-primary closermv" id = "Cancelar" > Cancelar </button>
+            </div>
+
+    </div>
 
 
 </body>

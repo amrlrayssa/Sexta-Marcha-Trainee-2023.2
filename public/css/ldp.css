@@ -226,19 +226,6 @@ textarea {
     cursor: pointer;
 }
 
-.modaledit {
-    width: 40%;
-    height: 76.37%;
-    background-color: #fff;
-    position: fixed;
-    left: 30%;
-    top: 5%;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    
-}
-
 h2.Cadastro {
     color: #333;
     font-size: 24px;
@@ -306,6 +293,8 @@ textarea {
     font-size: 15px;
 }
 
+
+
 /* Estilos para a imagem de fundo */
 #Imageme {
     background: #f2f2f2;
@@ -326,6 +315,19 @@ textarea {
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
     margin-bottom: 0;
+}
+
+#modal_rmv {
+    height: 55%;
+}
+
+.warning {
+    color: #831C21;
+    font-size: 16px;
+}
+
+.excluir_post {
+    font-size: 32px;
 }
 
 .close {
