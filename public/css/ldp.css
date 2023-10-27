@@ -148,7 +148,7 @@ body {
 
 .modal {
     width: 40%;
-    height: 90%;
+    height: 93%;
     background-color: #fff;
     position: fixed;
     left: 30%;
@@ -234,8 +234,8 @@ h2.Cadastro {
     padding-bottom: 10px;
 }
 
-.form-groupe {
-    margin-top: 20px;
+.form-group {
+    margin-top: 15px;
 }
 
 .modaldeit label {
@@ -291,6 +291,7 @@ textarea {
 
 .botoes {
     font-size: 15px;
+    text-align: right;
 }
 
 
@@ -318,16 +319,26 @@ textarea {
 }
 
 #modal_rmv {
-    height: 55%;
+    margin-top: 10%;
+    height: 35%;
 }
+
+
 
 .warning {
     color: #831C21;
-    font-size: 16px;
+}
+
+.warning h2 {
+    font-size: 24px;
+}
+
+.warning h3{
+    font-size: 20px;
 }
 
 .excluir_post {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .close {
