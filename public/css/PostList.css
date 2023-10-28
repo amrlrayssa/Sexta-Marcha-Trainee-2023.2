@@ -1,8 +1,9 @@
 *{
     margin: 0%;
-    margin-bottom: 100px;
-    padding: 0%;
-    border: 0%;
+    margin-bottom: 0px;
+    padding: 0;
+    border: 0;
+    box-sizing: 0;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -11,31 +12,54 @@ body{
     background-repeat: repeat;
     background-color: #d9d9d9;
     z-index: -1;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
- h1{
-    width: 31.49%;
-    height: 4.25%;
-    top: 9.43%;
-    left: 15%; 
-    padding: 10px;
+.right-side {
+    flex: 0.75;
+    padding: 20px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-side {
+    flex: 1;
+    padding: 20px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+h1.header{
+    width: 100%;
+    padding-bottom: 10px;
     color: #C60000;
-    position: absolute;
     font-size: 36px; 
     font-weight: 700;
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     padding-top: 5px;
-    padding-bottom: 5px;
-    margin-left: 10px;
-    /*word-wrap: break-word*/
+    margin-bottom: 20px;
+    /*margin-left: 10px;*/
 }
 
 .Searchbar {
-    width: 52.41%;
-    height: 5.29%;
-    left: 4.54%;
-    top: 22.99%;
-    position: absolute;
+    width: 100%;
+    margin-left: 2%;
 }
   
  .Searchbar .icons {
@@ -86,181 +110,183 @@ body{
     background-color: #831c21;
     transition: 0.5s;  
   }
-  
 
-.PostFixed{
-    width: 27.66%;
-    height: 65.52%;
-    left: 66.02%;
-    top: 14.43%;
-    position: absolute;
-}
-
-.PostFixed .AyrtonPodium{
-    width: 305px; 
-    height: 355px; 
-    left: 42px; 
-    top: 32px; 
-    position: absolute; 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    border-radius: 30px;
-}
-
-.PostFixed .BGRedFixed{
-    width: 570px; 
-    height: 389px; 
-    left: 0px; 
-    top: 570px; 
-    position: absolute; 
-    transform: rotate(-90deg); 
-    transform-origin: 0 0; background: rgba(131, 28, 33, 0.98); 
-    box-shadow: 10px 10px 4px 2px rgba(0, 0, 0, 0.25); 
-    border-radius: 30px;
-}
-
-.PostFixed h2{
-    width: auto; 
-    height: aut; 
-    left: 63px; 
-    top: 505px; 
-    position: absolute; 
-    text-align: center; 
-    color: #ffffff; 
-    font-size: 24px; 
-    font-weight: 700; 
-    /*word-wrap: break-word;*/
-}
-
-
-.Post{
-    width: 52.41%;
-    height: 23.45%;
-    left: 4.25%;
-    top: 34.48%;
-    position: absolute;
-}
-
-.Post .AyrtonPensativo{
-    width: 220px; 
-    height: 203px; 
-    left: 0px; 
-    top: 0px; 
-    position: absolute; 
+  .left-side .Post {
+    width: 93%;
+    display: flex; /* Use flexbox para alinhar a imagem e o conteúdo de texto */
+    flex-direction: row;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.60);
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    padding: 1%; /* Adicione algum espaço entre a imagem e o texto */
+    margin-top: 15px;
+    margin-left: 2%;
+    z-index: 1;
+    opacity: 0.9;
 }
 
-.Post .BGPost{
-    width: 737px; 
-    height: 203px; 
-    left: 1px; 
-    top: 0px; 
-    position: absolute; 
-    background: rgba(255, 255, 255, 0.60); 
-    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25); 
-    border-radius: 10px;
-}
-
-.Post h2{
-    width: 500px; 
-    height: 42px; 
-    left: 234px; 
-    top: 43px; 
-    position: absolute; 
-    color: #C60000; 
-    font-size: 24px; 
-    font-weight: 600; 
-    /*word-wrap: break-word*/
-}
-
-.Post p{
-    width: 480px; 
-    height: 91px; 
-    left: 236px; 
-    top: 89px; 
-    position: absolute; 
-    text-align: justify; 
-    color: black; 
-    font-size: 16px; 
-    font-weight: 600; 
-    /*word-wrap: break-word*/
-}
-
-
-.Post2{
-    width: 52.41%;
-    height: 23.45%;
-    left: 4.25%;
-    top: 65.17%;
-    position: absolute;
-}
-
-.Post2 .F1LeClerc{
-    width: 220px; 
-    height: 203px; 
-    left: 0px; 
-    top: 0px; 
-    position: absolute; 
-    border-radius: 10px;
-}
-
-.Post2 .BGPost2{
-    width: 737px; 
-    height: 203px; 
-    left: 0px; 
-    top: 0px; 
-    position: absolute; 
-    background: rgba(255, 255, 255, 0.60); 
-    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25); 
-    border-radius: 10px;
-}
-
-.Post2 h2{
-    width: 504px; 
-    height: 42px; 
-    left: 234px; 
-    top: 28px; 
-    position: absolute; 
-    color: #C60000; 
-    font-size: 24px; 
-    font-weight: 600; 
-    /*word-wrap: break-word*/
-}
-
-#LeiaMais{
-    width: auto;
-    height: auto; 
-    left: 630px; 
-    top: 157px; 
+.left-side .Post:hover{
+    opacity: 1;
     cursor: pointer;
-    position: absolute; 
-    padding: 10px 10px 10px 10px;
+}
+
+.left-side .Post .AyrtonPensativo {
+    width: 35%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 4px;
+}
+
+.left-side .Post .text-content {
+    width: 65%; 
+    height: 100%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.left-side .Post h2 {
+    width: 100%;
+    color: #C60000;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px; 
+    padding-left: 10px;
+}
+
+.left-side .Post p {
+    width: 80%;
+    text-align: justify;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    /*margin-top: 5px;  Reduza a margem superior entre o título e o parágrafo */
+    margin-bottom: 15px;
+}
+
+.left-side .Post .text-content .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.left-side .Post .text-content .button-container .LeiaMais {
+    cursor: pointer;
+    padding: 10px;
     background-color: #C60000;
     color: #ffffff;
     border: none;
     border-radius: 17px;
     font-family: 'Quicksand', sans-serif;
-    font-size: 16px; 
+    font-size: 16px;
     font-weight: 500;
     line-height: 50%;
     text-align: center;
+    margin-bottom: 15pxs;
 }
 
-#LeiaMais:hover{
+.left-side .Post .text-content .button-container .LeiaMais:hover{
     background-color: #831c21;
     transition: 0.5s;   
 }
 
-.Post2 p{
-    width: 480px; 
-    height: 91px; 
-    left: 236px; 
-    top: 74px; 
-    position: absolute; 
-    text-align: justify; 
-    color: black; 
-    font-size: 16px; 
-    font-weight: 600; 
-    /*word-wrap: break-word*/
+.left-side .Post .F1LeClerc{
+    width: 35%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 4px;
 }
+
+.right-side .PostFixed{
+    width: 60%;
+    border-radius: 30px;
+}
+
+.right-side .PostFixed .BGRedFixed{
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #C60000; 
+    box-shadow: 10px 10px 4px 2px rgba(0, 0, 0, 0.25); 
+    border-radius: 30px;
+    padding: 2% 2% 2% 2%;
+}
+
+.right-side .PostFixed .BGRedFixed:hover{
+    background-color: white;
+  }
+
+.right-side .PostFixed .LinhaCinza{
+    width: 100%; 
+    background: #d9d9d9; 
+    background-image: url(/public/assets/309862.png);
+    background-repeat: repeat;
+    border-radius: 30px;
+    padding: 2% 2% 2% 2%;
+}
+
+.right-side .PostFixed .BGWhite{
+    width: 100%; 
+    background: white; 
+    border-radius: 30px;
+}
+
+.right-side .PostFixed .AyrtonPodium{
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    color: black;
+    border-radius: 30px;
+    opacity: 0.9;
+}
+
+.right-side .PostFixed .AyrtonPodium:hover {
+    opacity: 1; 
+    cursor: pointer; 
+  } 
+
+.right-side .PostFixed .BGWhite .text-fixed{
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: #C60000;
+    text-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.text-fixed p{
+    width: 100%;
+    text-align: center; 
+    color: #C60000; 
+    font-size: 16px; 
+    font-weight: 700; 
+}
+
+.text-fixed h2{
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 550px) {
+    .right-side {
+        flex-wrap: wrap;
+    }
+    
+    body{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .left-side .Post {
+        flex-direction: column;
+    }
+}
+
 
   

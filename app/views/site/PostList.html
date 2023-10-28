@@ -4,58 +4,86 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <script src = "https://kit.fontawesome.com/46c6a48072.js" crossorigin = "anonymous"></script>
+    <link rel = "preconnect" href="https://fonts.googleapis.com">
+    <link rel = "preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel = "stylesheet">
     <link rel = "stylesheet" href = "/public/css/PostList.css">
     <title> SM PostList </title>
 </head>
 <body>
-        
-        <h1> POSTS MAIS RELEVANTES </h1>
-        
-        <div class = "Post" >
 
-          <div class = "BGPost" ></div>
-          <img class = "AyrtonPensativo" src = "/public/assets/Ayrton-Pensativo.png" />
-          <h2> Tudo sobre o Tricampeonato do Brasileiro </h2>
-          <p> Ayrton Senna da Silva ONM ComRB CvMA OME foi um piloto de Fórmula 1, empresário e filantropo brasileiro... </p>
-          <button class = "LeiaMais" id = "LeiaMais" > LEIA MAIS </button>
+    <div class = "left-side">
 
+        <div class = "header">
+            <h1 class="header">POSTS MAIS RELEVANTES</h1>
+            <div class = "Searchbar">
+                <div class = "icons">
+                    <i class = "fa-solid fa-magnifying-glass"></i>
+                    <input type = "text" name = "Search" placeholder = "Search...">
+                </div>
+            </div>
         </div>
+    
+        <div class = "container">
+    
+          <div class = "Post">
+              <img class = "AyrtonPensativo" src = "/public/assets/Ayrton-Pensativo.png" />
 
-        <div class = "Post2" >
+              <div class = "text-content">
+                    <h2> Tudo sobre o Tricampeonato do Brasileiro </h2>
+                    <p> Ayrton Senna da Silva ONM ComRB CvMA OME foi um piloto de Fórmula 1, empresário e filantropo brasileiro... </p>
+                    <div class = "button-container">
+                        <button class = "LeiaMais" >LEIA MAIS</button>
+                    </div>
 
-          <div class = "BGPost2" ></div>
-          <img class = "F1LeClerc" src = "/public/assets/LeClerc-Ferrari.png" />
-          <h2> Ferrari esperançosa após Pole Position </h2>
-          <p> Charles Leclerc leva a melhor durante treino classificatório para a corrida do Bahrein ao melhorar seu tempo... </p>
-          <button class = "LeiaMais" id = "LeiaMais"> LEIA MAIS </button>
- 
-        </div>
-
-        <div class = "Searchbar">
-          <div class = "icons">
-            <i class = "fa-solid fa-magnifying-glass" ></i>
-            <input type = "text" name = "Search" placeholder = "Search..."></div>
-        </div>
+              </div>
+              
+          </div>
+          
+          <div class = "container">
+    
+            <div class = "Post">
+                <img class = "F1LeClerc" src = "/public/assets/LeClerc-Ferrari.png" />
+                
+                <div class = "text-content">
+                      <h2> Ferrari esperançosa após Pole Position </h2>
+                      <p> Charles Leclerc leva a melhor durante treino classificatório para a corrida do Bahrein ao melhorar seu tempo... </p>
+                      <div class = "button-container">
+                          <button class = "LeiaMais" >LEIA MAIS</button>
+                      </div>
+  
+                </div>
+                
+            </div>
         
+        </div>
+      
+    </div>
+
+    </div>
+
+
+    <div class = "right-side" >
+    
         <div class = "PostFixed" >
-
-          <div class = "BGRedFixed" ></div>
-          <img class = "AyrtonPodium" src = "/public/assets/ayrton-Podium.png" />
-
-          <div class = "SennaSextaMarchaTXT" style = "width: 281px; height: auto; left: 54px; top: 417px; position: absolute; text-align: center" >
-            <span style = "color: rgba(217, 217, 217, 0.80); font-size: 20px; font-family: Quicksand; font-weight: 700; word-wrap: break-word"> Senna comemorando ao vencer heroicamente com a </span>
-            <span style = "color: #ffffff; font-size: 20px; font-family: Quicksand; font-weight: 700; word-wrap: break-word"> Sexta Marcha </span>
+            <div class = "BGRedFixed" >
+              <div class = "LinhaCinza" >
+                <div class = "BGWhite" >
+          
+                    <img class = "AyrtonPodium" src = "/public/assets/ayrton-Podium.png"/>
+                    
+                    <div class = "text-fixed">
+                        <p>Senna comemorando ao vencer heroicamente com a Sexta Marcha</p>
+                        <h2> Interlagos, 24/03/1991 </h2>  
+                    </div>  
+                </div>
+            </div>
           </div>
-           
-            <h2> Interlagos, 24/03/1991 </h2>        
-        
-          </div>
+      </div>
+  
+    </div> 
 
 </body>
+
 </html>
-
-
-
-
-
 
