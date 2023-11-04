@@ -26,7 +26,7 @@ body {
 
 /* Estilos para a barra de navegação quando está aberta */
 .navegacao.open {
-    width: 230px; /* Amplia a largura quando a barra de navegação está aberta */
+    width: 250px; /* Amplia a largura quando a barra de navegação está aberta */
     height: 600px;
 }
 
