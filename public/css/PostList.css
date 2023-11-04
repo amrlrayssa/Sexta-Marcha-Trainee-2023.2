@@ -113,31 +113,36 @@ h1.header{
 
   .left-side .Post {
     width: 93%;
-    display: flex; /* Use flexbox para alinhar a imagem e o conteúdo de texto */
+    display: flex; 
     flex-direction: row;
     align-items: center;
     background: rgba(255, 255, 255, 0.60);
     box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    padding: 1%; /* Adicione algum espaço entre a imagem e o texto */
+    padding: 1%; /* Adiciona algum espaço entre a imagem e o texto */
     margin-top: 15px;
     margin-left: 2%;
     z-index: 1;
     opacity: 0.9;
+    filter: grayscale(40%);
+    transition: filter 0.3s ease;
 }
 
 .left-side .Post:hover{
     opacity: 1;
-    cursor: pointer;
+    filter: none;
+    /*cursor: default;*/
+    transition: filter 0.5s;
+    background-color: white;
 }
 
 .left-side .Post .AyrtonPensativo {
     width: 35%;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;
     margin-top: 8px;
-    margin-left: 4px;
+    margin-left: 4px;*/
 }
 
 .left-side .Post .text-content {
@@ -169,13 +174,13 @@ h1.header{
     margin-bottom: 15px;
 }
 
-.left-side .Post .text-content .button-container {
+.button-container {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.left-side .Post .text-content .button-container .LeiaMais {
+.button-container .LeiaMais {
     cursor: pointer;
     padding: 10px;
     background-color: #C60000;
@@ -187,10 +192,10 @@ h1.header{
     font-weight: 500;
     line-height: 50%;
     text-align: center;
-    margin-bottom: 15pxs;
+    margin-bottom: 15px;
 }
 
-.left-side .Post .text-content .button-container .LeiaMais:hover{
+.button-container .LeiaMais:hover{
     background-color: #831c21;
     transition: 0.5s;   
 }
@@ -199,9 +204,9 @@ h1.header{
     width: 35%;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;
     margin-top: 8px;
-    margin-left: 4px;
+    margin-left: 4px;*/
 }
 
 .right-side .PostFixed{
@@ -220,9 +225,9 @@ h1.header{
     padding: 2% 2% 2% 2%;
 }
 
-.right-side .PostFixed .BGRedFixed:hover{
+/*.right-side .PostFixed .BGRedFixed:hover{
     background-color: white;
-  }
+  }*/
 
 .right-side .PostFixed .LinhaCinza{
     width: 100%; 
@@ -235,22 +240,28 @@ h1.header{
 
 .right-side .PostFixed .BGWhite{
     width: 100%; 
-    background: white; 
+    background: rgba(255, 255, 255, 0.60);
     border-radius: 30px;
+    opacity: 0.9;
+    filter: grayscale(40%);
+    transition: filter 0.3s ease;
+}
+
+.right-side .PostFixed .BGWhite:hover{
+    opacity: 1;
+    filter: none;
+    transition: filter 0.5s;
+    background-color: white;
 }
 
 .right-side .PostFixed .AyrtonPodium{
     width: 100%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/ 
     color: black;
-    border-radius: 30px;
+    border-radius: 30px 30px 0 0;
     opacity: 0.9;
-}
-
-.right-side .PostFixed .AyrtonPodium:hover {
-    opacity: 1; 
     cursor: pointer; 
-  } 
+}
 
 .right-side .PostFixed .BGWhite .text-fixed{
     width: 100%;
@@ -271,6 +282,7 @@ h1.header{
 .text-fixed h2{
     padding-top: 10px;
 }
+
 
 @media screen and (max-width: 550px) {
     .right-side {
