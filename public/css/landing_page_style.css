@@ -24,8 +24,8 @@ header img {
 
 }
 
-#mini-logo{
-display: none;
+#mini-logo {
+  display: none;
 }
 
 .container {
@@ -35,7 +35,7 @@ display: none;
 
 aside {
   flex: 1.5;
-  background-image: url('../assets/Ayrton_Senna_Curva.jpeg');
+  background-image: url('../assets/Gif_Sexta_Marcha.gif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,6 +72,7 @@ section {
   margin-left: 2%;
   font-weight: 500;
   font-size: 26px;
+  margin-bottom: 3%;
 }
 
 .container-sobre {
@@ -145,7 +146,7 @@ ul {
 }
 
 
-.noticias{
+.noticias {
   justify-content: left;
   margin-top: 8%;
   margin-left: 20%;
@@ -153,7 +154,7 @@ ul {
 
 }
 
-.linha{
+.linha {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10%;
@@ -171,19 +172,20 @@ ul {
   width: 100%;
   height: 200px;
   overflow: hidden;
-  border-radius: 20px 20px 0 0; 
+  border-radius: 20px 20px 0 0;
 
 }
+
 .imagem img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   cursor: pointer;
 }
 
 .titulo {
   background-color: #d9d9d9;
-  color:#C60000;
+  color: #C60000;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -200,120 +202,137 @@ ul {
 }
 
 .efeito-imagem {
-filter: grayscale(100%);
-transition: filter 0.3s ease;
-width: 300px;
-height: 200px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  width: 300px;
+  height: 200px;
 }
 
-.efeito-imagem:hover{
+.efeito-imagem:hover {
   filter: none;
   transition: filter 0.5s;
 }
 
-.mais-noticias button{
-background-color: #C60000;
-color: #ffffff;
-border: none;
-border-radius: 17px;
-padding: 10px 20px 10px 20px;
-font-size: 18px;
-font-weight: 500;
-font-family: 'Quicksand', sans-serif;
-cursor: pointer;
-margin-bottom: 10%;
+.mais-noticias button {
+  background-color: #C60000;
+  color: #ffffff;
+  border: none;
+  border-radius: 17px;
+  padding: 10px 20px 10px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  margin-bottom: 10%;
 }
 
-.mais-noticias button:hover{
+.mais-noticias button:hover {
   background-color: #831c21;
   transition: 0.5s;
 }
 
-@media (max-width: 1100px){
-  .quadrado{
+@media (max-width: 1100px) {
+  .quadrado {
     height: 380px;
   }
 }
 
-@media (max-width: 915px){
- .post{
-text-align: left;
- }
-  .quadrado{
+@media (max-width: 915px) {
+  .post {
+    text-align: left;
+  }
+
+  .quadrado {
     width: 90%;
     margin-bottom: 10%;
   }
-.titulo h1 {
-  font-size: 26px;
-}
-.conteudo p {
-font-size: 22px;
-}
-.linha{
-display: block;
-justify-content: center;
-}
+
+  .titulo h1 {
+    font-size: 26px;
+  }
+
+  .conteudo p {
+    font-size: 22px;
+  }
+
+  .linha {
+    display: block;
+    justify-content: center;
+  }
 }
 
-@media(max-width: 730px){
-aside{
-  display: none;
-}
-.quadrado{
-height: 400px;
-
-}
-}
-
-@media (max-width: 500px){
-  #logo{
+@media(max-width: 730px) {
+  aside {
     display: none;
   }
-  header{
- display: flex;
- align-items: center;
+
+  .quadrado {
+    height: 400px;
+
   }
-   #mini-logo{
-     display: block;
-   }
- .conteudo p {
- font-size: 20px;
- }
-.sobre p{
-  font-size: 22px;
 }
 
+@media (max-width: 500px) {
+  #logo {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+  }
+
+  #mini-logo {
+    display: block;
+  }
+
+  .conteudo p {
+    font-size: 20px;
+  }
+
+  .sobre p {
+    font-size: 22px;
+  }
+
 }
- @media (max-width: 440px){
-.cardpost{
-width: 90%;
+
+@media (max-width: 440px) {
+  .cardpost {
+    width: 90%;
+  }
+
+  .noticias {
+    margin-left: 10%;
+    margin-right: 0;
+  }
+
+  .conteudo p {
+    font-size: 18px;
+  }
+
+  .sobre p {
+    font-size: 20px;
+  }
+
+  .quadrado {
+    height: 360px;
+  }
 }
-.noticias {
-  margin-left: 10%;
-  margin-right: 0;
-}
-.conteudo p {
-  font-size: 18px;
-}
-.sobre p {
-font-size: 20px;
-}
-.quadrado{
-height: 360px;
-}
- }
- 
- @media (max-width: 300px){
-  header img{
+
+@media (max-width: 300px) {
+  header img {
     width: 70%;
   }
-.conteudo p{
-font-size: 16px;
-}
-.sobre p {
-  font-size: 18px;
-}
-.quadrado{
-  height: 370px;
-}
+
+  .conteudo p {
+    font-size: 16px;
+  }
+
+  .sobre p {
+    font-size: 18px;
+  }
+
+  .quadrado {
+    height: 370px;
+  }
 }
