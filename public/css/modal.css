@@ -1,7 +1,7 @@
 .modal {
     display: none;
     width: 40%;
-    height: 76.37%;
+    height: 76%;
     background-color: #fff;
     position: fixed;
     left: 30%;
@@ -11,8 +11,14 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
+.modal-visu{
+    height: 40%;
+    margin-top: 30px;
+}
 
-
+.modal-edit{
+    height: 60%;
+}
 
 label {
     font-weight: bold;
@@ -46,12 +52,14 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
     margin-right: 10px;
+    margin-top: 15px;
 }
 
 /* Estilos para o botão "Cancelar" */
 #Cancelar-View {
     background-color: #831C21;
     color: white;
+    margin-top: 10px;
 }
 
 #Cancelar-View:hover {
@@ -92,4 +100,30 @@ textarea {
 
 .close {
     cursor: pointer;
+}
+
+@media(max-width: 990px)
+{
+    .modal-visu{
+        height: 50%;
+        margin-top: 30px;
+    }
+    
+    .modal-edit{
+        height: 60%;
+    }
+    
+}
+
+@media(max-width: 530px)
+{
+    .modal-visu{
+        height: 60%;
+        margin-top: 30px;
+    }
+    
+    .modal-edit{
+        height: 60%;
+    }
+
 }
