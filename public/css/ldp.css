@@ -156,7 +156,6 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    overflow: hidden;
 }
 
 .modal h2 {
@@ -350,7 +349,7 @@ textarea {
     }
 }
 
-@media only screen and (max-width: 540px) and (max-height: 919px){
+@media only screen and (max-width: 540px) and (max-height: 932px){
     /**Compaatibilidade com celular**/
    .btn-outline-light{
         margin-top: 5%;
@@ -371,7 +370,7 @@ textarea {
 
     .modal {
         width: 90%;
-        height: 72%;
+        height: fit-content;
         left: 5%;
         top: 5%;
     }
@@ -434,7 +433,7 @@ textarea {
 
     .modal {
         width: 80%;
-        height: 46.5%;
+        height: fit-content;
         left: 10%;
         top: 5%;
     }
