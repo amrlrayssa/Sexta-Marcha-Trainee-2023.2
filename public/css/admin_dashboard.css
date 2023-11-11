@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    width: 100%;
+    background-color: #831C21;
+  }
+  
+  .container {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 20%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .aba {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  i,
+  span {
+    margin: 10px 0px;
+    color: #A6A6A6;
+  }
+  
+  i {
+    font-size: 70px;
+  
+  }
+  
+  
+  .aba:hover {
+    cursor: pointer;
+  
+  
+  
+  }
+  
+  .aba:hover i {
+    font-size: 80px;
+    transition: 0.2s;
+    color: #666666;
+  }
+  
+  .aba:hover span {
+    color: #666666;
+  }
+  
+  span {
+    font-size: 25px;
+    font-weight: 500;
+  
+  }
+  
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  
+  }
+  
+  
+  @media (max-width: 1025px) {
+    .container{
+      width: 90%;
+      height: 25%;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .container{
+      width: 80%;
+      height: 20%;
+    }
+  }
+  
+  @media (max-width: 850px) {
+    .container{
+      width: 90%;
+  
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container{
+      width: 90%;
+      height: 18%;
+    }
+  }
+  
+  @media (max-width: 680px) {
+    .container{
+      width: 40%;
+      flex-direction: column;
+      height: 80%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .container{
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .container{
+      width: 60%;
+      height: 85%;
+    }
+  }
+  
+  @media (max-width: 415px) {
+    .container{
+      width: 60%;
+      
+    }
+  }
+  
+  
+  @media (max-width: 360px) {
+    .container{
+      width: 70%;
+      height: 85%;
+    }
+  }
+  
+  @media (max-width: 296px) {
+    .container{
+      width: 80%;
+      height: 90%;
+    }
+  }
+  
+  @media (max-width: 230px) {
+    .container{
+      width: 85%;
+    }
+  }
