@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var modal = document.getElementById("modal");
+    // Selecionando elementos do DOM
+    var modalCriar = document.getElementById("modal");
     var modalEdicao = document.getElementById("modal_edicao");
-    var modalRmv = document.getElementById("modal_rmv");
+    var modalExcluir = document.getElementById("modal_rmv");
     var page = document.getElementById("page");
 
     // Função para abrir o modal
@@ -14,14 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var criarUsuarioBtn = document.querySelector(".btn-outline-warning");
     var criarPostBtn = document.querySelector(".button2");
     var editarBtns = document.querySelectorAll("#edit, #edit-icon");
-    var excluirBtns = document.querySelectorAll("#excluir, .closermv");
+    var excluirBtns = document.querySelectorAll(".btn-outline-danger");
 
     criarUsuarioBtn.onclick = function () {
-        abrirModal(modal);
+        abrirModal(modalCriar);
     };
 
     criarPostBtn.onclick = function () {
-        abrirModal(modal);
+        abrirModal(modalCriar);
     };
 
     editarBtns.forEach(function (editarBtn) {
@@ -32,15 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     excluirBtns.forEach(function (excluirBtn) {
         excluirBtn.onclick = function () {
-            abrirModal(modalRmv);
+            abrirModal(modalExcluir);
         };
     });
 
     // Função para fechar os modais
     function fecharModais() {
-        modal.style.display = "none";
+        modalCriar.style.display = "none";
         modalEdicao.style.display = "none";
-        modalRmv.style.display = "none";
+        modalExcluir.style.display = "none";
         page.style.filter = "brightness(100%)";
     }
 
@@ -53,10 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Evento para fechar os modais quando clicar fora deles
     window.onclick = function (event) {
-        if (event.target === modal || event.target === modalEdicao || event.target === modalRmv) {
+        if (event.target === modalCriar || event.target === modalEdicao || event.target === modalExcluir) {
             fecharModais();
         }
     };
 
-    // Adicionar suas outras funcionalidades/modificações conforme necessário
+    // Adicione outras funcionalidades/modificações conforme necessário
 });
