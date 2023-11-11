@@ -138,6 +138,16 @@ textarea {
 .botoes {
     font-size: 15px;
     text-align: right;
+
+}
+
+.botoes btn btn-primary {
+    font-size: 15px;
+    text-align: right;
+    
+}
+.bt_Visu{
+    margin-top: 20px;
 }
 
 

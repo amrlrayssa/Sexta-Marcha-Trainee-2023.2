@@ -174,11 +174,18 @@ body {
     margin-right: 1.5%;
 }
 
-@media(max-width: 770px)
+@media(max-width: 760px)
 {
     .t1_5th{
         padding-left: 5%;
+       
     }
+    .t3th-icons{
+        display: inline-block;
+        width: 200px;
+        
+    }
+    
 }
 
 @media(max-width: 570px)
