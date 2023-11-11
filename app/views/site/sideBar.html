@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sexta marcha</title>
+    <link rel="stylesheet" href="/public/css/sideBar.css" />
+    <!-- Inclui um arquivo CSS externo chamado "sadibar.css" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@1,100;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navegacao"> <!-- Cria uma div com a classe "navegacao" que contém a barra de navegação -->
+      
+      <div class="alternar_menu"></div> <!-- Cria um elemento div com a classe "alternar_menu" provavelmente usado para alternar a visibilidade da barra de navegação -->
+      <ul>
+        <li class="lista ativa" style="--clr: #c60000"> <!-- Cria um item de lista com a classe "lista" e define uma cor personalizada usando variável CSS -->
+          <a href="#">
+            <span class="icon"><ion-icon name="home-outline"></ion-icon></span> <!-- Insere um ícone da biblioteca Ionicons -->
+
+
+            <span class="text">Home</span> <!-- Insere o texto "Home" -->
+            
+          </a>
+        </li>
+                    <!-- ... Outros itens de lista semelhantes para outras páginas ... -->
+        <li class="lista" style="--clr: #ffa117">
+          <a href="#">
+            <span class="icon" ><ion-icon name="person-outline"></ion-icon ></span>
+            <span class="text">Perfil</span>
+          </a>
+        </li>
+        <li class="lista" style="--clr: #c60000">
+          <a href="#">
+            <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+            <span class="text">Chat</span>
+          </a>
+        </li>
+        <li class="lista" style="--clr: #ffa117">
+          <a href="#">
+            <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+            <span class="text">Fotos</span>
+          </a>
+        </li>
+        <li class="lista" style="--clr: #c60000">
+          <a href="#">
+            <span class="icon" ><ion-icon name="settings-outline"></ion-icon></span>
+            <span class="text">Configurações</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script>
+        const alternar_menu = document.querySelector('.alternar_menu'); // Seleciona o elemento com a classe "alternar_menu"
+        const navegacao = document.querySelector('.navegacao'); // Seleciona o elemento com a classe "navegacao"
+
+        alternar_menu.onclick =  function(){ // Define um evento de clique para alternar a visibilidade da barra de navegação
+            navegacao.classList.toggle('open'); // Alterna a classe "open" do elemento "navegacao"
+        }
+        const lista = document.querySelectorAll('.lista'); // Seleciona todos os elementos com a classe "lista"
+        function ativaLink(){ // Define uma função para ativar um link na barra de navegação
+            lista.forEach((item) => // Itera por todos os elementos com a classe "lista"
+                item.classList.remove('ativa') // Remove a classe "ativa" de todos os elementos
+            );
+            this.classList.add('ativa'); // Adiciona a classe "ativa" ao elemento clicado (destacando-o visualmente)
+        }
+        lista.forEach((item) => // Adiciona um evento de clique a todos os elementos com a classe "lista"
+            item.addEventListener('click',ativaLink)
+        )
+    </script>
+        <!-- Inclui a biblioteca Ionicons a partir de um CDN para exibir ícones nos itens de navegação -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
