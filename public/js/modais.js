@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var modalCriar = document.getElementById("modal");
     var modalEdicao = document.getElementById("modal_edicao");
     var modalExcluir = document.getElementById("modal_rmv");
+    var modalVer = document.getElementById("modal_ver");
     var page = document.getElementById("page");
 
     // Função para abrir o modal
@@ -12,18 +13,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Botões para abrir os modais
-    var criarUsuarioBtn = document.querySelector(".btn-outline-warning");
-    var criarPostBtn = document.querySelector(".button2");
-    var editarBtns = document.querySelectorAll("#edit, #edit-icon");
-    var excluirBtns = document.querySelectorAll(".btn-outline-danger");
+    var criarPostBtn = document.querySelectorAll("#openCreatPost, #openCreatPostM");
+    var verBtns = document.querySelectorAll("#openVerPost, #openVerPostM");
+    var editarBtns = document.querySelectorAll("#openEditPost, #openEditPostM");
+    var excluirBtns = document.querySelectorAll("#openRmvPost, #openRmvPostM");
 
-    criarUsuarioBtn.onclick = function () {
-        abrirModal(modalCriar);
-    };
-
-    criarPostBtn.onclick = function () {
-        abrirModal(modalCriar);
-    };
+    criarPostBtn.forEach(function (criarPostBtn) {
+        criarPostBtn.onclick = function () {
+            abrirModal(modalCriar);
+        };
+    });
 
     editarBtns.forEach(function (editarBtn) {
         editarBtn.onclick = function () {
@@ -37,16 +36,23 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     });
 
+    verBtns.forEach(function (verBtn) {
+        verBtn.onclick = function () {
+            abrirModal(modalVer);
+        };
+    });
+
     // Função para fechar os modais
     function fecharModais() {
         modalCriar.style.display = "none";
         modalEdicao.style.display = "none";
         modalExcluir.style.display = "none";
+        modalVer.style.display = "none";
         page.style.filter = "brightness(100%)";
     }
 
     // Botões para fechar modais
-    var closeBtns = document.querySelectorAll(".close, .closeEdit, .closermv");
+    var closeBtns = document.querySelectorAll(".close, .closever, .closeEdit, .closeRmv");
 
     closeBtns.forEach(function (closeBtn) {
         closeBtn.onclick = fecharModais;
