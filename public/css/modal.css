@@ -102,6 +102,24 @@ textarea {
     cursor: pointer;
 }
 
+.warning {
+    color: #831C21;
+}
+
+.warning h3{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 18px;
+    color: black;
+    font-weight: 400;
+}
+
+
+.excluir_post {
+    font-weight: bold;
+    font-size: 28px;
+}
+
 @media(max-width: 990px)
 {
     .modal-visu{
