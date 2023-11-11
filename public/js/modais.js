@@ -1,70 +1,62 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var modal = document.getElementById("modal");
+    var modalEdicao = document.getElementById("modal_edicao");
+    var modalRmv = document.getElementById("modal_rmv");
+    var page = document.getElementById("page");
 
-var page = document.getElementById("page");
-var modal = document.getElementById("modal");
-var btn = document.getElementById("edit");
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function (){
-    modal.style.display = "block";
-    page.style.filter = "brightness(30%)";
-}
-
-span.onclik = function (){
-    modal.style.display = "none";
-    page.style.filter = "brightness(100%)";
-}
-
-
-
-var modal_view = document.getElementById("modal-view");
-var btn = document.getElementById("view");
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function (){
-    modal_view.style.display = "block";
-    page.style.filter = "brightness(30%)";
-}
-
-span.onclik = function (){
-    modal_view.style.display = "none";
-    page.style.filter = "brightness(100%)";
-}
-
-window.onclick = function(event){
-    if(event.target == modal_view){
-        modal.style.display = "none";
+    // Função para abrir o modal
+    function abrirModal(modal) {
+        modal.style.display = "block";
+        page.style.filter = "brightness(50%)";
     }
-}
 
+    // Botões para abrir os modais
+    var criarUsuarioBtn = document.querySelector(".btn-outline-warning");
+    var criarPostBtn = document.querySelector(".button2");
+    var editarBtns = document.querySelectorAll("#edit, #edit-icon");
+    var excluirBtns = document.querySelectorAll("#excluir, .closermv");
 
+    criarUsuarioBtn.onclick = function () {
+        abrirModal(modal);
+    };
 
-var modal = document.getElementById("modal");
-var btn = document.getElementById("edit-icon");
-var span = document.getElementsByClassName("close")[0];
+    criarPostBtn.onclick = function () {
+        abrirModal(modal);
+    };
 
-btn.onclick = function (){
-    modal.style.display = "block";
-}
+    editarBtns.forEach(function (editarBtn) {
+        editarBtn.onclick = function () {
+            abrirModal(modalEdicao);
+        };
+    });
 
-span.onclik = function (){
-    modal.style.display = "none";
-}
+    excluirBtns.forEach(function (excluirBtn) {
+        excluirBtn.onclick = function () {
+            abrirModal(modalRmv);
+        };
+    });
 
-
-var modal_view = document.getElementById("modal-view");
-var btn = document.getElementById("view-icon");
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function (){
-    modal_view.style.display = "block";
-}
-
-span.onclik = function (){
-    modal_view.style.display = "none";
-}
-
-window.onclick = function(event){
-    if(event.target == modal_view){
+    // Função para fechar os modais
+    function fecharModais() {
         modal.style.display = "none";
+        modalEdicao.style.display = "none";
+        modalRmv.style.display = "none";
+        page.style.filter = "brightness(100%)";
     }
-}
+
+    // Botões para fechar modais
+    var closeBtns = document.querySelectorAll(".close, .closeEdit, .closermv");
+
+    closeBtns.forEach(function (closeBtn) {
+        closeBtn.onclick = fecharModais;
+    });
+
+    // Evento para fechar os modais quando clicar fora deles
+    window.onclick = function (event) {
+        if (event.target === modal || event.target === modalEdicao || event.target === modalRmv) {
+            fecharModais();
+        }
+    };
+
+    // Adicionar suas outras funcionalidades/modificações conforme necessário
+});

@@ -82,76 +82,108 @@
         </div>
     </div>
     </div>
-    <!--Modal de Edição de Usuários-->
-
-    <div class="modal" id="modal">   
+    <div class = "modal" id="modal">
+                    
+        <div class = "ModalHead">
+            <h2 class = "Cadastro-Post" > Criação de Posts </h2>
             
-        <div class="modal-content">
-            
-            <div class="modal-head">
-                <h2>Edição de Usuários</h2>
-            </div>
-            
-        
-                <form action="processar_cadastro.php" method = "post" enctype = "multipart/form-data" >
-                
-                    <div clas = "form-group" >
-                        <label for = "nome" > Nome:</label>
-                        <input type = "text" class = "form-control" id = "nome" name ="nome" placeholder = "Digite o nome" required>
-                    </div>
-        
-                    <div class = "form-group" id = "Imagem" >
-                        <label for = "imagem" > Imagem:</label>
-                        <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" required>
-                    </div>
-        
-                    <div class = "form-group" >
-                        <label for = "email" > Email:</label>
-                        <input type = "email" class = "form-control" id = "email" name = "email" placeholder = "Digite o e-mail" required>
-                    </div>
-        
-                    <div class = "form-group" >
-                        <label for = "senha" > Senha:</label>
-                        <input type = "password " class = "form-control" id = "senha" name = "senha" placeholder = "Digite a senha" required>
-                    </div>
-        
-                    <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
-                    <button type = "Cancelar" class = "btn btn-primary close" id = "Cancelar" > Cancelar </button>
-                </form>
         </div>
         
-    </div>
+        <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data">
+        
+            <div class = "form-group" >
+                <label for = "titulo" > Titulo:</label>
+                <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required>
+            </div>
 
-     <!--Modal de Visualização de Usuário-->
+            <div class = "form-group" >
+                <label for = "autor" > Autor:</label>
+                <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
+            </div>
 
-     <div class="modal" id="modal-view">   
-            
-        <div class="modal-content">
-            
-            <div class="modal-head">
-                <h2>Visualização de Usuários</h2>
+            <div class = "form-group" >
+                <label for = "data"> Data de Criação:</label>
+                <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" required style="width: 55%;">
+            </div>
+
+            <div class = "form-group">
+                <label for = "conteudo" id = "label-centered" > Conteudo:</label>
+                <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 100%; width: 100%;"></textarea>
+            </div>
+
+            <div class = "form-group" id = "Imagem" >
+                <label for = "imagem" id = "label-centered" > Imagem:</label>
+                <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" required>
             </div>
             
-               
-                <form>
-                    <div class = "form-view" >
-                        <label for = "nome" >Nome:</label>
-                        <input type = "text" id = "nome" name = "nome" value = "Sandy Junior" readonly class = "text-view">
-                
-                        <label for = "email"> Email:</label>
-                        <input type = "email" id = "email" name = "email" value = "sandy_40@example.com" readonly class = "text-view">
-                
-                        <label for = "mensagem" id = "Mensagem"> Este Formulário não permite alterações! </label>
+            <div class = "botoes" >
+                <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
+                <button type = "Cancelar" class = "btn btn-primary close" id = "Cancelar" > Cancelar </button>
+            </div>
 
-                        <button type = "Cancelar" class = "btn btn-primary close" id = "Cancelar-View" > Fechar </button>
-                    </div>
-                </form> 
+        </form>
+    
+    </div>
+<div class = "modal" id = "modal_edicao">
 
-
+        <div class = "ModalHead">
+            <h2 class = "Cadastro-Post" >Edição de Posts </h2>
         </div>
         
-    </div>
+        <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data">
+        
+            <div class = "form-group" >
+                <label for = "titulo" > Titulo:</label>
+                <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required>
+            </div>
 
+            <div class = "form-group" >
+                <label for = "autor" > Autor:</label>
+                <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
+            </div>
+
+            <div class = "form-group" >
+                <label for = "data"> Data de Criação:</label>
+                <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" required style="width: 70%;">
+            </div>
+
+            <div class = "form-group">
+                <label for = "conteudo" id = "label-centered" > Conteudo:</label>
+                <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 70%; width: 70%;"></textarea>
+            </div>
+
+            <div class = "form-group" id = "Imagem" >
+                <label for = "imagem" id = "label-centered" > Imagem:</label>
+                <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" required>
+            </div>
+            
+            <div class = "botoes" >
+                <button type = "button" class = "btn btn-primary" id = "Salvar" > Salvar </button>
+                <button type = "button" class = "btn btn-primary closeEdit" id = "Cancelar" > Cancelar </button>
+            </div>
+
+        </form>
+    
+    
+</div>
+
+<div class = "modal" id = "modal_rmv">
+                
+    <div class = "ModalHead">
+        <h2 class = "Cadastro-Post excluir_post" > Excluir post </h2>
+    </div>
+    
+        <div class = "warning" >
+            <h2>Atenção, uma vez que essa ação for concluida, não é possivel desfazela.</h2>
+            <h3>Tem certeza que deseja excluir esse post?</h3>
+        </div>
+        
+        <div class = "botoes" >
+            <button type = "excluir" class = "btn btn-primary" id = "excluir" > Excluir </button>
+            <button type = "Cancelar" class = "btn btn-primary closermv" id = "Cancelar" > Cancelar </button>
+        </div>
+
+</div>
 </body>
 
 
