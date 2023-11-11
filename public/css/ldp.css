@@ -148,7 +148,7 @@ body {
 
 .modal {
     width: 40%;
-    height: 93%;
+    height: fit-content;
     background-color: #fff;
     position: fixed;
     left: 30%;
@@ -156,12 +156,15 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
 }
 
-
+.modal h2 {
+    font-weight: bold;
+}
 
 label {
-    font-weight: bold;
+    font-weight: 600;
     color: #831C21;
     font-size: 21px;
 }
@@ -191,11 +194,6 @@ textarea {
     margin-right: 10px;
 }
 
-/* Estilos para o botão "Cancelar" */
-#Cancelar {
-    background-color: #ccc;
-    font-size: 16px;
-}
 
 /* Estilos para a imagem de fundo */
 #Imagem {
@@ -220,10 +218,6 @@ textarea {
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
     margin-bottom: 0;
-}
-
-.close {
-    cursor: pointer;
 }
 
 h2.Cadastro {
@@ -320,7 +314,7 @@ textarea {
 
 #modal_rmv {
     margin-top: 10%;
-    height: 35%;
+    height: fit-content;
 }
 
 
@@ -329,22 +323,25 @@ textarea {
     color: #831C21;
 }
 
-.warning h2 {
-    font-size: 24px;
-}
 
 .warning h3{
+    margin-top: 1%;
+    margin-bottom: 1%;
     font-size: 20px;
+    color: black;
+    font-weight: 400;
 }
 
 .excluir_post {
+    font-weight: bold;
     font-size: 28px;
 }
 
-.close {
+.Cancelar {
     cursor: pointer;
-    font-size: 32px;
     color: #c60000; 
+    background-color: #ccc;
+    font-size: 16px;
 }
 
 @media only screen and (min-width: 920px) {

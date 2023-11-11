@@ -1,79 +1,69 @@
-    
-    var conteudo = document.getElementById("conteiner");
-    var cadastro = document.getElementById("modal");
-    var btn = document.getElementById("openCreatPost");
-    var btnT = document.getElementById("alsocreat");
-    var btnM = document.getElementById("openCreatPostM");
-    var form = document.getElementsByClassName("close")[0];
-    var edit = document.getElementById("modal_edicao");
-    var btnedit = document.getElementById("openEditPost");
-    var btneditM = document.getElementById("openEditPostM");
-    var formedit = document.getElementsByClassName("closeEdit")[0];
-    var btnrmv = document.getElementById("openRmvPost");
-    var btnrmvM = document.getElementById("openRmvPostM");
-    var rmv = document.getElementById("modal_rmv");
-    var formrmv = document.getElementsByClassName ("closermv")[0];
+document.addEventListener("DOMContentLoaded", function () {
+    // Selecionando elementos do DOM
+    var modalCriar = document.getElementById("modal");
+    var modalEdicao = document.getElementById("modal_edicao");
+    var modalExcluir = document.getElementById("modal_rmv");
+    var modalVer = document.getElementById("modal_ver");
+    var page = document.getElementById("page");
 
-
-    btn.onclick = function () {
-        cadastro.style.display = "block";
-        conteudo.style.filter = "brightness(30%)";
+    // Função para abrir o modal
+    function abrirModal(modal) {
+        modal.style.display = "block";
+        page.style.filter = "brightness(50%)";
     }
 
-    btnM.onclick = function () {
-        cadastro.style.display = "block";
-        conteudo.style.filter = "brightness(30%)";
+    // Botões para abrir os modais
+    var criarPostBtn = document.querySelectorAll("#openCreatPost, #openCreatPostM");
+    var verBtns = document.querySelectorAll("#openVerPost, #openVerPostM");
+    var editarBtns = document.querySelectorAll("#openEditPost, #openEditPostM");
+    var excluirBtns = document.querySelectorAll("#openRmvPost, #openRmvPostM");
+
+    criarPostBtn.forEach(function (criarPostBtn) {
+        criarPostBtn.onclick = function () {
+            abrirModal(modalCriar);
+        };
+    });
+
+    editarBtns.forEach(function (editarBtn) {
+        editarBtn.onclick = function () {
+            abrirModal(modalEdicao);
+        };
+    });
+
+    excluirBtns.forEach(function (excluirBtn) {
+        excluirBtn.onclick = function () {
+            abrirModal(modalExcluir);
+        };
+    });
+
+    verBtns.forEach(function (verBtn) {
+        verBtn.onclick = function () {
+            abrirModal(modalVer);
+        };
+    });
+
+    // Função para fechar os modais
+    function fecharModais() {
+        modalCriar.style.display = "none";
+        modalEdicao.style.display = "none";
+        modalExcluir.style.display = "none";
+        modalVer.style.display = "none";
+        page.style.filter = "brightness(100%)";
     }
 
-    form.onclick = function () {
-        cadastro.style.display = "none";
-        edit.style.display = "none";
-        conteudo.style.filter = "brightness(100%)";
-    }
+    // Botões para fechar modais
+    var closeBtns = document.querySelectorAll(".close, .closever, .closeEdit, .closeRmv");
 
-    btnedit.onclick = function () {
-        edit.style.display = "block";
-        conteudo.style.filter = "brightness(30%)";
-    }
+    closeBtns.forEach(function (closeBtn) {
+        closeBtn.onclick = fecharModais;
+    });
 
-    btneditM.onclick = function () {
-        edit.style.display = "block";
-        conteudo.style.filter = "brightness(30%)";
+    // Evento para fechar os modais quando clicar fora deles
+    window.onclick = function (event) {
+        if (event.target === modalCriar || event.target === modalEdicao || event.target === modalExcluir) {
+            fecharModais();
+        }
+    };
 
-    }
-
-    formedit.onclick = function () {
-        edit.style.display = "none";
-        cadastro.style.display = "none";
-        conteudo.style.filter = "brightness(100%)";
-    }
-
-  
-    btnrmv.onclick = function () {
-        rmv.style.display = "block";
-        conteudo.style.filter = "brightness(30%)";
-    }
-
-    btnrmvM.onclick = function () {
-        rmv.style.display = "block";
-        conteudo.style.filter = "brightness(30%)";
-    }
-  
-    formrmv.onclick = function () {
-        rmv.style.display = "none";
-        edit.style.display = "none";
-        cadastro.style.display = "none";
-        conteudo.style.filter = "brightness(100%)";
-    }
-  
-  
-    window.onclick = function () {
-        if (event.target == conteudo && event.target != btn && event.target != btnT && event.target != btnedit && event.target != btneditM) {
-        if (event.target != btnrmv && event.target != btnrmv) {
-            cadastro.style.display = "none";
-            edit.style.display = "none";
-            rmv.style.display = "none";
-            conteudo.style.filter = "brightness(100%)";
-        }}
-   }
-    
+    // Adicione outras funcionalidades/modificações conforme necessário
+});
