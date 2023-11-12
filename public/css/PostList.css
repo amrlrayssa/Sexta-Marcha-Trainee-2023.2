@@ -225,11 +225,19 @@ body{
     box-shadow: 10px 10px 4px 2px rgba(0, 0, 0, 0.25); 
     border-radius: 30px;
     padding: 2% 2% 2% 2%;
+    opacity: 1;
+    cursor: pointer;
+    filter: brightness(90%);
+    transition: filter 0.3s ease;
 }
 
-/*.right-side .PostFixed .BGRedFixed:hover{
-    background-color: white;
-  }*/
+.right-side .PostFixed .BGRedFixed:hover {
+    border: 2px solid #831c21;
+    opacity: 1;
+    transform: scale(1.03); 
+    filter: none;
+    transition: 0.5s;
+}
 
 .right-side .PostFixed .LinhaCinza{
     width: 100%; 
@@ -244,16 +252,6 @@ body{
     width: 100%; 
     background: rgba(255, 255, 255, 0.60);
     border-radius: 30px;
-    opacity: 0.9;
-    filter: grayscale(40%);
-    transition: filter 0.3s ease;
-}
-
-.right-side .PostFixed .BGWhite:hover{
-    opacity: 1;
-    filter: none;
-    transition: filter 0.5s;
-    background-color: white;
 }
 
 .right-side .PostFixed .AyrtonPodium{
@@ -261,8 +259,6 @@ body{
     /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/ 
     color: black;
     border-radius: 30px 30px 0 0;
-    opacity: 0.9;
-    cursor: pointer; 
 }
 
 .right-side .PostFixed .BGWhite .text-fixed{
@@ -276,13 +272,14 @@ body{
 .text-fixed p{
     width: 100%;
     text-align: center; 
-    color: #C60000; 
+    color: black; 
     font-size: 16px; 
-    font-weight: 700; 
+    font-weight: 500; 
 }
 
 .text-fixed h2{
     padding-top: 10px;
+    font-weight: 500;
 }
 
 
