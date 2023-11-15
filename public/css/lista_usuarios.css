@@ -188,7 +188,7 @@ body {
     
 }
 
-@media(max-width: 570px)
+@media(max-width: 414px)
 {
     .btn-outline-warning{
         display: none;
@@ -216,5 +216,8 @@ body {
     }
     .t1th{
         padding-left: 5%;
+    }
+    .container{
+        margin-top: 80px;
     }
 }
