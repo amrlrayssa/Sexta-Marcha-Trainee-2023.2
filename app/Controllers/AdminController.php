@@ -55,7 +55,7 @@ public function create()
         'autor' => $_POST['autor'],
         ];
         app::get('database')-> edit('usuarios', $_POST['id'], $parameters);
-        header('Location: /admin');
+        header('Location: /admin/lista_usuarios');
 
         }
 }
