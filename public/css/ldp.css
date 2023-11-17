@@ -190,7 +190,6 @@ textarea {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px;
 }
 
 
@@ -259,7 +258,6 @@ textarea {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px;
 }
 
 /* Estilos para o botão "Cancelar" */
@@ -351,17 +349,24 @@ textarea {
 
 @media only screen and (max-width: 540px) and (max-height: 932px){
     /**Compaatibilidade com celular**/
+
    .btn-outline-light{
         margin-top: 5%;
+        margin-left: 30.4%;
+        margin-right: 30.4%;
    }
    
     .btn-outline-info {
         margin-top: 5%;
         margin-bottom: 5%;
+        margin-left: 30.4%;
+        margin-right: 30.4%;
     }
 
     .btn-outline-danger {
         margin-bottom: 5%;
+        margin-left: 30.4%;
+        margin-right: 30.4%;
     }
 
     .btnd {
@@ -441,4 +446,16 @@ textarea {
     label, .Cadastro-Post{
         font-size: 30px;
     }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height:600px){
+    .modal{
+        top: 2%;
+        width: fit-content;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
 }
