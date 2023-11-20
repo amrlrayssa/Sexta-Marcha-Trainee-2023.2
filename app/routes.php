@@ -17,5 +17,8 @@ use App\Core\Router;
     $router->post('views', 'LoginController@confirmaLogin');
     $router->post('logout', 'LoginController@logout');
 
+    $router->get('landing_page', 'LandingPageController@view');
+
+
 
 ?>
