@@ -82,6 +82,7 @@
                 </table>
             </div>
         </div>
+        <?php foreach($users as $user): ?> 
         </div>
         <div class = "modal" id="modal">
                     
@@ -93,29 +94,20 @@
             <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data">
             
                 <div class = "form-group" >
-                    <label for = "titulo" > Titulo:</label>
-                    <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required>
+                    <label for = "titulo" > nome:</label>
+                    <input type = "text" class = "form-control" id = "nome" name ="<?php echo $user->nome ?>" placeholder = "Digite o seu nome" required>
                 </div>
     
                 <div class = "form-group" >
-                    <label for = "autor" > Autor:</label>
-                    <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
+                    <label for = "autor" > email:</label>
+                    <input type = "text" class = "form-control" id = "email" name = "<?php echo $user->email ?>" placeholder = "Digite o seu email" required>
                 </div>
     
                 <div class = "form-group" >
-                    <label for = "data"> Data de Criação:</label>
-                    <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" required style="width: 55%;">
+                    <label for = "data"> senha:</label>
+                    <input type = "password" class = "form-control" id = "password" name = "<?php echo $user->senha ?>" placeholder = "Digite a sua senha" required style="width: 55%;">
                 </div>
     
-                <div class = "form-group">
-                    <label for = "conteudo" id = "label-centered" > Conteudo:</label>
-                    <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 100%; width: 100%;"></textarea>
-                </div>
-    
-                <div class = "form-group img" id = "Imagem" >
-                    <label for = "imagem" id = "label-centered" > Imagem:</label>
-                    <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" required>
-                </div>
                 
                 <div class = "botoes" >
                     <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
@@ -134,30 +126,21 @@
             <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data">
             
                 <div class = "form-group" >
-                    <label for = "titulo" > Titulo:</label>
-                    <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required>
+                    <label for = "nome" > nome:</label>
+                    <input type = "text" class = "form-control" id = "nome" nome ="<?php echo $user->nome ?>" placeholder = "ediatr nome" required>
                 </div>
     
                 <div class = "form-group" >
-                    <label for = "autor" > Autor:</label>
-                    <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
+                    <label for = "autor" > email:</label>
+                    <input type = "text" class = "form-control" id = "email" name = "<?php echo $user->email ?>" placeholder = "editar email" required>
                 </div>
     
                 <div class = "form-group" >
-                    <label for = "data"> Data de Criação:</label>
-                    <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" required style="width: 70%;">
+                    <label for = "data"> Senha </label>
+                    <input type = "password" class = "form-control" id = "password" senha = "<?php echo $user->password ?>" placeholder = "editar senha" required style="width: 70%;">
                 </div>
     
-                <div class = "form-group">
-                    <label for = "conteudo" id = "label-centered" > Conteudo:</label>
-                    <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 70%; width: 70%;"></textarea>
-                </div>
-    
-                <div class = "form-group img" id = "Imagem" >
-                    <label for = "imagem" id = "label-centered" > Imagem:</label>
-                    <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" required>
-                </div>
-                
+            
                 <div class = "botoes" >
                     <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
                     <button type = "Cancelar" class = "btn btn-primary closeEdit Cancelar" > Cancelar </button>
@@ -186,7 +169,11 @@
     </div>
 
     <div class = "modal" id="modal_ver">
-                    
+
+        
+           
+               
+
         <div class = "ModalHead">
             <h2 class = "Cadastro-Post" > Visualizar Usuários </h2>
             
@@ -195,14 +182,14 @@
         <!-- <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data"> -->
         
             <div class = "form-group" >
-                <label for = "titulo" > Nome:</label>
-                <input type = "text"  id = "titulo" name ="titulo" value="blue pen" readonly class = "text-view"
+                <label for = "nome" > Nome:</label>
+                <input type = "text"  id = "nome" name ="nome" value="<?php echo $user->nome ?>" readonly class = "text-view"
                 >
             </div>
     
             <div class = "form-group" >
-                <label for = "autor" > Email:</label>
-                <input type = "text" id = "autor" name = "autor" value= "blue pen" readonly class = "text-view"
+                <label for = "email" > Email:</label>
+                <input type = "text" id = "email" name = "email" value= "<?php echo $user->email ?>" readonly class = "text-view"
                 >
             </div>
     
@@ -210,6 +197,7 @@
                 <button class = "btn btn-primary  bt_Visu "  id = "Salvar" > Salvar </button>
                 <button class = "btn btn-primary closever Cancelar bt_Visu" > Cancelar </button>
             </div>
+            <?php endforeach ?>
     
         </form>
     

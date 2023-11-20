@@ -10,30 +10,27 @@ class AdminController
 
     public function view()
     {
-        $posts = App::get('database')->selectAll('posts');
-        $usuarios = App::get('database')->selectAll('usuarios');
+        
+        $users = App::get('database')->selectAll('users');
         $tables = [
-            'posts' => $posts,
-            'usuarios' => $usuarios,
+            'users' => $users,
         ];
 
-        return view('admin/postList', $tables);
+        return view('admin/Lista_usuarios', $tables);
     }
 
 
 public function create()
 {
     $parameters = [
-        'titulo' => $_POST['titulo'],
-        'conteudo' => $_POST['conteudo'],
-        'imagem' => $_POST['imagem'],
-        'data' => $_POST['data'],
-        'autor' => $_POST['autor'],
+        'nome' => $_POST['nome'],
+        'email' => $_POST['email'],
+        'senha' => $_POST['senha'],
     ];
 
-    App::get('database')->insert('usuarios', $parameters);
+    App::get('database')->insert('users', $parameters);
 
-    header('Location: /admin');
+    header('Location: /admin/lista_usuarios');
 
     }
 
@@ -41,20 +38,18 @@ public function create()
     {
         $id = $_POST['id'];
 
-        App::get('database')->delete('posts', $id);
+        App::get('database')->delete('users', $id);
 
-        header('Location: /admin/postList');
+        header('Location: /admin/Lista_usuarios');
     }
 
     public function edit(){
         $parameters =[
-            'titulo' => $_POST['titulo'],
-        'conteudo' => $_POST['conteudo'],
-        'imagem' => $_POST['imagem'],
-        'data' => $_POST['data'],
-        'autor' => $_POST['autor'],
+            'nome' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'senha' => $_POST['senha'],
         ];
-        app::get('database')-> edit('usuarios', $_POST['id'], $parameters);
+        app::get('database')-> edit('users', $_POST['id'], $parameters);
         header('Location: /admin/lista_usuarios');
 
         }
