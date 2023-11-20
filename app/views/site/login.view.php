@@ -47,7 +47,7 @@
             <label for="Senha">Digite a sua senha</label>
             <div class="icons">
               <i class="fa fa-eye"></i>
-              <input type="password" name="Senha" placeholder="Senha">
+              <input type="password" name="password" placeholder="Senha">
             </div>
 
           </div>

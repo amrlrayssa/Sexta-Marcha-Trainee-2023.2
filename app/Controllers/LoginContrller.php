@@ -1,3 +1,5 @@
+<?php
+
 namespace App\Controllers;
 
 use App\Core\App;
@@ -9,32 +11,31 @@ class LoginController
     public function view()
     {
 
-        return view('views/site/login');
+        return view('login');
     }
     public function confirmaLogin()
     {
-
         $email = $_POST["login"];
         $password = $_POST["password"];
 
-        $logado = App::get('database')->login('users', $email, $password);
+        $JaLagdo = app::get('database')->login('users', $email, $password);
 
-        if($logado){
+        if ($JaLagdo) {
             session_start();
             $_SESSION['logado'] = true;
-            header('Location: /');
-        } else { 
+            header('Location /');
+        } else {
             $erro = [
-                'erro' => "Usuário ou senha inválidos",
-            ] ;
-            return view('views/site/login', $erro);
+                'erro' => "Senha invalida",
+            ];
+            return view('login', $erro);
         }
-
     }
-
-public function logout(){
-    session_start();
-    session_destroy();
-    header('Location: /');
+    public function logout()
+    {
+        session_start();
+        session_destroy();
+        header('Location: /');
+    }
 }
-}
+?>
