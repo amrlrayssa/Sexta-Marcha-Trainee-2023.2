@@ -13,9 +13,9 @@ use App\Core\Router;
     $router->post('admin/lista_usuarios/delete', 'AdminController@delete');
     $router->post('admin/lista_usuarios/update', 'AdminController@edit');
 
-    $router->get('views', 'LoginController@view');
+    $router->get('login', 'LoginController@view');
     $router->post('views', 'LoginController@confirmaLogin');
-    $router->post('logou', 'LoginController@logou');
+    $router->post('logout', 'LoginController@logout');
 
 
 ?>

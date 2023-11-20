@@ -32,8 +32,9 @@ class LoginController
 
     }
 
-public function logou(){
+public function logout(){
     session_start();
     session_destroy();
     header('Location: /');
+}
 }
