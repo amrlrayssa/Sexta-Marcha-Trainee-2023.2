@@ -24,7 +24,7 @@
                 <button type="button" class="btn btn-outline-warning" id="openCreatPost"><b>Criar Usuário</b></button>
                 <button type="button" class="button2" id="openCreatPostM"><b>+</b></button>
             </div>
-    
+            
             <div class="tabela">
                 <table class="tb">
                     <thead>
@@ -38,11 +38,11 @@
                 </table>
                 <table class="tbb">
                     <tbody>
-
+                    <?php foreach($users as $user): ?> 
                         <tr>
-                            <th class="t1th">1</th>
-                            <td class="t1_5th">Felipe Nogueira</td>
-                            <td class="t2th">felipe.nogueira@sextamarcha</td>
+                            <th class="t1th"><?php echo $user->id ?></th>
+                            <td class="t1_5th"><?php echo $user->nome ?></td>
+                            <td class="t2th"><?php echo $user->email ?></td>
                             <td class="t3th"><button type="button" class="btn btn-outline-light" id="openVerPost">Visualizar</button><button
                                     type="button" class="btn btn-outline-info" id="openEditPost">Editar</button><button type="button"
                                     class="btn btn-outline-danger" id="openRmvPost">Excluir</button></td>
@@ -51,35 +51,11 @@
                             <td class="t3th-icons"><button type="button" class="btn btn-outline-light" id="openVerPostM"><ion-icon name="eye-outline"></ion-icon></button><button
                                     type="button" class="btn btn-outline-info" id="openEditPostM"><ion-icon name="pencil-outline"></ion-icon></button><button type="button"
                                     class="btn btn-outline-danger" id="openRmvPostM"><ion-icon name="trash-outline"></ion-icon></button></td>
-                        </tr>
-                        <tr>
-                            <th class="t1th">2</th>
-                            <td class="t1_5th">Breno Furtado</td>
-                            <td class="t2th">breno.furtado@sextamarcha</td>
-                            <td class="t3th"><button type="button" class="btn btn-outline-light" id="view">Visualizar</button><button
-                                    type="button" class="btn btn-outline-info" id="edit">Editar</button><button type="button"
-                                    class="btn btn-outline-danger">Excluir</button></td>
-    
-                                    <!--Icons-->
-                                    <td class="t3th-icons"><button type="button" class="btn btn-outline-light" id="view"><ion-icon name="eye-outline"></ion-icon></button><button
-                                        type="button" class="btn btn-outline-info" id="edit"><ion-icon name="pencil-outline"></ion-icon></button><button type="button"
-                                        class="btn btn-outline-danger"><ion-icon name="trash-outline"></ion-icon></button></td>
-                        </tr>   
-                        <tr>
-                            <th class="t1th">3</th>
-                            <td class="t1_5th">Davi Pacheco</td>
-                            <td class="t2th">davi.pacheco@sextamarcha</td>
-                            <td class="t3th"><button type="button" class="btn btn-outline-light" id="view">Visualizar</button><button
-                                    type="button" class="btn btn-outline-info" id="edit">Editar</button><button type="button"
-                                    class="btn btn-outline-danger">Excluir</button></td>
-    
-                                    <!--Icons-->
-                                    <td class="t3th-icons"><button type="button" class="btn btn-outline-light" id="view"><ion-icon name="eye-outline"></ion-icon></button><button
-                                        type="button" class="btn btn-outline-info" id="edit"><ion-icon name="pencil-outline"></ion-icon></button><button type="button"
-                                        class="btn btn-outline-danger"><ion-icon name="trash-outline"></ion-icon></button></td>
-                        </tr>
+                    </tr>
+                    <?php endforeach ?>
                     </tbody>
                 </table>
+                
             </div>
         </div>
         <?php foreach($users as $user): ?> 
@@ -115,7 +91,7 @@
                 </div>
     
             </form>
-        
+          
         </div>
     <div class = "modal" id = "modal_edicao">
 
