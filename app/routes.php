@@ -4,18 +4,13 @@ namespace App\Controllers;
 use App\Controllers\ExampleController;
 use App\Core\Router;
 
-    $router->get('', 'ExampleController@index');
 
+    //Lista de posts
+    $router->get('admin/ldp', 'AdminController@view');
+    $router->post('admin/ldp/create','AdminController@create');
+    $router->post('admin/ldp/delete','AdminController@delete');
+    $router->post('admin/ldp/update','AdminController@edit');
 
-    $router->get('admin', 'AdminController@view');
-
-    $router->post('admin/lista_usuarios/create', 'AdminController@create');
-    $router->post('admin/lista_usuarios/delete', 'AdminController@delete');
-    $router->post('admin/lista_usuarios/update', 'AdminController@edit');
-
-    $router->get('views', 'LoginController@view');
-    $router->post('views', 'LoginController@confirmaLogin');
-    $router->post('logou', 'LoginController@logou');
 
 
 ?>

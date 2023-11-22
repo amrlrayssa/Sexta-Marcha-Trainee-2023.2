@@ -29,9 +29,9 @@ class QueryBuilder
         }
     }
 
-    public function insert($table,  $parameters){
+    public function insert($table, $parameters){
         $sql = sprintf(
-        'INSERT INFO %s (%s) value (%s)', 
+        'INSERT INTO %s (%s) value (%s)', 
         $table, implode(', ', array_keys($parameters)),
          ':' . implode(', :', array_keys($parameters))
         );
@@ -46,34 +46,33 @@ class QueryBuilder
         }
     }
 
-    public function delete($table, $id){
+    public function delete($table, $id)
+    {
         $sql = sprintf(
-            'DELETE FROM  %s WHERE %s value', 
-            $table, 
-            'id = id'
-            );
-            try {
-                $stmt = $this->pdo->prepare($sql);
-                $stmt->execute(compact('id'));
-    
-    
-            } catch (Exception $e) {
-                die($e->getMessage());
-            }
-        
+            'DELETE FROM %s WHERE %s',
+            $table,
+            'id = :id'
+        );
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(compact('id'));
+
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
-    public function edit($table, $id, $parameters){
+    public function edit($table, $id,$parameters){
         $sql = sprintf(  
-            'UPDATE %s SET  WHERE %s',
+            'UPDATE %s SET %s WHERE %s',
             $table,
             implode(', ', array_map(function ($parameters){
-               
-              return "{$parameters} = :{$parameters}";
+                return "{$parameters} = :{$parameters}";
             }, array_keys($parameters))),
             'id = :id'
         );
-        $parameters['$id'] = $id;
+        $parameters['id'] = $id;
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
@@ -83,6 +82,7 @@ class QueryBuilder
             die($e->getMessage());
         }
     
+        header('Location: /admin/ldp');
     }
 
     function login($table, $email, $password)
