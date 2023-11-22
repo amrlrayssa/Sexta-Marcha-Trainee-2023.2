@@ -8,14 +8,14 @@ use Exception;
 class langpageController{
 
     public function view(){
-        $posts = App::get('database')->selecAll('posts');
-        $users = App::get('database')->selecAll('users');
+        $post = App::get('database')->selectAll('post');
+        $users = App::get('database')->selectAll('users');
 
         $tables = [
-            'posts' => $posts,
+            'post' => $post,
             'users' => $users,
         ];
-        return view('landing_page', compact('users', 'posts'));
+        return view('/site/landing_page', compact('users', 'post'));
 
     }
 }
