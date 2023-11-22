@@ -1,3 +1,4 @@
+<?php
 namespace App\Controllers;
 
 use App\Core\App;
@@ -9,7 +10,7 @@ class LoginController
     public function view()
     {
 
-        return view('views/site/login');
+        return view('/site/login');
     }
     public function confirmaLogin()
     {
@@ -27,7 +28,7 @@ class LoginController
             $erro = [
                 'erro' => "Usuário ou senha inválidos",
             ] ;
-            return view('views/site/login', $erro);
+            return view('/site/login', $erro);
         }
 
     }
