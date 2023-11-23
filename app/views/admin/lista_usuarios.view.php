@@ -17,12 +17,13 @@
 </head>
 
 <body>
+    <div class="filter" id ="filtro"></div> 
     <div class="page" id="page">
         <div class="container">
             <div class="cardtitle">
                 <b class="p">Lista de Usuários</b>
-                <button type="button" class="btn btn-outline-warning" id="openCreatPost"><b>Criar Usuário</b></button>
-                <button type="button" class="button2" id="openCreatPostM"><b>+</b></button>
+                <button type="button" class="btn btn-outline-warning" id="openCreatPost"onclick="openmodal('modal')"><b>Criar Usuário</b></button>
+                <button type="button" class="button2" id="openCreatPostM" onclick="openmodal('modal')"><b>+</b></button>
             </div>
             
             <div class="tabela">
@@ -43,83 +44,46 @@
                             <th class="t1th"><?php echo $user->id ?></th>
                             <td class="t1_5th"><?php echo $user->nome ?></td>
                             <td class="t2th"><?php echo $user->email ?></td>
-                            <td class="t3th"><button type="button" class="btn btn-outline-light" id="openVerPost">Visualizar</button><button
-                                    type="button" class="btn btn-outline-info" id="openEditPost">Editar</button><button type="button"
-                                    class="btn btn-outline-danger" id="openRmvPost">Excluir</button></td>
+
+                            <td class="t3th"><button type="button" class="btn btn-outline-light" id="openVerPost"onclick="openmodal('modal_ver<?= $user->id?>')">Visualizar</button><button
+                                    type="button" class="btn btn-outline-info" id="openEditPost" onclick="openmodal('modal_edicao<?= $user->id?>')">Editar</button><button type="button"
+                                    class="btn btn-outline-danger" id="openRmvPost"onclick="openmodal('modal_rmv<?= $user->id?>')">Excluir</button></td>
     
                             <!--Icons-->
-                            <td class="t3th-icons"><button type="button" class="btn btn-outline-light" id="openVerPostM"><ion-icon name="eye-outline"></ion-icon></button><button
-                                    type="button" class="btn btn-outline-info" id="openEditPostM"><ion-icon name="pencil-outline"></ion-icon></button><button type="button"
-                                    class="btn btn-outline-danger" id="openRmvPostM"><ion-icon name="trash-outline"></ion-icon></button></td>
-                    </tr>
-                    <?php endforeach ?>
-                    </tbody>
-                </table>
-                
-            </div>
-        </div>
-        <?php foreach($users as $user): ?> 
-        </div>
-        <div class = "modal" id="modal">
-                    
-            <div class = "ModalHead">
-                <h2 class = "Cadastro-Post" > Criação de Usuários </h2>
-                
-            </div>
-            
-            <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data">
-            
-                <div class = "form-group" >
-                    <label for = "titulo" > nome:</label>
-                    <input type = "text" class = "form-control" id = "nome" name ="<?php echo $user->nome ?>" placeholder = "Digite o seu nome" required>
-                </div>
-    
-                <div class = "form-group" >
-                    <label for = "autor" > email:</label>
-                    <input type = "text" class = "form-control" id = "email" name = "<?php echo $user->email ?>" placeholder = "Digite o seu email" required>
-                </div>
-    
-                <div class = "form-group" >
-                    <label for = "data"> senha:</label>
-                    <input type = "password" class = "form-control" id = "password" name = "<?php echo $user->senha ?>" placeholder = "Digite a sua senha" required style="width: 55%;">
-                </div>
-    
-                
-                <div class = "botoes" >
-                    <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
-                    <button type = "Cancelar" class = "btn btn-primary close Cancelar" > Cancelar </button>
-                </div>
-    
-            </form>
-          
-        </div>
-    <div class = "modal" id = "modal_edicao">
+                            <td class="t3th-icons">
+                                <button type="button" class="btn btn-outline-light" id="openVerPostM"onclick= "openmodal('modal_ver<?= $user->id?>')">👁</button>
+                                <button type="button" class="btn btn-outline-info" id="openEditPostM" onclick="openmodal('modal_edicao<?= $user->id?>')">✎</button>
+                                <button type="button" class="btn btn-outline-danger" id="openRmvPostM"onclick="openmodal('modal_rmv<?= $user->id?>')"><ion-icon name="trash-outline"></ion-icon></button>
+                            </td>
+                        </tr>
+                    <div class = "modal" id = "modal_edicao<?= $user->id?>" >
 
             <div class = "ModalHead">
                 <h2 class = "Cadastro-Post" >Edição de Usuários </h2>
             </div>
             
-            <form action = "processar_cadastro.php" method = "post" enctype = "multipart/form-data">
+            <form action = "/admin/lista_usuarios/update" method = "post" enctype = "multipart/form-data">
             
                 <div class = "form-group" >
                     <label for = "nome" > nome:</label>
-                    <input type = "text" class = "form-control" id = "nome" nome ="<?php echo $user->nome ?>" placeholder = "ediatr nome" required>
+                    <input type = "text" class = "form-control" id = "nome" name ="nome" value ="<?php echo $user->nome ?>" placeholder = "ediatr nome" required>
                 </div>
     
                 <div class = "form-group" >
                     <label for = "autor" > email:</label>
-                    <input type = "text" class = "form-control" id = "email" name = "<?php echo $user->email ?>" placeholder = "editar email" required>
+                    <input type = "text" class = "form-control" id = "email" name ="email" value = "<?php echo $user->email ?>" placeholder = "editar email" required>
                 </div>
     
                 <div class = "form-group" >
                     <label for = "data"> Senha </label>
-                    <input type = "password" class = "form-control" id = "password" senha = "<?php echo $user->password ?>" placeholder = "editar senha" required style="width: 70%;">
+                    <input type = "password" class = "form-control" id = "password" name ="senha" value = "<?php echo $user->password ?>" placeholder = "editar senha" required style="width: 70%;">
+                    <input hidden name="id" value = "<?= $user->id?>">
                 </div>
     
             
                 <div class = "botoes" >
                     <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
-                    <button type = "Cancelar" class = "btn btn-primary closeEdit Cancelar" > Cancelar </button>
+                    <button type = "button" class = "btn btn-primary closeEdit Cancelar"onclick="closemodal('modal_edicao<?= $user->id?>')" > Cancelar </button>
                 </div>
     
             </form>
@@ -127,10 +91,12 @@
         
     </div>
     
-    <div class = "modal" id = "modal_rmv">
-                    
+    <div class = "modal" id = "modal_rmv<?= $user->id?>">
+
+          
         <div class = "ModalHead">
-            <h2 class = "Cadastro-Post excluir_post" > Excluir Usuários </h2>
+
+            <h2 class = "" > Excluir Usuários </h2>
         </div>
         
             <div class = "warning" >
@@ -138,18 +104,20 @@
             </div>
             
             <div class = "botoes" >
-                <button type = "excluir" class = "btn btn-primary" id = "excluir" > Excluir </button>
-                <button type = "Cancelar" class = "btn btn-primary closeRmv Cancelar" > Cancelar </button>
+                <button type = "excluir" class = "btn btn-primary" id = "excluir" onclick="excluir()" > Excluir </button>
+                <button type = "button" class = "btn btn-primary closeRmv Cancelar"onclick="closemodal('modal_rmv<?= $user->id?>')" > Cancelar </button>
+                <form id="excluirForm<?= $user->id?>" action = "/admin/lista_usuarios/delete" method = "post" enctype = "multipart/form-data">
+                <input hidden name="id" value= "<?= $user->id?>">
+                </form> 
+                
+
             </div>
 
-    </div>
+                    </div>
 
-    <div class = "modal" id="modal_ver">
+    <div class = "modal" id="modal_ver<?= $user->id?>">
 
-        
-           
-               
-
+    
         <div class = "ModalHead">
             <h2 class = "Cadastro-Post" > Visualizar Usuários </h2>
             
@@ -171,14 +139,53 @@
     
             <div class = "botoes" >
                 <button class = "btn btn-primary  bt_Visu "  id = "Salvar" > Salvar </button>
-                <button class = "btn btn-primary closever Cancelar bt_Visu" > Cancelar </button>
+                <button type="button" class = "btn btn-primary closever Cancelar bt_Visu" onclick="closemodal('modal_ver<?= $user->id?>')"> Cancelar </button>
             </div>
-            <?php endforeach ?>
-    
-        </form>
     
     </div>
 
+                    <?php endforeach ?>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+        
+        </div>
+        <div class = "modal" id="modal">
+                    
+            <div class = "ModalHead">
+                <h2 class = "Cadastro-Post" > Criação de Usuários </h2>
+                
+            </div>
+            
+            <form action = "/admin/lista_usuarios/create" method = "post" enctype = "multipart/form-data">
+            
+                <div class = "form-group" >
+                    <label for = "titulo" > nome:</label>
+                    <input type = "text" class = "form-control" id = "nome" name ="nome" placeholder = "Digite o seu nome" required>
+                </div>
+    
+                <div class = "form-group" >
+                    <label for = "autor" > email:</label>
+                    <input type = "text" class = "form-control" id = "email" name = "email" placeholder = "Digite o seu email" required>
+                </div>
+    
+                <div class = "form-group" >
+                    <label for = "data"> senha:</label>
+                    <input type = "password" class = "form-control" id = "senha" name = "senha" placeholder = "Digite a sua senha" required style="width: 55%;">
+                </div>
+    
+                
+                <div class = "botoes" >
+                    <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
+                    <button type = "button" class = "btn btn-primary close Cancelar"onclick="closemodal('modal')" > Cancelar </button>
+                </div>
+    
+            </form>
+          
+        </div>
+    
 
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -187,5 +194,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script> 
+        function excluir(){
+            document.getElementById('excluirForm<?= $user->id?>').submit();
+        }
 
+    </script>
 </html>

@@ -20,17 +20,20 @@ class AdminController
     }
 
 
-public function create()
-{
-    $parameters = [
+    public function create()
+        
+    {
+
+        $parameters = [
         'nome' => $_POST['nome'],
         'email' => $_POST['email'],
         'senha' => $_POST['senha'],
-    ];
 
-    App::get('database')->insert('users', $parameters);
+        ];
 
-    header('Location: /admin/lista_usuarios');
+        App::get('database')->insert('users', $parameters);
+
+        header('Location: /admin/lista_usuarios');
 
     }
 
@@ -40,19 +43,26 @@ public function create()
 
         App::get('database')->delete('users', $id);
 
-        header('Location: /admin/Lista_usuarios');
+        header('Location: /admin/lista_usuarios');
     }
 
     public function edit(){
+            // echo $_POST['id'];
+            // die();
+
         $parameters =[
+
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
+
         ];
         app::get('database')-> edit('users', $_POST['id'], $parameters);
         header('Location: /admin/lista_usuarios');
 
+
         }
+        
 }
 
 ?>

@@ -29,9 +29,11 @@ class QueryBuilder
         }
     }
 
-    public function insert($table,  $parameters){
+    
+    
+    public function insert($table, $parameters,){
         $sql = sprintf(
-        'INSERT INFO %s (%s) value (%s)', 
+        'INSERT INTO %s (%s) VALUES (%s)', 
         $table, implode(', ', array_keys($parameters)),
          ':' . implode(', :', array_keys($parameters))
         );
@@ -48,9 +50,9 @@ class QueryBuilder
 
     public function delete($table, $id){
         $sql = sprintf(
-            'DELETE FROM  %s WHERE %s value', 
+            'DELETE FROM  %s WHERE %s', 
             $table, 
-            'id = id'
+            'id = :id'
             );
             try {
                 $stmt = $this->pdo->prepare($sql);
@@ -65,7 +67,7 @@ class QueryBuilder
 
     public function edit($table, $id, $parameters){
         $sql = sprintf(  
-            'UPDATE %s SET  WHERE %s',
+            'UPDATE %s SET %s  WHERE %s',
             $table,
             implode(', ', array_map(function ($parameters){
                
@@ -73,7 +75,7 @@ class QueryBuilder
             }, array_keys($parameters))),
             'id = :id'
         );
-        $parameters['$id'] = $id;
+        $parameters['id'] = $id;
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
