@@ -30,10 +30,10 @@ class AdminController
         ];
 
         App::get('database')->insert('posts', $parameters);
-
+ 
         header('Location: /admin/ldp');
-
-    }
+ 
+    } 
 
     public function delete()
     {

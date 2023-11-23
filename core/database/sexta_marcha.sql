@@ -107,9 +107,9 @@ ALTER TABLE `users`
 --
 
 --
--- Restrições para tabelas `post`
+-- Restrições para tabelas `posts`
 --
-ALTER TABLE `post`
+ALTER TABLE `posts`
   ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`autor`) REFERENCES `users` (`id`);
 COMMIT;
 

@@ -84,7 +84,7 @@
     
                 <div class = "form-group">
                     <label for = "conteudo" id = "label-centered" > Conteudo:</label>
-                    <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 70%; width: 70%;">value="<?php echo $post->conteudo ; ?>"</textarea>
+                    <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 70%; width: 70%;"><?php echo $post->conteudo ; ?></textarea>
                 </div>
     
                 <div class = "form-group" id = "Imagem" >
@@ -93,6 +93,7 @@
                 </div>
                 
                 <div class = "botoes" >
+                    <input hidden name="id" value="<?= $post->id ?>" >
                     <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
                     <button type = "button" class = "btn btn-primary closeEdit Cancelar" onclick="closemodal('modal_edicao<?=$post->id ?>')" > Cancelar </button>
                 </div>
@@ -111,12 +112,13 @@
             <div class = "warning" >
                 <h3>Atenção, uma vez que essa ação for concluida, não é possivel desfazê-la! <p>Tem certeza que deseja excluir esse post?</p></h3>
             </div>
-            <form action = "/admin/ldp/delete" method = "post" enctype = "multipart/form-data">
-                <div class = "botoes" >
-                    <button class = "btn btn-primary" type="submit" id = "excluir" > Excluir </button>
-                    <button type = "button" class = "btn btn-primary closeRmv Cancelar" onclick="closemodal('modal_rmv<?=$post->id ?>')" > Cancelar </button>
-                </div>
-            </form>
+            <div class = "botoes" >
+                <button class = "btn btn-primary" type="submit" id = "excluir" onclick="excluir()" > Excluir </button>
+                <button type = "button" class = "btn btn-primary closeRmv Cancelar" onclick="closemodal('modal_rmv<?=$post->id ?>')" > Cancelar </button>
+                <form id="excluir_form<?= $post->id ?>" action = "/admin/ldp/delete" method = "post" enctype = "multipart/form-data">
+                    <input hidden name="id" value="<?= $post->id ?>">
+                </form>
+            </div>
 
     </div>
     
@@ -202,6 +204,11 @@
                 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
                 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
                 <script src="/public/js/modal.js"></script>
+                <script>
+                    function excluir(){
+                        document.getElementById('excluir_form<?= $post->id ?>').submit();
+                    }
+                </script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
