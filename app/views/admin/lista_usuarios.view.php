@@ -127,14 +127,14 @@
         
             <div class = "form-group" >
                 <label for = "nome" > Nome:</label>
-                <input type = "text"  id = "nome" name ="nome" value="<?php echo $user->nome ?>" readonly class = "text-view"
-                >
+                <p><?php echo $user->nome; ?> </p>
+                
             </div>
     
             <div class = "form-group" >
                 <label for = "email" > Email:</label>
-                <input type = "text" id = "email" name = "email" value= "<?php echo $user->email ?>" readonly class = "text-view"
-                >
+                <p> <?php echo $user->email; ?> <p>
+                
             </div>
     
             <div class = "botoes" >
