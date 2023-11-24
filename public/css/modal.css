@@ -140,6 +140,7 @@ textarea {
 .botoes {
     font-size: 15px;
     text-align: right;
+    margin-top: 20px;
 
 }
 
@@ -206,6 +207,9 @@ textarea {
     color: #c60000; 
     background-color: #ccc;
     font-size: 16px;
+}
+.text{
+  color: #831C21; 
 }
 
 @media only screen and (min-width: 920px) {

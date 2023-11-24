@@ -81,7 +81,7 @@
                 </div>
     
             
-                <div class = "botoes" >
+                <div class = "botoes">
                     <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
                     <button type = "button" class = "btn btn-primary closeEdit Cancelar"onclick="closemodal('modal_edicao<?= $user->id?>')" > Cancelar </button>
                 </div>
@@ -96,14 +96,14 @@
           
         <div class = "ModalHead">
 
-            <h2 class = "" > Excluir Usuários </h2>
+            <h2 class = "text" > Excluir Usuários </h2>
         </div>
         
             <div class = "warning" >
                 <h3>Atenção, uma vez que essa ação for concluida, não é possivel desfazê-la! <p>Tem certeza que deseja excluir esse Usuário?</p></h3>
             </div>
             
-            <div class = "botoes" >
+            <div class = "botoes">
                 <button type = "excluir" class = "btn btn-primary" id = "excluir" onclick="excluir()" > Excluir </button>
                 <button type = "button" class = "btn btn-primary closeRmv Cancelar"onclick="closemodal('modal_rmv<?= $user->id?>')" > Cancelar </button>
                 <form id="excluirForm<?= $user->id?>" action = "/admin/lista_usuarios/delete" method = "post" enctype = "multipart/form-data">
