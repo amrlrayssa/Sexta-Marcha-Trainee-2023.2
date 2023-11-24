@@ -12,27 +12,31 @@ class LoginController
 
         return view('/site/login');
     }
-    public function confirmaLogin()
-    {
+    public function login(){
 
-        $email = $_POST["login"];
-        $password = $_POST["password"];
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
+    
+    $usuarioAutenticado = App::get('database')->login('users', $email, $senha);
 
-        $logado = App::get('database')->login('users', $email, $password);
+    if ($usuarioAutenticado) {
+        session_start();
+        $_SESSION['logado'] = true;
 
-        if($logado){
-            session_start();
-            $_SESSION['logado'] = true;
-            header('Location: /');
-        } else { 
-            $erro = [
-                'erro' => "Usuário ou senha inválidos",
-            ] ;
-            return view('/site/login', $erro);
-        }
 
+        header('Location: /admin_dashboard');
+    } else {    
+        $erro = [
+            'erro' => "Usuário ou senha inválidos",
+        ];
+        return view('/site/login', $erro);
     }
+}
 
+//está encerrando a sessão do usuário (por meio de session_destroy()) 
+//e redirecionando-o para a página inicial (por meio de header('Location: /')).
+// Isso é típico em processos de logout para garantir que qualquer informação de sessão relacionada ao usuário seja removida,
+// e o usuário seja direcionado para uma página específica após o logout.
 public function logout(){
     session_start();
     session_destroy();

@@ -14,8 +14,11 @@ use App\Core\Router;
     $router->post('admin/lista_usuarios/update', 'AdminController@edit');
 
     $router->get('login', 'LoginController@view');
-    $router->post('views', 'LoginController@confirmaLogin');
+    $router->post('logon', 'LoginController@login');
     $router->post('logout', 'LoginController@logout');
+
+    $router -> get('admin_dashboard', 'dashboardController@view');
+
 
 
 ?>
