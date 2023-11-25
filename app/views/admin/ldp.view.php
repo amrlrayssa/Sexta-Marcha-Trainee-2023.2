@@ -1,7 +1,6 @@
 <?php
 
     namespace App\Controllers;
-    
 
 ?>
 
@@ -50,10 +49,10 @@
                         <th class="t1th"><?php echo $post->id ?></th>
                         <td class="t2th"><?php echo $post->titulo ?></td>
                         <td class="t3th">
-                            <button type="button" class="btn btn-outline-light btnd" id="openVerPost" onclick="openmodal('modal_ver<?=$post->id ?>')">Visualizar</button>
+                            <button type="button" class="btn btn-outline-light btnd" id="openVerPost" onclick="openmodale('modal_ver<?=$post->id ?>')">Visualizar</button>
                             <button type="button" class="btn btn-outline-info btnd" id="openEditPost" onclick="openmodal('modal_edicao<?=$post->id ?>')">Editar</button>
                             <button type="button"class="btn btn-outline-danger btnd" id="openRmvPost" onclick="openmodal('modal_rmv<?=$post->id?>')">Excluir</button>
-                            <button type="button" class="btn btn-outline-light btnr" id="openVerPostM" onclick="openmodal('modal_ver<?=$post->id ?>')">👁</button>
+                            <button type="button" class="btn btn-outline-light btnr" id="openVerPostM" onclick="openmodale('modal_ver<?=$post->id ?>')">👁</button>
                             <button type="button" class="btn btn-outline-info btnr" id="openEditPostM" onclick="openmodal('modal_edicao<?=$post->id?>')">✎</button>
                             <button type="button"class="btn btn-outline-danger btnr" id="openRmvPostM" onclick="openmodal('modal_rmv<?=$post->id?>')"><ion-icon name="trash-outline"></ion-icon></button>
                         </td>
@@ -127,23 +126,31 @@
             <h2 class = "Cadastro-Post" > Visualizar Post </h2>
             
         </div>
-            
-            <div class = "form-group" >
-                <p><?php echo $post->titulo; ?></p>
-            </div>
-    
-            <div class = "form-group" >
-                <p><?php echo $post->autor; ?></p>
-            </div>
-    
-            <div class = "form-group" >
-                <p><?php echo $post->data; ?></p>
-            </div>
-    
-            <div class = "form-group">
-                <p><?php echo $post->conteudo; ?></p>
-            </div>
-    
+                <div class = "modal_ver_conteudo" >
+                    <h3>Titulo:</h3>
+                    <p><?php echo $post->titulo; ?></p>
+                </div>
+        
+                <div class = "modal_ver_conteudo" >
+                    <h3>Autor:</h3>
+                    <p><?php echo $post->autor; ?></p>
+                </div>
+        
+                <div class = "modal_ver_conteudo" >
+                    <h3>Data:</h3>
+                    <p><?php echo $post->data; ?></p>
+                </div>
+        
+                <div class = "modal_ver_conteudo">
+                    <h3>Conteudo:</h3>
+                    <p><?php echo $post->conteudo; ?></p>
+                </div>
+
+                    <div class="modal_ver_conteudo_img">
+                        <h3>Imagem:</h3>
+                        <img src="/<?php echo $post->imagem; ?>" alt="">
+                    </div>
+
         
             
             <div class = "botoes" >
