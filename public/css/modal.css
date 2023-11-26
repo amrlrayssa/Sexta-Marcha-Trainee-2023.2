@@ -1,5 +1,5 @@
 .modal {
-    width: 45%;
+    width: 50%;
     height: fit-content;
     background-color: #fff;
     position: fixed;
@@ -132,10 +132,15 @@ textarea {
 .botoes {
     font-size: 15px;
     text-align: right;
-    /* margin-top: 20px; */
-    margin-left: 30px;
+     margin-top: 20px;
+    /* margin-left: 50px; */
 }
-
+.senha input{
+    height: 47px;
+}
+.senhaEdit input{
+    width: 30px;
+}
 .botoes btn btn-primary {
     font-size: 15px;
     text-align: right;
@@ -145,9 +150,6 @@ textarea {
      margin-top: 20px; 
 }
 
-
-
-/* Estilos para a imagem de fundo */
 #Imageme {
     background: #f2f2f2;
     padding: 20px;
@@ -172,11 +174,6 @@ textarea {
 #modal_rmv {
     margin-top: 10%;
     height: fit-content;
-}
-
-.senha input {
-    width: 800px;
-    height: 50px;
 }
 .warning {
     color: #831C21;
@@ -213,10 +210,9 @@ textarea {
 .text{
   color: #831C21; 
 }
-.criacao input{
-    width: 50px;
-    /* height: 40px; */
 
+.form-group input{
+    width: 400px;
 }
 
 @media only screen and (min-width: 920px) {

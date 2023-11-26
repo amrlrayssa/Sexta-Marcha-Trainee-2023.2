@@ -84,7 +84,7 @@ else{
                     <input type = "text" class = "form-control" id = "email" name ="email" value = "<?php echo $user->email ?>" placeholder = "editar email" required>
                 </div>
     
-                <div class = "form-group" >
+                <div class = "form-group senhaEdit" >
                     <label for = "data"> Senha </label>
                      <input type = "password" class = "form-control" id = "password" name ="senha"  value =  ""  placeholder = "editar senha" required style="width: 70%;"> 
                     <input hidden name="id" value = "<?= $user->id?>">
@@ -182,13 +182,13 @@ else{
                     <input type = "text" class = "form-control" id = "email" name = "email" placeholder = "Digite o seu email" required>
                 </div>
     
-                <div class = "form-group  senha" >
+                <div class = "form-group senha" >
                     <label for = "data"> Senha:</label>
-                    <input type = "password" class = "form-control" id = "senha" name = "senha" placeholder = "Digite a sua senha" required style="width: 55%;">
+                    <input type = "password" class = "form-control" id = "senha" name = "senha" placeholder = "Digite a sua senha" required>
                 </div>
     
                 
-                <div class = "botoes" >
+                <div class = "botoes " >
                     <button type = "Salvar" class = "btn btn-primary" id = "Salvar" > Salvar </button>
                     <button type = "button" class = "btn btn-primary close Cancelar"onclick="closemodal('modal')" > Cancelar </button>
                 </div>
