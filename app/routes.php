@@ -15,7 +15,7 @@ use App\Core\Router;
 
     $router->get('login', 'LoginController@view');
     $router->post('logon', 'LoginController@login');
-    $router->post('logout', 'LoginController@logout');
+    $router->get('logout', 'LoginController@logout');
 
     $router -> get('admin_dashboard', 'dashboardController@view');
 

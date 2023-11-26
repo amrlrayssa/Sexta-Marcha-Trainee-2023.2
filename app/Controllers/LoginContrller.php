@@ -37,9 +37,9 @@ class LoginController
 //e redirecionando-o para a página inicial (por meio de header('Location: /')).
 // Isso é típico em processos de logout para garantir que qualquer informação de sessão relacionada ao usuário seja removida,
 // e o usuário seja direcionado para uma página específica após o logout.
-public function logout(){
+    public function logout(){
     session_start();
     session_destroy();
-    header('Location: /');
-}
+    return redirect('login');
+    }
 }

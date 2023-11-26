@@ -1,3 +1,12 @@
+<?php  
+    session_start();
+    if($_SESSION['logado']){
+  }
+else{
+  return redirect('login');
+  }
+ ?>
+
 <!DOCTYPE html>
 
 <html>
@@ -26,19 +35,15 @@
       <i class="fas fa-user mt-2"></i>
       <span>Usuários</span>
     </div>
+    <a  href="/logout">
     <div class="aba">
       <i class="fas fa-sign-out-alt mt-2"></i>
-      <span>LogOut</span> 
-    </div>
+      <span>LogOut</span>
+    </div> </a>
   </div>
   <script src="https://kit.fontawesome.com/4e7ac1064c.js" crossorigin="anonymous">
   </script>
-
-
+  
 </body>
-
-
-
-
 
 </html>
