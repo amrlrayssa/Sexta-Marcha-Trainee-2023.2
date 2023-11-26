@@ -39,9 +39,10 @@
                 </table>
                 <table class="tbb">
                     <tbody>
+                        <?php $cont = 1;?>
                     <?php foreach($users as $user): ?> 
                         <tr>
-                            <th class="t1th"><?php echo $user->id ?></th>
+                            <th class="t1th"><?php echo $cont ?></th>
                             <td class="t1_5th"><?php echo $user->nome ?></td>
                             <td class="t2th"><?php echo $user->email ?></td>
 
@@ -65,18 +66,18 @@
             <form action = "/admin/lista_usuarios/update" method = "post" enctype = "multipart/form-data">
             
                 <div class = "form-group" >
-                    <label for = "nome" > nome:</label>
+                    <label for = "nome" > Nome:</label>
                     <input type = "text" class = "form-control" id = "nome" name ="nome" value ="<?php echo $user->nome ?>" placeholder = "ediatr nome" required>
                 </div>
     
                 <div class = "form-group" >
-                    <label for = "autor" > email:</label>
+                    <label for = "autor" > Email:</label>
                     <input type = "text" class = "form-control" id = "email" name ="email" value = "<?php echo $user->email ?>" placeholder = "editar email" required>
                 </div>
     
                 <div class = "form-group" >
                     <label for = "data"> Senha </label>
-                    <input type = "password" class = "form-control" id = "password" name ="senha" value = "<?php echo $user->password ?>" placeholder = "editar senha" required style="width: 70%;">
+                     <input type = "password" class = "form-control" id = "password" name ="senha"  value =  ""  placeholder = "editar senha" required style="width: 70%;"> 
                     <input hidden name="id" value = "<?= $user->id?>">
                 </div>
     
@@ -143,8 +144,9 @@
             </div>
     
     </div>
-
+                        <?php $cont++; ?>
                     <?php endforeach ?>
+
                     </tbody>
                 </table>
                 
@@ -154,7 +156,7 @@
         </div>
         <div class = "modal" id="modal">
                     
-            <div class = "ModalHead">
+            <div class = "ModalHead criacao" >
                 <h2 class = "Cadastro-Post" > Criação de Usuários </h2>
                 
             </div>
@@ -162,17 +164,17 @@
             <form action = "/admin/lista_usuarios/create" method = "post" enctype = "multipart/form-data">
             
                 <div class = "form-group" >
-                    <label for = "titulo" > nome:</label>
+                    <label for = "titulo" > Nome:</label>
                     <input type = "text" class = "form-control" id = "nome" name ="nome" placeholder = "Digite o seu nome" required>
                 </div>
     
                 <div class = "form-group" >
-                    <label for = "autor" > email:</label>
+                    <label for = "autor" > Email:</label>
                     <input type = "text" class = "form-control" id = "email" name = "email" placeholder = "Digite o seu email" required>
                 </div>
     
-                <div class = "form-group" >
-                    <label for = "data"> senha:</label>
+                <div class = "form-group  senha" >
+                    <label for = "data"> Senha:</label>
                     <input type = "password" class = "form-control" id = "senha" name = "senha" placeholder = "Digite a sua senha" required style="width: 55%;">
                 </div>
     

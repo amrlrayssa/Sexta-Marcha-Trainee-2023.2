@@ -1,5 +1,5 @@
 .modal {
-    width: 40%;
+    width: 45%;
     height: fit-content;
     background-color: #fff;
     position: fixed;
@@ -9,8 +9,8 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     z-index: 3;
+    margin-top: 80px;
 }
-
 
 .modal h2 {
     font-weight: bold;
@@ -46,18 +46,6 @@ textarea {
     cursor: pointer;
     margin-right: 10px;
 }
-
-
-/* Estilos para a imagem de fundo */
-.img {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    background: #d9d9d9;
-    padding: 20px;
-    border-radius: 5px;
-    font-size: 12px;
-}
-
 
 .ModalHead {
     display: flex;
@@ -117,7 +105,11 @@ textarea {
     margin-right: 10px;
 }
 
-/* Estilos para o botão "Cancelar" */
+/* Estilos para o campo de senha no modal de criação */
+.senha input {
+    width: 100%; 
+    height: 50px;
+}
 
 
 /* Estilos para a seção de deleção de posts */
@@ -140,8 +132,8 @@ textarea {
 .botoes {
     font-size: 15px;
     text-align: right;
-    margin-top: 20px;
-
+    /* margin-top: 20px; */
+    margin-left: 30px;
 }
 
 .botoes btn btn-primary {
@@ -150,7 +142,7 @@ textarea {
     
 }
 .bt_Visu{
-    margin-top: 20px;
+     margin-top: 20px; 
 }
 
 
@@ -182,8 +174,10 @@ textarea {
     height: fit-content;
 }
 
-
-
+.senha input {
+    width: 800px;
+    height: 50px;
+}
 .warning {
     color: #831C21;
 }
@@ -196,7 +190,15 @@ textarea {
     color: black;
     font-weight: 400;
 }
-
+.form-group p{
+    font-size: 23px;
+}
+.form-group label{
+    font-size: 25px;
+}
+.ModalHead h2{
+    font-size: 35px;
+}
 .excluir_post {
     font-weight: bold;
     font-size: 28px;
@@ -210,6 +212,11 @@ textarea {
 }
 .text{
   color: #831C21; 
+}
+.criacao input{
+    width: 50px;
+    /* height: 40px; */
+
 }
 
 @media only screen and (min-width: 920px) {
