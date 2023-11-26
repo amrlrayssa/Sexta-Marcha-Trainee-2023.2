@@ -27,15 +27,21 @@ else{
       <i class="fas fa-house-user mt-2"></i>
       <span>Home</span>
     </div>
+    <a class="lpd" href="admin/ldp">
     <div class="aba">
       <i class="fas fa-newspaper mt-2"></i>
       <span>Posts</span>
-    </div>
-    <div class="aba">
+    </div> 
+   </a>
+  
+   <a class="ldu" href="admin/lista_usuarios">
+     <div class="aba">
       <i class="fas fa-user mt-2"></i>
       <span>Usuários</span>
     </div>
-    <a  href="/logout">
+   </a>
+
+    <a class="login" href="/logout">
     <div class="aba">
       <i class="fas fa-sign-out-alt mt-2"></i>
       <span>LogOut</span>
