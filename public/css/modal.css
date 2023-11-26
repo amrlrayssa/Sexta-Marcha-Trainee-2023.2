@@ -136,10 +136,11 @@ textarea {
     /* margin-left: 50px; */
 }
 .senha input{
-    height: 47px;
+    height: 25px;
 }
 .senhaEdit input{
     width: 30px;
+    height: 48px;
 }
 .botoes btn btn-primary {
     font-size: 15px;

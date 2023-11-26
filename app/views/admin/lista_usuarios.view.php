@@ -86,7 +86,7 @@ else{
     
                 <div class = "form-group senhaEdit" >
                     <label for = "data"> Senha </label>
-                     <input type = "password" class = "form-control" id = "password" name ="senha"  value =  ""  placeholder = "editar senha" required style="width: 70%;"> 
+                     <input type = "password" class = "form-control" id = "password" name ="senha"  value =  ""  placeholder = "editar senha" required > 
                     <input hidden name="id" value = "<?= $user->id?>">
                 </div>
     
