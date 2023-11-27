@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <script src = "https://kit.fontawesome.com/46c6a48072.js" crossorigin = "anonymous"></script>
+    <link rel = "preconnect" href="https://fonts.googleapis.com">
+    <link rel = "preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel = "stylesheet">
+    <link rel = "stylesheet" href = "/public/css/PostList.css">
+    <title> SM PostList </title>
+</head>
+<body>
+
+    <div class = "left-side">
+
+        <div class = "header">
+        <div class = "header_plus">
+            <h1>POSTS MAIS RELEVANTES</h1>
+        </div>    
+        <div class="Searchbar">
+            <div class="icons">
+                <i class = "fa-solid fa-magnifying-glass" id = "search-icon"></i>
+                <form id = "search-form" action = "/core/Search_Post.php" method = "GET">
+                    <input type = "text" name = "search" id = "search-input" placeholder = "Search...">
+                    <button type = "submit" style = "display: none;" ></button>
+                </form>
+            </div>
+        </div>
+    
+        <div class = "container">
+    
+          <div class = "Post Post1" >
+              <img class = "imagem" src = "/public/assets/Ayrton-Pensativo.png" />
+
+              <div class = "text-content">
+                    <h2> Tudo sobre o Tricampeonato do Brasileiro </h2>
+                    <p> Ayrton Senna da Silva ONM ComRB CvMA OME foi um piloto de Fórmula 1, empresário e filantropo brasileiro... </p>
+                    <div class = "button-container">
+                        <button class = "LeiaMais" >LER MAIS ></button>
+                    </div>
+
+              </div>
+              
+          </div>
+          
+          <div class = "container">
+    
+            <div class = "Post Post2" >
+                <img class = "imagem" src = "/public/assets/LeClerc-Ferrari.png" id="efeito-imagem"/>
+                
+                <div class = "text-content">
+                      <h2> Ferrari esperançosa após Pole Position </h2>
+                      <p> Charles Leclerc leva a melhor durante treino classificatório para a corrida do Bahrein ao melhorar seu tempo... </p>
+                      <div class = "button-container">
+                          <button class = "LeiaMais" >LER MAIS ></button>
+                      </div>
+  
+                </div>
+                
+            </div>
+        
+        </div>
+      
+    </div>
+
+</div>
+
+    <div class = "right-side" >
+    
+        <div class = "PostFixed" id="efeito-imagem">
+            <div class = "BGRedFixed" >
+              <div class = "LinhaCinza" >
+                <div class = "BGWhite" >
+          
+                    <img class = "AyrtonPodium" src = "/public/assets/ayrton-Podium.png" />
+                    
+                    <div class = "text-fixed">
+                        <p>Senna comemorando ao vencer heroicamente com a Sexta Marcha</p>
+                        <h2> Interlagos, 24/03/1991 </h2>  
+                    </div>  
+                </div>
+            </div>
+          </div>
+      </div>
+  
+    </div> 
+            
+            <!-- Fazendo o Icone de Botão de Pesquisa -->
+    <script>
+        document.getElementById('search-icon').addEventListener('click', function() {
+            document.getElementById('search-form').submit();
+        });
+    </script>
+
+</body>
+
+</html>
+

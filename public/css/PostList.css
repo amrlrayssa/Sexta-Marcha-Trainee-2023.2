@@ -1,0 +1,341 @@
+*{
+    margin: 0%;
+    margin-bottom: 0px;
+    padding: 0;
+    border: 0;
+    box-sizing: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    background-image: url(/public/assets/309862.png);
+    background-repeat: repeat;
+    background-color: #d9d9d9;
+    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.right-side {
+    flex: 0.75;
+    padding: 20px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-side {
+    flex: 1;
+    padding: 20px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-side, .right-side{
+    margin-bottom: 15px;
+}
+
+.header{
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.header_plus{
+    display: inline-block;
+    padding-bottom: 10px;
+    background-color: #831c21;
+    color:white;
+    font-size: 20px; 
+    font-weight: 700;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 50px;
+    border-radius: 60px;
+    /*margin-left: 10px;*/
+}
+
+.Searchbar {
+    width: 100%;
+    margin-left: 2%;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+  
+ .Searchbar .icons {
+    position: relative;
+    width: 93%;
+  }
+  
+.Searchbar .icons i {
+    position: absolute;
+    right: 1px; 
+    top: 25px; 
+    transform: translateY(-50%); 
+    color: #FFFFFF; 
+    font-size: 24px; 
+    z-index: 1;
+  }
+  
+  .Searchbar .icons input {
+    padding-right: 1px; /* Espaço para o ícone */
+    padding-left: 20px; /* Espaço para o texto */
+    align-items: center;
+    display: flex;
+    width: 100%; /* ajusta automaticamente à largura */
+    height: 46px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #831c21;
+    /*background: rgba(131, 28, 33, 0.98);*/
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+    border: 1px solid #d9d9d9;
+    border-radius: 40px;
+    color: white; 
+    font-size: 18px; 
+  }
+
+  .Searchbar .icons input:focus {
+    border: 1px solid #ffffff; /* Cor da borda ao receber foco */
+  }
+  
+  .Searchbar .icons input::placeholder {
+    color: #d9d9d9;
+    font-size: 18px;
+  }
+  
+  .Searchbar .icons input:hover {
+    cursor: pointer;
+    background-color: #420e11;
+    transition: 0.2s;  
+  }
+
+  .left-side .Post {
+    width: 93%;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    background: white;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 1%; /* Adiciona algum espaço entre a imagem e o texto */
+    margin-left: 2%;
+    z-index: 1;
+    opacity: 1;
+    cursor: pointer;
+    filter: brightness(90%);
+    transition: filter 0.3s ease;
+}
+
+.Post:hover {
+    border: 2px solid #831c21;
+    opacity: 1;
+    transform: scale(1.03); 
+    filter: none;
+    transition: 0.5s;
+}
+
+.Post2{
+    margin-top: 30px;
+}
+
+.Post .imagem {
+    width: 35%;
+    height: 200px;
+    border-radius: 10px; 
+}
+
+.left-side .Post .text-content {
+    width: 65%; 
+    height: 100%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.left-side .Post h2 {
+    width: 100%;
+    color: #C60000;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px; 
+    padding-left: 10px;
+}
+
+.left-side .Post p {
+    width: 80%;
+    text-align: justify;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    /*margin-top: 5px;  Reduza a margem superior entre o título e o parágrafo */
+    margin-bottom: 15px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container .LeiaMais {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #C60000;
+    color: #ffffff;
+    border: none;
+    border-radius: 17px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.button-container .LeiaMais:hover{
+    background-color: #831c21;
+    transition: 0.5s;   
+}
+
+.right-side .PostFixed{
+    width: 60%;
+    border-radius: 30px;
+}
+
+.right-side .PostFixed .BGRedFixed{
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #C60000; 
+    box-shadow: 10px 10px 4px 2px rgba(0, 0, 0, 0.25); 
+    border-radius: 30px;
+    padding: 2% 2% 2% 2%;
+    opacity: 1;
+    cursor: pointer;
+    filter: brightness(90%);
+    transition: filter 0.3s ease;
+}
+
+.right-side .PostFixed .BGRedFixed:hover {
+    border: 2px solid #831c21;
+    opacity: 1;
+    transform: scale(1.03); 
+    filter: none;
+    transition: 0.5s;
+}
+
+.right-side .PostFixed .LinhaCinza{
+    width: 100%; 
+    background: #d9d9d9; 
+    background-image: url(/public/assets/309862.png);
+    background-repeat: repeat;
+    border-radius: 30px;
+    padding: 2% 2% 2% 2%;
+}
+
+.right-side .PostFixed .BGWhite{
+    width: 100%; 
+    background: rgba(255, 255, 255, 0.60);
+    border-radius: 30px;
+}
+
+.right-side .PostFixed .AyrtonPodium{
+    width: 100%;
+    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/ 
+    color: black;
+    border-radius: 30px 30px 0 0;
+}
+
+.right-side .PostFixed .BGWhite .text-fixed{
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: #C60000;
+    text-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.text-fixed p{
+    width: 100%;
+    text-align: center; 
+    color: black; 
+    font-size: 16px; 
+    font-weight: 500; 
+}
+
+.text-fixed h2{
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+
+/* ----- Fold ----- */
+@media screen and (max-width: 300px) {
+    .header_plus{
+        font-size: 12px;
+    }
+    .Post .imagem{
+        height: auto;
+        width: 60%;
+    }
+    .left-side .Post h2{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .right-side {
+        flex-wrap: wrap;
+    }
+    body{
+        flex-direction: column;
+    }
+    .Post .imagem{
+        height: 100px;
+        /*width: 40%;*/
+    }
+    .header_plus{
+        font-size: 16px;
+    }
+    .PostFixed h2{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .left-side .Post {
+        flex-direction: column;
+    }
+    .Post .imagem{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .Post .imagem{
+        height: 120px;
+    }
+}
+
+
+
+
+
+
+  
