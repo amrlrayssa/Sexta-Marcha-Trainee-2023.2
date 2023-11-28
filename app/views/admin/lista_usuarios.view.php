@@ -26,6 +26,7 @@ else{
 </head>
 
 <body>
+
     <div class="filter" id ="filtro"></div> 
     <div class="page" id="page">
         <div class="container">

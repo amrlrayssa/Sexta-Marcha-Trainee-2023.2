@@ -25,6 +25,7 @@ a {
 
 .nav img{
     height: 80%;
+    width: 250px;
     margin-left: 20px;
 
 }
@@ -69,6 +70,9 @@ a {
 
 .log-in, .log-in:hover{
     transition: 0.3s;
+}
+.logo-c{
+    height: 30px;
 }
 
 

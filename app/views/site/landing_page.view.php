@@ -14,6 +14,9 @@
 </head>
 
 <body>
+  <?php require 'navbar.html' ?>
+  
+
   <header><img id="logo" src="../../../public/assets/sexta_marcha_logo_so_que_bom.png"
       alt="imagem do logo do sexta marcha">
     <img id="mini-logo" src="../../../public/assets/logo_sem_bordas.png" alt="logo sem bordas do sexta marcha">
@@ -127,6 +130,7 @@
       </div>
     </section>
   </div>
+  <?php require 'footer.html' ?>
 </body>
 
 </html>
