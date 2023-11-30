@@ -28,6 +28,7 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+<<<<<<< HEAD
 
     public function insert($table,  $parameters){
         $sql = sprintf(
@@ -98,4 +99,6 @@ class QueryBuilder
                 return false;
             }
         }
+=======
+>>>>>>> main
 }
