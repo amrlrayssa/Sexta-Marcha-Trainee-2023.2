@@ -6,8 +6,6 @@ use App\Core\Router;
 
     $router->get('', 'ExampleController@index');
 
-<<<<<<< HEAD
-=======
 
     $router->get('admin', 'AdminController@view');
 
@@ -23,5 +21,4 @@ use App\Core\Router;
 
 
 
->>>>>>> parent of 2d49214 (Merge branch 'main' into crud_login)
 ?>

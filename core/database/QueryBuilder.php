@@ -28,8 +28,6 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-<<<<<<< HEAD
-=======
 
     public function insert($table,  $parameters){
         $sql = sprintf(
@@ -100,5 +98,4 @@ class QueryBuilder
                 return false;
             }
         }
->>>>>>> parent of 2d49214 (Merge branch 'main' into crud_login)
 }
