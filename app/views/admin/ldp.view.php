@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php  
     session_start();
     if($_SESSION['logado']){
@@ -15,6 +16,15 @@ else{
 ?>
 
 >>>>>>> 881ecdfcd3ffcebd91dfa60082dbaed88e58e9a0
+=======
+<?php
+
+    namespace App\Controllers;
+    
+
+?>
+
+>>>>>>> parent of e518372 (add verificação do login)
 
 <!DOCTYPE html>
 <html lang="pt-br">
