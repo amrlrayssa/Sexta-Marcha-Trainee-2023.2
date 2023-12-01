@@ -68,27 +68,28 @@
             
                 <div class = "form-group" >
                     <label for = "titulo" > Titulo:</label>
-                    <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" value="<?php echo $post->titulo ; ?>" required>
+                    <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" value="<?php echo $post->titulo ; ?>" >
                 </div>
     
                 <div class = "form-group" >
                     <label for = "autor" > Autor:</label>
-                    <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" value="<?php echo $post->autor ; ?>" required>
+                    <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" value="<?php echo $post->autor ; ?>" >
                 </div>
     
                 <div class = "form-group" >
                     <label for = "data"> Data de Criação:</label>
-                    <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" value="<?php echo $post->data ; ?>" required style="width: 70%;">
+                    <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" value="<?php echo $post->data ; ?>"  style="width: 70%;">
                 </div>
     
                 <div class = "form-group">
                     <label for = "conteudo" id = "label-centered" > Conteudo:</label>
-                    <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 70%; width: 70%;"><?php echo $post->conteudo ; ?></textarea>
+                    <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 70%; width: 70%;"><?php echo nl2br($post->conteudo) ; ?></textarea>
                 </div>
     
                 <div class = "form-group" id = "Imagem" >
                     <label for = "imagem" id = "label-centered" > Imagem:</label>
-                    <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" required>
+                    <input type = "file" class = "form-control-file" id = "imagem" name = "imagem" accept = "image/*" placeholder = "Escolha a Imagem" >
+                    <input hidden value="<?= $post->imagem ?>" name="manterimg">
                 </div>
                 
                 <div class = "botoes" >
@@ -116,6 +117,7 @@
                 <button type = "button" class = "btn btn-primary closeRmv Cancelar" onclick="closemodal('modal_rmv<?=$post->id ?>')" > Cancelar </button>
                 <form id="excluir_form<?= $post->id ?>" action = "/admin/ldp/delete" method = "post" enctype = "multipart/form-data">
                     <input hidden name="id" value="<?= $post->id ?>">
+                    <input hidden value="<?= $post->imagem ?>" name="apagarimg">
                 </form>
             </div>
 
@@ -143,7 +145,7 @@
         
                 <div class = "modal_ver_conteudo">
                     <h3>Conteudo:</h3>
-                    <p><?php echo $post->conteudo; ?></p>
+                    <p><?php echo nl2br($post->conteudo); ?></p>
                 </div>
 
                     <div class="modal_ver_conteudo_img">

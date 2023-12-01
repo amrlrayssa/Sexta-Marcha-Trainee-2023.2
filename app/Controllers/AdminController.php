@@ -23,7 +23,7 @@ class AdminController
         if(isset($_FILES['imagem']))
         {
             $extensao = strtolower(substr($_FILES['imagem']['name'], -4));
-            $novo_nome = md5(time()) . "." . $extensao;
+            $novo_nome = md5(time()) . $extensao;
             $diretorio = "public/img/";
             $caminho = $diretorio.$novo_nome;
             move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho);
@@ -49,18 +49,33 @@ class AdminController
     public function delete()
     {
         $id = $_POST['id'];
+        unlink($_POST['apagarimg']);
         App::get('database')->delete('posts', $id);
         header('Location: /admin/ldp');
     }
 
     public function edit()
     {
+        if(!empty($_FILES['imagem']['tmp_name']))
+        {
+            unlink($_POST['manterimg']);
+
+            $extensao = strtolower(substr($_FILES['imagem']['name'], -4));
+            $novo_nome = md5(time()) . $extensao;
+            $diretorio = "public/img/";
+            $caminho = $diretorio.$novo_nome;
+            move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho);
+                
+        }else{
+            $caminho = $_POST['manterimg'];
+        }
+
         $parameters = [
             'titulo' => $_POST['titulo'],
             'autor' => $_POST['autor'],
             'data' => $_POST['data'],
             'conteudo' => $_POST['conteudo'],
-            'imagem'=> $_FILES['imagem'],
+            'imagem'=> $caminho,
 
         ];
         App::get('database')->edit('posts', $_POST['id'] ,$parameters);
