@@ -10,9 +10,9 @@ class AdminController
 
     public function view()
     {
-        $posts = App::get('database')->selectAll('posts');
+        $posts = App::get('database')->selectAll('post');
         $tables = [
-            'posts' => $posts,
+            'post' => $posts,
         ];
 
         return view('admin/ldp', $tables);
@@ -29,7 +29,7 @@ class AdminController
 
         ];
 
-        App::get('database')->insert('posts', $parameters);
+        App::get('database')->insert('post', $parameters);
  
         header('Location: /admin/ldp');
  
@@ -38,7 +38,7 @@ class AdminController
     public function delete()
     {
         $id = $_POST['id'];
-        App::get('database')->delete('posts', $id);
+        App::get('database')->delete('post', $id);
         header('Location: /admin/ldp');
     }
 
@@ -52,7 +52,7 @@ class AdminController
             'imagem'=> $_FILES['imagem'],
 
         ];
-        App::get('database')->edit('posts', $_POST['id'] ,$parameters);
+        App::get('database')->edit('post', $_POST['id'] ,$parameters);
     }
 
 }

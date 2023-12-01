@@ -1,42 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of f681dfb (Merge branch 'Lista_De_Posts_adm' of https://github.com/amrlrayssa/Sexta-Marcha-Trainee-2023.2 into Lista_De_Posts_adm)
 <?php  
-    session_start();
-    if($_SESSION['logado']){
-  }
-else{
-  return redirect('login');
-  }
- ?>
-<<<<<<< HEAD
-=======
-<?php
-
-    namespace App\Controllers;
-
-?>
-
->>>>>>> 881ecdfcd3ffcebd91dfa60082dbaed88e58e9a0
-=======
-=======
->>>>>>> parent of e518372 (add verificação do login)
-<?php
 
     namespace App\Controllers;
     
-
 ?>
 
-<<<<<<< HEAD
->>>>>>> parent of e518372 (add verificação do login)
-=======
->>>>>>> parent of e518372 (add verificação do login)
-=======
->>>>>>> parent of f681dfb (Merge branch 'Lista_De_Posts_adm' of https://github.com/amrlrayssa/Sexta-Marcha-Trainee-2023.2 into Lista_De_Posts_adm)
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -77,7 +46,7 @@ else{
             </table>
             <table class="tbb">
                 <tbody>
-                    <?php foreach($posts as $post): ?>
+                    <?php foreach($post as $post): ?>
                     <tr>
                         <th class="t1th"><?php echo $post->id ?></th>
                         <td class="t2th"><?php echo $post->titulo ?></td>
