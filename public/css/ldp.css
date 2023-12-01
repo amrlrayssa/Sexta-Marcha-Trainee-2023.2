@@ -158,7 +158,6 @@ body {
     margin-right: 1.5%;
 }
 
-
 .modal {
     width: 40%;
     height: fit-content;
@@ -251,35 +250,6 @@ h2.Cadastro {
     margin-bottom: 5px; /* Adicione margem inferior para espaçamento */
 }
 
-.modal_ver {
-    display: none;
-}
-
-
-.modal_ver_conteudo, .modal_ver_conteudo_img {
-    margin-top: 15px;
-}
-
-.modal_ver_conteudo_img {
-    margin-left: auto;
-
-}
-
-
-.modal_ver_conteudo_img img {
-    border-radius: 10px;
-    max-width: 80%;
-    max-height: 200px;
-    
-}
-
-.modal_ver_conteudo h3, .modal_ver_conteudo_img h3 {
-    color: #831C21;
-    font-size: 20px;
-    padding-bottom: 10px;
-    margin-bottom: 0;
-}
-
 input[type="text"],
 input[type="date"],
 textarea {
@@ -335,6 +305,13 @@ textarea {
     background: #f2f2f2;
     padding: 20px;
     border-radius: 5px;
+}
+
+.ModalHeade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
 }
 
 .edit-Post {
