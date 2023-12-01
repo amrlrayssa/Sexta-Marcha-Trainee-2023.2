@@ -22,8 +22,6 @@
 
 
 
-
-
     <div class="login_direita">
       <div class="container">
         <div class="logo">
