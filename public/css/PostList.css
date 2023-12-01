@@ -187,13 +187,13 @@ body{
     margin-bottom: 15px;
 }
 
-.button-container {
+.button-conteinerf {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.button-container .LeiaMais {
+.button-conteinerf .LeiaMais {
     cursor: pointer;
     padding: 10px;
     background-color: #C60000;
@@ -208,7 +208,7 @@ body{
     margin-bottom: 15px;
 }
 
-.button-container .LeiaMais:hover{
+.button-conteinerf .LeiaMais:hover{
     background-color: #831c21;
     transition: 0.5s;   
 }

@@ -21,30 +21,31 @@
         <div class="Searchbar">
             <div class="icons">
                 <i class = "fa-solid fa-magnifying-glass" id = "search-icon"></i>
-                <form id = "search-form" action = "/core/Search_Post.php" method = "GET">
+                <form id = "search-form" action = "search" method = "GET">
                     <input type = "text" name = "search" id = "search-input" placeholder = "Search...">
                     <button type = "submit" style = "display: none;" ></button>
                 </form>
             </div>
         </div>
     
-        <div class = "container">
+        <div class = "conteinerf">
     
           <div class = "Post Post1" >
+          <?php foreach($posts as $post): ?>
               <img class = "imagem" src = "/public/assets/Ayrton-Pensativo.png" />
 
               <div class = "text-content">
-                    <h2> Tudo sobre o Tricampeonato do Brasileiro </h2>
-                    <p> Ayrton Senna da Silva ONM ComRB CvMA OME foi um piloto de Fórmula 1, empresário e filantropo brasileiro... </p>
-                    <div class = "button-container">
+                    <h2> <?php echo $post->titulo?> </h2>
+                    <p> <?php echo substr($post->conteudo, 0, 100) . "...";?> </p>
+                    <div class = "button-conteinerf">
                         <button class = "LeiaMais" >LER MAIS ></button>
                     </div>
 
               </div>
-              
+           <?php endforeach; ?>    
           </div>
           
-          <div class = "container">
+          <div class = "conteinerf">
     
             <div class = "Post Post2" >
                 <img class = "imagem" src = "/public/assets/LeClerc-Ferrari.png" id="efeito-imagem"/>
@@ -52,7 +53,7 @@
                 <div class = "text-content">
                       <h2> Ferrari esperançosa após Pole Position </h2>
                       <p> Charles Leclerc leva a melhor durante treino classificatório para a corrida do Bahrein ao melhorar seu tempo... </p>
-                      <div class = "button-container">
+                      <div class = "button-conteinerf">
                           <button class = "LeiaMais" >LER MAIS ></button>
                       </div>
   

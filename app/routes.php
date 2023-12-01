@@ -5,6 +5,6 @@ use App\Controllers\ExampleController;
 use App\Core\Router;
 
     $router->get('', 'ExampleController@index');
-    $router->get('PostList', 'PostListController@view');
+    $router->get('postlist', 'PostListController@view');
 
 ?>
