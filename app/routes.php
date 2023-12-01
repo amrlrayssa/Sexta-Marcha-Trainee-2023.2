@@ -6,7 +6,6 @@ use App\Core\Router;
 
     $router->get('', 'ExampleController@index');
 
-<<<<<<< HEAD
 
     $router->get('admin', 'AdminController@view');
 
@@ -22,6 +21,4 @@ use App\Core\Router;
 
 
 
-=======
->>>>>>> main
 ?>
