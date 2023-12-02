@@ -22,12 +22,16 @@ else{
 </head>
 
 <body>
+
   <img src="../../../public/assets/logo_sem_bordas.png" alt="">
   <div class="container">
+
+  <a class="landing" href="site/landing_page">
     <div class="aba">
       <i class="fas fa-house-user mt-2"></i>
       <span>Home</span>
     </div>
+</a>
     <a class="lpd" href="admin/ldp">
     <div class="aba">
       <i class="fas fa-newspaper mt-2"></i>

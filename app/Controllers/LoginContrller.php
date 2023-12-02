@@ -13,7 +13,7 @@ class LoginController
         return view('/site/login');
     }
     public function login(){
-     $id = $_POST['id'];
+
     $email = $_POST["email"];
     $senha = $_POST["senha"];
     
