@@ -14,9 +14,13 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+    public function selectAll($table, $start_limit = null, $rows_amount = null)
     {
         $sql = "select * from {$table}";
+
+        if ($start_limit >=0 && $rows_amount > 0) {
+            $sql .= " LIMIT {$start_limit}, {$rows_amount}";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -97,6 +101,20 @@ class QueryBuilder
             return true;
         } else {
             return false;
+        }
+    }
+
+
+    public function countAll($table)
+    {
+        $sql = "SELECT COUNT(*) FROM {$table}";
+       
+        try {
+            $statment = $this->pdo->prepare($sql);
+            $statment->execute();
+            return intval($statment->fetch(PDO::FETCH_NUM)[0]);
+        } catch (Exception $e) {
+            die($e->getMessage());
         }
     }
 }

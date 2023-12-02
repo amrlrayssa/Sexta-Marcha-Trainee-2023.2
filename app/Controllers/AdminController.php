@@ -10,10 +10,37 @@ class AdminController
 
     public function view()
     {
-        $posts = App::get('database')->selectAll('posts');
+        $page = 1;
+        
+        if(isset($_GET['pagina']) && !empty($_GET['pagina']))
+        {
+            $page = intval($_GET['pagina']);
+
+            if($page < 1)
+            {
+                return redirect('admin/ldp');
+            }
+        }
+
+        $items_per_page = 4;
+        $start_limit = ($items_per_page * $page) - $items_per_page;
+        $rows_count = App::get('database')->countAll('posts');
+
+        if($start_limit > $rows_count)
+        {
+            return redirect('admin/ldp');
+        }
+
+        $total_pages = ceil($rows_count / $items_per_page);
+
+        $posts = App::get('database')->selectAll('posts', $start_limit, $items_per_page);
+        
         $tables = [
             'posts' => $posts,
+            'page' => $page,
+            'total_pages' => $total_pages,
         ];
+
 
         return view('admin/ldp', $tables);
     }
