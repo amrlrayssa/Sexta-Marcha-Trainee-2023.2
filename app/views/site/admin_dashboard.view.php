@@ -1,7 +1,4 @@
 
-
-
-
 <?php  
     session_start();
     if($_SESSION['logado']){
@@ -25,7 +22,6 @@ else{
 </head>
 
 <body>
-  <?php require 'sideBar.html'?>
   <img src="../../../public/assets/logo_sem_bordas.png" alt="">
   <div class="container">
     <div class="aba">

@@ -8,6 +8,7 @@ use App\Core\Router;
 
 
     $router->get('admin', 'AdminController@view');
+    
 
     $router->post('admin/lista_usuarios/create', 'AdminController@create');
     $router->post('admin/lista_usuarios/delete', 'AdminController@delete');
@@ -18,7 +19,7 @@ use App\Core\Router;
     $router->get('logout', 'LoginController@logout');
 
     $router -> get('admin_dashboard', 'dashboardController@view');
-
-
+    $router->get('landing_page', 'landingController@view');
+    $router-> get('pvu', 'pvuController@view');
 
 ?>
