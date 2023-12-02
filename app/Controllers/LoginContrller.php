@@ -13,7 +13,7 @@ class LoginController
         return view('/site/login');
     }
     public function login(){
-
+     $id = $_POST['id'];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
     
@@ -21,6 +21,15 @@ class LoginController
 
     if ($usuarioAutenticado) {
         session_start();
+        // Configura o tempo de expiração da sessão para 1 hora (3600 segundos)
+        $tempoExpiracao  = 3600; 
+         session_set_cookie_params($tempoExpiracao );
+        session_regenerate_id(true);
+        //A função session_regenerate_id() é usada para regenerar o ID da sessão.
+        // Isso é útil para mitigar ataques de fixação de sessão. 
+       //  O ID da sessão é uma chave única associada a cada sessão do usuário.
+
+        $_SESSION['id'] = $usuarioAutenticado['id']; 
         $_SESSION['logado'] = true;
 
 
