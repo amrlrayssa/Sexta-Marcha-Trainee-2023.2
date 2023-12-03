@@ -64,7 +64,7 @@
                 <h2 class = "Cadastro-Post" >Edição de Posts </h2>
             </div>
             
-            <form action = "/admin/ldp/update" method = "post" enctype = "multipart/form-data">
+            <form action = "/admin/lista_posts/update" method = "post" enctype = "multipart/form-data">
             
                 <div class = "form-group" >
                     <label for = "titulo" > Titulo:</label>
@@ -115,7 +115,7 @@
             <div class = "botoes" >
                 <button class = "btn btn-primary" type="submit" id = "excluir" onclick="excluir()" > Excluir </button>
                 <button type = "button" class = "btn btn-primary closeRmv Cancelar" onclick="closemodal('modal_rmv<?=$post->id ?>')" > Cancelar </button>
-                <form id="excluir_form<?= $post->id ?>" action = "/admin/ldp/delete" method = "post" enctype = "multipart/form-data">
+                <form id="excluir_form<?= $post->id ?>" action = "/admin/lista_posts/delete" method = "post" enctype = "multipart/form-data">
                     <input hidden name="id" value="<?= $post->id ?>">
                     <input hidden value="<?= $post->imagem ?>" name="apagarimg">
                 </form>
@@ -199,7 +199,7 @@
                         
                     </div>
                     
-                    <form action = "/admin/ldp/create" method = "post" enctype = "multipart/form-data">
+                    <form action = "/admin/lista_posts/create" method = "post" enctype = "multipart/form-data">
                     
                         <div class = "form-group" >
                             <label for = "titulo" > Titulo:</label>

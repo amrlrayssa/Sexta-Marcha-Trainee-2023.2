@@ -6,10 +6,10 @@ use App\Core\Router;
 
 
     //Lista de posts
-    $router->get('admin/ldp', 'AdminController@view');
-    $router->post('admin/ldp/create','AdminController@create');
-    $router->post('admin/ldp/delete','AdminController@delete');
-    $router->post('admin/ldp/update','AdminController@edit');
+    $router->get('admin/lista_posts', 'AdminController@view');
+    $router->post('admin/lista_posts/create','AdminController@create');
+    $router->post('admin/lista_posts/delete','AdminController@delete');
+    $router->post('admin/lista_posts/update','AdminController@edit');
 
 
 

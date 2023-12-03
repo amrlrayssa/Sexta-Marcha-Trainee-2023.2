@@ -18,7 +18,7 @@ class AdminController
 
             if($page < 1)
             {
-                return redirect('admin/ldp');
+                return redirect('admin/lista_posts');
             }
         }
 
@@ -28,7 +28,7 @@ class AdminController
 
         if($start_limit > $rows_count)
         {
-            return redirect('admin/ldp');
+            return redirect('admin/lista_posts');
         }
 
         $total_pages = ceil($rows_count / $items_per_page);
@@ -69,7 +69,7 @@ class AdminController
 
         App::get('database')->insert('posts', $parameters);
  
-        header('Location: /admin/ldp');
+        header('Location: /admin/lista_posts');
  
     } 
 
@@ -78,7 +78,7 @@ class AdminController
         $id = $_POST['id'];
         unlink($_POST['apagarimg']);
         App::get('database')->delete('posts', $id);
-        header('Location: /admin/ldp');
+        header('Location: /admin/lista_posts');
     }
 
     public function edit()
