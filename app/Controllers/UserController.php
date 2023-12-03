@@ -10,10 +10,38 @@ class UserController
 
     public function view()
     {
-        
-        $users = App::get('database')->selectAll('users');
+        $page = 1;
+
+        if(isset($_GET['pagina'])&& !empty ($_GET['pagina'])){
+
+            $page = intval ($_GET['pagina']);
+
+            if($page<1){
+
+                return redirect ('admin/lista_usuarios');
+
+            }
+
+
+        }
+
+            $itens_per_page = 4;
+            $start_limit = ($itens_per_page * $page) - $itens_per_page;
+            $rows_count = App::get('database')->countAll('users');
+
+            if($start_limit>$rows_count){
+
+                return redirect ('admin/lista_usuarios');
+
+            }
+
+            $total_pages = ceil ($rows_count/$itens_per_page);
+
+        $users = App::get('database')->selectAll('users' , $start_limit , $itens_per_page);
         $tables = [
             'users' => $users,
+            'page' => $page,
+            'total_pages' => $total_pages,
         ];
 
         return view('admin/Lista_usuarios', $tables);
