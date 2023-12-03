@@ -26,13 +26,13 @@ else{
   <img src="../../../public/assets/logo_sem_bordas.png" alt="">
   <div class="container">
 
-  <a class="landing" href="site/landing_page">
+  <a class="landing" href="/">
     <div class="aba">
       <i class="fas fa-house-user mt-2"></i>
       <span>Home</span>
     </div>
 </a>
-    <a class="lpd" href="admin/ldp">
+    <a class="lpd" href="admin/lista_posts">
     <div class="aba">
       <i class="fas fa-newspaper mt-2"></i>
       <span>Posts</span>

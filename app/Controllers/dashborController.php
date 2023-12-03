@@ -11,7 +11,7 @@ class dashboardController
     {
 
 
-        return view('/site/admin_dashboard');
+        return view('/admin/admin_dashboard');
     }
 }
 

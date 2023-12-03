@@ -2,6 +2,12 @@
 
     namespace App\Controllers;
 
+    session_start();
+    if($_SESSION['logado']){
+  }else{
+    return redirect('login');
+    }
+
 ?>
 
 
