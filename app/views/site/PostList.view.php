@@ -11,7 +11,7 @@
     <title> Sexta Marcha </title>
 </head>
 <body>
-    
+    <?php require('navbar.html'); ?>
     <div class = "left-side">
 
         <div class = "header">
@@ -95,6 +95,7 @@
     </script>
 
 <script src = "https://kit.fontawesome.com/46c6a48072.js" crossorigin = "anonymous"></script>
+<?php require('footer.html'); ?>    
 </body>
 
 </html>

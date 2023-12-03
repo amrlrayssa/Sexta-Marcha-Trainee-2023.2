@@ -6,10 +6,10 @@
 }
 
 /* Define o estilo de fundo para o corpo da página */
-body {
+ /* body {
     background: #3d4152;
     font-family: 'Quicksand', sans-serif;
-}
+ } */
 
 /* Estilos para a barra de navegação */
 .navegacao {
@@ -21,13 +21,17 @@ body {
     display: flex; /* Define o modelo de exibição flexível */
     justify-content: center; /* Alinha os elementos horizontalmente ao centro */
     align-items: center; /* Alinha os elementos verticalmente ao centro */
-    border-radius: 10px;
+    border-radius: 20px;
+    z-index: 1;
 }
 
 /* Estilos para a barra de navegação quando está aberta */
 .navegacao.open {
-    width: 220px; /* Amplia a largura quando a barra de navegação está aberta */
+    width: 280px; /* Amplia a largura quando a barra de navegação está aberta */
+    height: 600px;
 }
+
+
 
 /* Estilos para o botão de alternância da barra de navegação */
 .navegacao .alternar_menu {
@@ -95,11 +99,18 @@ body {
     padding: 0 10px;
     transition: 0.5s; /* Adiciona uma transição suave */
 }
+.icon{
+    margin-right: 70px;
+}
+
+
 
 /* Estilos para o item de lista ativo */
 .navegacao ul li.ativa {
     transform: translateX(30px); /* Move o item de lista para a direita */
+    
 }
+
 
 /* Estilos para o texto do item de lista */
 .navegacao ul li a {
@@ -152,6 +163,8 @@ body {
 
 /* Estilos para o texto do item de lista */
 .navegacao ul li  a .text {
+    white-space: nowrap; /* Impede a quebra do texto em várias linhas */
+
     position: relative; /* Define a posição relativa */
     padding: 0 15px;
     height: 60px;
@@ -167,9 +180,34 @@ body {
 .navegacao.open ul li a .text {
     opacity: 1; /* Define a opacidade para tornar o texto visível */
     visibility: visible; /* Torna o texto visível */
+    
 }
 
 /* Estilos para o texto do item de lista quando o item está ativo */
 .navegacao ul li.ativa a .text {
     color: var(--clr); /* Usa uma variável CSS como cor do texto */
+} 
+
+@media (max-width: 1100px) { 
+    .navegacao {
+        height: 60px;
+        border-radius: 15px;
+    }
+    .navegacao.open {
+        height: auto;
+        margin-bottom: 150px;
+    }
+    .navegacao li {
+        display: none;
+    }
+    .navegacao.open li {
+        display: flex;
+        align-items: center; /* Centraliza verticalmente o conteúdo */
+    }
+    .navegacao.open .text {
+        margin-top: 0; 
+    }
+    .navegacao ul li a .text {
+        margin-bottom: 0; 
+    }
 }

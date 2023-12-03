@@ -1,14 +1,4 @@
-<?php
 
-    namespace App\Controllers;
-
-    session_start();
-    if($_SESSION['logado']){
-  }else{
-    return redirect('login');
-    }
-
-?>
 
 
 <!DOCTYPE html>
@@ -29,6 +19,7 @@
 </head>
 
 <body>
+<?php require('app/views/site/sideBar.html'); ?>
     <div class="filtro" id="filtro" ></div>
     <div class="page" id="page">
     <div class="container">
