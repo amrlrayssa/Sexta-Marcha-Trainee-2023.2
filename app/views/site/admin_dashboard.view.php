@@ -1,3 +1,13 @@
+
+<?php  
+    session_start();
+    if($_SESSION['logado']){
+  }
+else{
+  return redirect('login');
+  }
+ ?>
+
 <!DOCTYPE html>
 
 <html>
@@ -12,33 +22,39 @@
 </head>
 
 <body>
+
   <img src="../../../public/assets/logo_sem_bordas.png" alt="">
   <div class="container">
+
+  <a class="landing" href="site/landing_page">
     <div class="aba">
       <i class="fas fa-house-user mt-2"></i>
       <span>Home</span>
     </div>
+</a>
+    <a class="lpd" href="admin/ldp">
     <div class="aba">
       <i class="fas fa-newspaper mt-2"></i>
       <span>Posts</span>
-    </div>
-    <div class="aba">
+    </div> 
+   </a>
+  
+   <a class="ldu" href="admin/lista_usuarios">
+     <div class="aba">
       <i class="fas fa-user mt-2"></i>
       <span>Usuários</span>
     </div>
+   </a>
+
+    <a class="login" href="/logout">
     <div class="aba">
       <i class="fas fa-sign-out-alt mt-2"></i>
-      <span>LogOut</span> 
-    </div>
+      <span>LogOut</span>
+    </div> </a>
   </div>
   <script src="https://kit.fontawesome.com/4e7ac1064c.js" crossorigin="anonymous">
   </script>
-
-
+  
 </body>
-
-
-
-
 
 </html>

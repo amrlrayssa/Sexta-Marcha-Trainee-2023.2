@@ -149,8 +149,8 @@ else{
             </div>
     
             <div class = "botoes" >
-                <button class = "btn btn-primary  bt_Visu "  id = "Salvar" > Salvar </button>
-                <button type="button" class = "btn btn-primary closever Cancelar bt_Visu" onclick="closemodal('modal_ver<?= $user->id?>')"> Cancelar </button>
+                
+                <button type="button" class = "btn btn-primary closever Cancelar bt_Visu" onclick="closemodal('modal_ver<?= $user->id?>')"> Fechar </button>
             </div>
     
     </div>

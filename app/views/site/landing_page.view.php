@@ -124,9 +124,11 @@
             </div>
           </div>
         </div>
-        <div class="mais-noticias">
-          <button class="botao-noticias">MAIS NOTICIAS ></button>
+        
+         <div class="mais-noticias">
+         <a href="admin/ldp"><button class="botao-noticias">MAIS NOTICIAS ></button></a>
         </div>
+
       </div>
     </section>
   </div>
