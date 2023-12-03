@@ -11,6 +11,16 @@ use App\Core\Router;
     $router->post('admin/lista_posts/delete','AdminController@delete');
     $router->post('admin/lista_posts/update','AdminController@edit');
 
+    //Lista de usuarios
+    $router->get('admin/lista_usuarios', 'UserController@view');
+    $router->post('admin/lista_usuarios/create', 'UserController@create');
+    $router->post('admin/lista_usuarios/delete', 'UserController@delete');
+    $router->post('admin/lista_usuarios/update', 'UserController@edit');
 
+    //post individual
+    $router->get('landing_page' , 'lang_pageController@view');
+    $router->get('pvu' , 'pvuController@view');
+
+    return
 
 ?>

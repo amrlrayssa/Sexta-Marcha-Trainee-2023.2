@@ -3,15 +3,14 @@
 namespace App\Controllers;
 
 use App\Core\App;
-// use Exception;
+use Exception;
 
-class DashboardController
+class pvuController
 {
+
     public function view()
     {
-
-
-        return view('admin/admin_dashboard');
+        return view('site/pvu');
     }
 }
 
