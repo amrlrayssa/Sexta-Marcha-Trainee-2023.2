@@ -30,4 +30,7 @@ use App\Core\Router;
     //dashboard
     $router -> get('admin_dashboard', 'dashboardController@view');
 
+    //post list
+    $router->get('postlist', 'PostListController@view');
+
 ?>
