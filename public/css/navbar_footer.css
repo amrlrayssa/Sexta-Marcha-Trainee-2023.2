@@ -230,10 +230,12 @@ footer .footer-box{
 .footer-box .p-c{
     font-size: 15px;
 }
-
-.main{
-    height: 650px;
+.logo-c{
+    height: 50px;
 }
+/* .main{
+    height: 650px;
+} */
 
 
 /*Responsividade do Footer*/

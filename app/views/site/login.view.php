@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,48 +21,37 @@
       <img src="/public/assets/carro ayrton.jpg" class="img_login" alt="Pista de corrida">
     </div>
 
-
-
-
-
     <div class="login_direita">
       <div class="container">
         <div class="logo">
           <img class="img-logo" src="/public/assets/logo_quadrada_-_fundo_transparente.png" alt="Logo" width="250px"
             height="230px">
         </div>
-
-        <div class="dados">
-          <div class="formulario">
-            <label for="E-mail">Digite o seu e-mail</label>
-            <div class="icons">
-              <i class="fa fa-envelope"></i>
-              <input type="text" name="Email" placeholder="Email">
+        <!-- Correção no atributo action -->
+        <form action="/logon" method="post" enctype="multipart/form-data">
+          <div class="dados">
+            <div class="formulario">
+              <label for="Email">Digite o seu e-mail</label>
+              <div class="icons">
+                <i class="fa fa-envelope"></i>
+                <input type="text" name="email" placeholder="Email">
+              </div>
             </div>
 
-
-          </div>
-
-
-          <div class="formulario">
-            <label for="Senha">Digite a sua senha</label>
-            <div class="icons">
-              <i class="fa fa-eye"></i>
-              <input type="password" name="Senha" placeholder="Senha">
+            <div class="formulario">
+              <label for="Senha">Digite a sua senha</label>
+              <div class="icons">
+                <i class=""></i>
+                <input type="password" name="senha" placeholder="Senha">
+              </div>
             </div>
-
+            <div class="btn_login">
+              <button type="submit">Entrar</button>
+            </div>
           </div>
-          <div class="btn_login">
-            <button>Entrar</button>
-          </div>
-        </div>
-
+        </form>
       </div>
     </div>
-
-
-
-
   </div>
 </body>
 

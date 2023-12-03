@@ -92,20 +92,20 @@ class QueryBuilder
         header('Location: /admin/ldp');
     }
 
-    function login($table, $email, $password)
-    {
-        $sql = sprintf('SELECT * FROM %s WHERE email = :email', $table);
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':email', $email);
-        $stmt->execute();
-        $user = $stmt->fetch();
-
-        if ($user && $password == $user['password']) {
-            return true;
-        } else {
-            return false;
+        function login($table, $email, $senha)
+        {
+            $sql = sprintf('SELECT * FROM %s WHERE email = :email', $table);
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+            $stmt->execute();
+            $user = $stmt->fetch();
+            if ($user && is_array($user) && $senha == $user['senha']) { 
+                return true;
+            } else {
+                return false;
+            }
         }
-    }
+    
 
 
     public function countAll($table)

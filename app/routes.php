@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controllers;
-use App\Controllers\ExampleController;
 use App\Core\Router;
 
 
@@ -18,9 +17,17 @@ use App\Core\Router;
     $router->post('admin/lista_usuarios/update', 'UserController@edit');
 
     //post individual
-    $router->get('landing_page' , 'lang_pageController@view');
     $router->get('pvu' , 'pvuController@view');
 
-    return
+    //landing page
+    $router->get('' , 'lang_pageController@view');
+
+    //login
+    $router->get('login', 'LoginController@view');
+    $router->post('logon', 'LoginController@login');
+    $router->get('logout', 'LoginController@logout');
+
+    //dashboard
+    $router -> get('admin_dashboard', 'dashboardController@view');
 
 ?>
