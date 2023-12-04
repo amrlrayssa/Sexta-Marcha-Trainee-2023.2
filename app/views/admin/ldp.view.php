@@ -49,9 +49,10 @@ else{
             </table>
             <table class="tbb">
                 <tbody>
+                    <?php $cont = 1+(4*($page-1));?>
                     <?php foreach($posts as $post): ?>
                     <tr>
-                        <th class="t1th"><?php echo $post->id ?></th>
+                        <th class="t1th"><?php echo $cont ?></th>
                         <td class="t2th"><?php echo $post->titulo ?></td>
                         <td class="t3th">
                             <button type="button" class="btn btn-outline-light btnd" id="openVerPost" onclick="openmodale('modal_ver<?=$post->id ?>')">Visualizar</button>
@@ -164,6 +165,7 @@ else{
                 <button type="button" class = "btn btn-primary closever Cancelar" onclick="closemodal('modal_ver<?=$post->id ?>')" > Fechar </button>
             </div>
     </div>
+                    <?php $cont++;?>
                     <?php endforeach; ?>
                 </tbody>
             </table>
