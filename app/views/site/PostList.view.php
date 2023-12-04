@@ -1,12 +1,4 @@
 
-<?php  
-    session_start();
-    if($_SESSION['logado']){
-  }
-else{
-  return redirect('login');
-  }
- ?>
 <!DOCTYPE html>
 <html lang = "pt-br">
 <head>
@@ -17,7 +9,7 @@ else{
     <link rel = "preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel = "stylesheet">
     <link rel = "stylesheet" href = "/public/css/PostList.css">
-    <title> Sexta Marcha </title>
+    <title> Sexta Marcha - PostList </title>
 </head>
 <body>
     <?php require('navbar.html'); ?>
@@ -37,43 +29,26 @@ else{
             </div>
         </div>
         
+        <?php foreach($posts as $post): ?>
         <div class = "conteinerf">
             
             <div class = "Post Post1" >
-                <?php foreach($posts as $post): ?>
-                    <img class = "imagem" src = "/public/assets/Ayrton-Pensativo.png" />
+                
+                    <img class = "imagem" src = <?php echo $post->imagem; ?> />
                     
                     <div class = "text-content">
                         <h2> <?php echo $post->titulo?> </h2>
                         <p> <?php echo substr($post->conteudo, 0, 100) . "...";?> </p>
                         <div class = "button-conteinerf">
-                            <button class = "LeiaMais" >LER MAIS ></button>
+                            <button class = "LeiaMais" > LER MAIS ></button>
                         </div>
                         
                     </div>
-                    <?php endforeach; ?>    
+          
                 </div>
           
-          <div class = "conteinerf">
-    
-              <div class = "Post Post2" >
-                  <img class = "imagem" src = "/public/assets/LeClerc-Ferrari.png" id="efeito-imagem"/>
-                  
-                  <div class = "text-content">
-                      <h2> Ferrari esperançosa após Pole Position </h2>
-                      <p> Charles Leclerc leva a melhor durante treino classificatório para a corrida do Bahrein ao melhorar seu tempo... </p>
-                      <div class = "button-conteinerf">
-                          <button class = "LeiaMais" >LER MAIS ></button>
-                      </div>
-                      
-                    </div>
-                    
-                </div>
-                
-            </div>
-            
         </div>
-        
+        <?php endforeach; ?>  
     </div>
     
     <div class = "right-side" >

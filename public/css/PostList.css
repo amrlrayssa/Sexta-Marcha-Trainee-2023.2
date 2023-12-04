@@ -88,6 +88,7 @@ body{
     color: #FFFFFF; 
     font-size: 24px; 
     z-index: 1;
+    cursor: pointer;
   }
   
   .Searchbar .icons input {
@@ -131,6 +132,7 @@ body{
     align-items: center;
     background: white;
     box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 5%;
     border-radius: 10px;
     padding: 1%; /* Adiciona algum espaço entre a imagem e o texto */
     margin-left: 2%;
@@ -147,10 +149,6 @@ body{
     transform: scale(1.03); 
     filter: none;
     transition: 0.5s;
-}
-
-.Post2{
-    margin-top: 30px;
 }
 
 .Post .imagem {
@@ -284,7 +282,6 @@ body{
     padding-top: 10px;
     font-weight: 500;
 }
-
 
 /* ----- Fold ----- */
 @media screen and (max-width: 300px) {
