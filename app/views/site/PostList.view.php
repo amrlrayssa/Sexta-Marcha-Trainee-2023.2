@@ -30,7 +30,7 @@ else{
         <div class="Searchbar">
             <div class="icons">
                 <i class = "fa-solid fa-magnifying-glass" id = "search-icon"></i>
-                <form id = "search-form" action = "search" method = "GET">
+                <form id = "search-form" action = "buscapost" method = "GET">
                     <input type = "text" name = "search" id = "search-input" placeholder = "Search...">
                     <button type = "submit" style = "display: none;" ></button>
                 </form>
