@@ -27,6 +27,7 @@ else{
 </head>
 
 <body>
+<?php require('app/views/site/sideBar.html'); ?>
 
     <div class="filter" id ="filtro"></div> 
     <div class="page" id="page">
