@@ -79,7 +79,12 @@ else{
     
                 <div class = "form-group" >
                     <label for = "autor" > Autor:</label>
-                    <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" value="<?php echo $post->autor ; ?>" >
+                    <select class = "form-control" id = "autor" name = "autor" required>
+                        <option value = ""> --Selecione o autor-- </option>
+                        <?php foreach($users as $user) : ?>
+                            <option value = "<?=$user->id?>"> <?=$user->nome?> </option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
     
                 <div class = "form-group" >
@@ -141,7 +146,13 @@ else{
         
                 <div class = "modal_ver_conteudo" >
                     <h3>Autor:</h3>
-                    <p><?php echo $post->autor; ?></p>
+                    <?php foreach($users as $user) : ?>
+                         <?php if($post->autor == $user->id): ?>
+                            <p>
+                                <?= $user->nome ?>    
+                            </p>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
         
                 <div class = "modal_ver_conteudo" >
@@ -214,9 +225,10 @@ else{
                         
                         <div class = "form-group" >
                             <label for = "autor" > Autor:</label>
-                            <select class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
+                            <select class = "form-control" id = "autor" name = "autor" required>
+                                <option value = ""> --Selecione o autor-- </option>
                                 <?php foreach($users as $user) : ?>
-                                <option value = "<?=$user->id?>"> <?=$user->nome?> </option>
+                                    <option value = "<?=$user->id?>"> <?=$user->nome?> </option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
