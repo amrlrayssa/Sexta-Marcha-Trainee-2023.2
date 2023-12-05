@@ -32,5 +32,6 @@ use App\Core\Router;
 
     //post list
     $router->get('postlist', 'PostListController@view');
+    $router->get('buscapost', 'PostListController@search');
 
 ?>

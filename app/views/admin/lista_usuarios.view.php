@@ -27,6 +27,7 @@ else{
 </head>
 
 <body>
+<?php require('app/views/site/sideBar.html'); ?>
 
     <div class="filter" id ="filtro"></div> 
     <div class="page" id="page">
@@ -50,7 +51,7 @@ else{
                 </table>
                 <table class="tbb">
                     <tbody>
-                        <?php $cont = 1;?>
+                        <?php $cont = 1+(4*($page-1));?>
                     <?php foreach($users as $user): ?> 
                         <tr>
                             <th class="t1th"><?php echo $cont ?></th>
