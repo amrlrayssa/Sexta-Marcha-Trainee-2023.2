@@ -20,7 +20,7 @@ use App\Core\Router;
     $router->get('pvu' , 'pvuController@view');
 
     //landing page
-    $router->get('' , 'lang_pageController@view');
+    $router->get('' , 'landing_pageController@view');
 
     //login
     $router->get('login', 'LoginController@view');
