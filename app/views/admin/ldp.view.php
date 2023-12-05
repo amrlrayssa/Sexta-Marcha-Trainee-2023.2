@@ -162,7 +162,21 @@ else{
         
                 <div class = "modal_ver_conteudo">
                     <h3>Conteudo:</h3>
-                    <p><?php echo nl2br($post->conteudo); ?></p>
+                    <p>
+                    <?php
+                        $texto = $post->conteudo;
+                        $tamanhoLimite = 120;
+
+                        if (strlen($texto) > $tamanhoLimite) {
+                            $textoLimitado = substr($texto, 0, $tamanhoLimite) . "...";
+                        } else {
+                            $textoLimitado = $texto;
+                        }
+
+                        echo $textoLimitado;
+                    ?>
+
+                    </p>
                 </div>
 
                     <div class="modal_ver_conteudo_img">
