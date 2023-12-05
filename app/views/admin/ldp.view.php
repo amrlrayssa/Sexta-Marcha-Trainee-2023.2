@@ -207,22 +207,25 @@ else{
                     </div>
                     
                     <form action = "/admin/lista_posts/create" method = "post" enctype = "multipart/form-data">
-                    
                         <div class = "form-group" >
                             <label for = "titulo" > Titulo:</label>
                             <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required>
                         </div>
-            
+                        
                         <div class = "form-group" >
                             <label for = "autor" > Autor:</label>
-                            <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
+                            <select class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
+                                <?php foreach($users as $user) : ?>
+                                <option value = "<?=$user->id?>"> <?=$user->nome?> </option>
+                                <?php endforeach; ?>
+                            </select>
                         </div>
-            
+                        
                         <div class = "form-group" >
                             <label for = "data"> Data de Criação:</label>
                             <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" required style="width: 55%;">
                         </div>
-            
+                        
                         <div class = "form-group">
                             <label for = "conteudo" id = "label-centered" > Conteudo:</label>
                             <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 100%; width: 100%;"></textarea>
