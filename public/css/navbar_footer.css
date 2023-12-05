@@ -11,26 +11,26 @@ a {
 }
 
 
-.nav{
+.nav_NavBar{
     background-color: #831C21;
     width: 100%;
-    height: 80px;
+    height: 90px;
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    box-shadow: 0 6px 8px grey;
+    
 }
 
-.nav img{
+.nav_NavBar img{
     height: 80%;
     width: 250px;
     margin-left: 20px;
 
 }
 
-.nav-list{
+.nav-lista{
     display: flex;
     gap: 32x;
     list-style: none;
@@ -38,7 +38,7 @@ a {
     margin-right: 20px;
 }
 
-.nav-list a{
+.nav-lista a{
     position: relative;
     font-size: 22px;
     color: white;
@@ -47,7 +47,7 @@ a {
     margin-left: 40px;
 }
 
-.log-in{
+.login_navBar{
     text-align: center;
     width: 180px;
     font-size: 22px;
@@ -62,17 +62,18 @@ a {
 
 /*Animação do botão*/
 
-.log-in:hover{
+.login_navBar:hover{
     scale: 1.05;
     color: black;
     background-color: white;
 }
 
-.log-in, .log-in:hover{
+.login_navBar, .login_navBar:hover{
     transition: 0.3s;
 }
-.logo-c{
+.p-c img{
     height: 30px;
+    width: 15px;
 }
 
 
@@ -119,6 +120,15 @@ a {
     transition: 0.3s;
 }
 
+.redes_footer{
+    white-space: nowrap;
+}
+
+.redes_footer img{
+    display: inline-block;
+    margin-right: 10px;
+
+}
 /*Resposividade da Navbar*/
 
 @media (max-width: 750px){
@@ -128,9 +138,7 @@ a {
         float: right;
         margin-right: 18px;
     }
-
-
-    .nav-list{
+    .nav-lista{
         position: fixed;
         top: 0;
         left: 0;
@@ -147,26 +155,32 @@ a {
         pointer-events: none;
     }
 
-    .nav.active .nav-list{
+    .nav_NavBar.active .nav-lista{
         clip-path: circle(1500px at 90% -15%);
         pointer-events: all;
     }
 
-    .nav.active .hamburger{
+    .nav_NavBar.active .hamburger{
         position: fixed;
         top: 26px;
         right: 16px;
         border-top-color: transparent;
     }
 
-    .nav.active .hamburger::before{
+    .nav_NavBar.active .hamburger::before{
         transform: rotate(135deg);
     }
 
-    .nav.active .hamburger::after{
+    .nav_NavBar.active .hamburger::after{
         transform: rotate(-135deg);
         top: -7px;
     }
+    .nav_NavBar img{
+        width: 30%;
+    }
+}
+@media only screen and (max-width:500px){
+
 }
 
 
@@ -203,12 +217,21 @@ footer .footer-box{
     font-size: 30px;
     padding-top: 3.5px;
 }
+.redes_footer{
+    white-space: nowrap;
+}
 
-.footer-box .redes img{
+.redes_footer img{
+    display: inline-block;
+    margin-right: 10px;
+
+}
+.footer-box .redes_footer img{
     width: 35px;
     height: 35px;
     margin-right: 15px;
     margin-bottom: 60px;
+
 }
 
 .footer-box li{
@@ -229,6 +252,7 @@ footer .footer-box{
 
 .footer-box .p-c{
     font-size: 15px;
+
 }
 .logo-c{
     height: 50px;
@@ -263,18 +287,18 @@ footer .footer-box{
         width: 100%;
         width: 250px;
     }
-    .footer-box .redes img{
+    .footer-box.redes_footer img{
         width: 35px;
         height: 35px;
         margin-right: 15px;
     }
-    .redes{
+    .redes_footer{
         margin-left: 15px;
     }   
 }
 
 @media (max-width: 280px){
-    .footer-box .redes img{
+    .footer-box.redes_footer img{
         width: 30px;
         height: 30px;
         margin-right: 15px;

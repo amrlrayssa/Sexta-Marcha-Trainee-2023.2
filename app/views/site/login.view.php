@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-    if($_SESSION['logado']){
+    if(isset($_SESSION['logado'])){
       return redirect('admin_dashboard');
   }
 else{
@@ -53,12 +53,22 @@ else{
             <div class="formulario">
               <label for="Senha">Digite a sua senha</label>
               <div class="icons">
-                <i class=""></i>
+              <i class="eye-outline"></i>
+
                 <input type="password" name="senha" placeholder="Senha">
               </div>
             </div>
+            
+            <?php  if($erro): ?>
+            <?= '<p class="invalida">Senha ou email incorreto</p>' ?>
+            <?php endif; ?>
+            <div class="botoes">
+            <div class="home">
+           <a href="/"> <button  type="button">Home</button> </a>
+            </div>
             <div class="btn_login">
               <button type="submit">Entrar</button>
+            </div>  
             </div>
           </div>
         </form>
