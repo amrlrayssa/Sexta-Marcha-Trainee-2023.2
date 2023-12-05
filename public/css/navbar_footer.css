@@ -14,13 +14,13 @@ a {
 .nav_NavBar{
     background-color: #831C21;
     width: 100%;
-    height: 80px;
+    height: 90px;
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    box-shadow: 0 6px 8px grey;
+    
 }
 
 .nav_NavBar img{
@@ -128,8 +128,6 @@ a {
         float: right;
         margin-right: 18px;
     }
-
-
     .nav-lista{
         position: fixed;
         top: 0;
@@ -167,6 +165,12 @@ a {
         transform: rotate(-135deg);
         top: -7px;
     }
+    .nav_NavBar img{
+        width: 30%;
+    }
+}
+@media only screen and (max-width:500px){
+
 }
 
 

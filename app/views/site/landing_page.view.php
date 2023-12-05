@@ -67,8 +67,13 @@
               </div>
             </div>
           </div>
+          
         </div>
       <?php endforeach; ?>
+      <a href="admin/lista_posts">
+      <div class="mais-noticias">
+          <button class="botao-noticias">MAIS NOTICIAS ></button>
+        </div></a>
     </section>
   </div>
   <?php require('footer.html'); ?>
