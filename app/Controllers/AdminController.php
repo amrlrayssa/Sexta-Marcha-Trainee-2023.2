@@ -34,9 +34,11 @@ class AdminController
         $total_pages = ceil($rows_count / $items_per_page);
 
         $posts = App::get('database')->selectAll('posts', $start_limit, $items_per_page);
+        $users = App::get('database')->selectAll('users');
         
         $tables = [
             'posts' => $posts,
+            'users' => $users,
             'page' => $page,
             'total_pages' => $total_pages,
         ];
@@ -106,6 +108,7 @@ class AdminController
 
         ];
         App::get('database')->edit('posts', $_POST['id'] ,$parameters);
+        header('Location: /admin/lista_posts');
     }
 
 }

@@ -134,4 +134,19 @@ class QueryBuilder
                 die($e->getMEssage());
             }
         }
+
+    public function selectPost($id, $table)
+    {
+        $sql = sprintf("SELECT * FROM %s WHERE id = {$id}", $table);
+
+        try {
+            $stat = $this->pdo->prepare($sql);
+
+            $stat->execute();
+
+            return $stat->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
