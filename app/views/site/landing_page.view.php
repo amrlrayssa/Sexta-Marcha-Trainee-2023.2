@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,11 +15,12 @@
 </head>
 
 <body>
-<?php require('navbar.html'); ?>
+  <?php require('navbar.html'); ?>
   <header><img id="logo" src="../../../public/assets/sexta_marcha_logo_so_que_bom.png"
       alt="imagem do logo do sexta marcha">
     <img id="mini-logo" src="../../../public/assets/logo_sem_bordas.png" alt="logo sem bordas do sexta marcha">
   </header>
+
   <div class="container">
     <aside></aside>
     <section>
@@ -52,84 +51,24 @@
           </div>
         </div>
       </div>
-      <div class="noticias">
-        <div class="linha">
-          <div class="quadrado">
-            <div class="imagem"><img src="../../../public/assets/f1-leclerc-ferrari-2022.jpg" class="efeito-imagem">
-            </div>
-            <div class="titulo">
-              <h1>NOTICÍAS</h1>
-            </div>
-            <div class="conteudo">
-              <p>Charles Leclerc leva a melhor durante treino classificatório para a corrida de Bahrein ao melhorar seu
-                tempo...</p>
-            </div>
-          </div>
-          <div class="quadrado">
-            <div class="imagem"><img src="../../../public/assets/f1-leclerc-ferrari-2022.jpg" class="efeito-imagem">
-            </div>
-            <div class="titulo">
-              <h1>NOTICÍAS</h1>
-            </div>
-            <div class="conteudo">
-              <p>Charles Leclerc leva a melhor durante treino classificatório para a corrida de Bahrein ao melhorar seu
-                tempo...</p>
+      <?php foreach ($posts as $post): ?>
+        <div class="noticias">
+          <div class="linha">
+            <div class="quadrado">
+              <div class="imagem"><img src=<?php echo $post->imagem; ?> class="efeito-imagem">
+              </div>
+              <div class="titulo">
+                <h1>NOTICÍAS</h1>
+              </div>
+              <div class="conteudo">
+                <p>
+                  <?php echo substr($post->conteudo, 0, 100) . "..."; ?>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="linha">
-          <div class="quadrado">
-            <div class="imagem"><img src="../../../public/assets/f1-leclerc-ferrari-2022.jpg" class="efeito-imagem">
-            </div>
-            <div class="titulo">
-              <h1>NOTICÍAS</h1>
-            </div>
-            <div class="conteudo">
-              <p>Charles Leclerc leva a melhor durante treino classificatório para a corrida de Bahrein ao melhorar seu
-                tempo...</p>
-            </div>
-          </div>
-          <div class="quadrado">
-            <div class="imagem"><img src="../../../public/assets/f1-leclerc-ferrari-2022.jpg" class="efeito-imagem">
-            </div>
-            <div class="titulo">
-              <h1>NOTICÍAS</h1>
-            </div>
-            <div class="conteudo">
-              <p>Charles Leclerc leva a melhor durante treino classificatório para a corrida de Bahrein ao melhorar seu
-                tempo...</p>
-            </div>
-          </div>
-        </div>
-        <div class="linha">
-          <div class="quadrado">
-            <div class="imagem"><img src="../../../public/assets/f1-leclerc-ferrari-2022.jpg" class="efeito-imagem">
-            </div>
-            <div class="titulo">
-              <h1>NOTICÍAS</h1>
-            </div>
-            <div class="conteudo">
-              <p>Charles Leclerc leva a melhor durante treino classificatório para a corrida de Bahrein ao melhorar seu
-                tempo...</p>
-            </div>
-          </div>
-          <div class="quadrado">
-            <div class="imagem"><img src="../../../public/assets/f1-leclerc-ferrari-2022.jpg" class="efeito-imagem">
-            </div>
-            <div class="titulo">
-              <h1>NOTICÍAS</h1>
-            </div>
-            <div class="conteudo">
-              <p>Charles Leclerc leva a melhor durante treino classificatório para a corrida de Bahrein ao melhorar seu
-                tempo...</p>
-            </div>
-          </div>
-        </div>
-        <div class="mais-noticias">
-         <a href="admin/ldp"> <button class="botao-noticias">MAIS NOTICIAS ></button></a>
-        </div>
-
-      </div>
+      <?php endforeach; ?>
     </section>
   </div>
   <?php require('footer.html'); ?>

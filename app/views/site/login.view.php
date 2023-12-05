@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+    if($_SESSION['logado']){
+      return redirect('admin_dashboard');
+  }
+else{
+  }
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">

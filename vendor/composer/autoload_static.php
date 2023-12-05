@@ -31,6 +31,7 @@ class ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458
         'App\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Controllers/UserController.php',
         'App\\Controllers\\dashboardController' => __DIR__ . '/../..' . '/app/Controllers/dashborController.php',
         'App\\Controllers\\landingController' => __DIR__ . '/../..' . '/app/Controllers/landingController.php',
+        'App\\Controllers\\landing_pageController' => __DIR__ . '/../..' . '/app/Controllers/landing_pageController.php',
         'App\\Controllers\\lang_pageController' => __DIR__ . '/../..' . '/app/Controllers/lang_pageController.php',
         'App\\Controllers\\pvuController' => __DIR__ . '/../..' . '/app/Controllers/pvuController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',

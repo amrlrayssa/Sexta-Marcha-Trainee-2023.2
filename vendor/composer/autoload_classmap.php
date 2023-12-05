@@ -12,6 +12,7 @@ return array(
     'App\\Controllers\\UserController' => $baseDir . '/app/Controllers/UserController.php',
     'App\\Controllers\\dashboardController' => $baseDir . '/app/Controllers/dashborController.php',
     'App\\Controllers\\landingController' => $baseDir . '/app/Controllers/landingController.php',
+    'App\\Controllers\\landing_pageController' => $baseDir . '/app/Controllers/landing_pageController.php',
     'App\\Controllers\\lang_pageController' => $baseDir . '/app/Controllers/lang_pageController.php',
     'App\\Controllers\\pvuController' => $baseDir . '/app/Controllers/pvuController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
