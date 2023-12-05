@@ -10,7 +10,16 @@ class pvuController
 
     public function view()
     {
-        return view('site/pvu');
+        $id = $_POST['id'];
+        $posts = App::get('database')->selectPost($id, 'posts');
+        $users = App::get('database')->selectAll('users');
+
+        $tables = [
+            'posts' => $posts,
+            'users' => $users,
+        ];
+
+        return view('site/pvu', $tables);
     }
 }
 

@@ -17,7 +17,7 @@ use App\Core\Router;
     $router->post('admin/lista_usuarios/update', 'UserController@edit');
 
     //post individual
-    $router->get('pvu' , 'pvuController@view');
+    $router->post('postlist/pvu' , 'pvuController@view');
 
     //landing page
     $router->get('' , 'landing_pageController@view');
