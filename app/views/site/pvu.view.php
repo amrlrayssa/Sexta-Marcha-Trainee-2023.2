@@ -26,7 +26,7 @@
         </div>
         
         <div class="postimage">
-            <img src="<?= $post->imagem ?>">
+            <img src="/<?=$post->imagem?>">
         </div> 
 
         <div class="cardposit">
@@ -38,9 +38,10 @@
                                 <?= $post->conteudo ?>
                             </p>
                             <div class="opinfo">
-                                <?php foreach($user as $user) : ?>
-                                    <?php if($post->id_user == $user->id): ?>
+                                <?php foreach($users as $user) : ?>
+                                    <?php if($post->autor == $user->id): ?>
                                 <p>
+    
                                     <?= $user->nome ?>    
                                 </p>
                                     <?php endif; ?>
