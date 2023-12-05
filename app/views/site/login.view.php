@@ -42,10 +42,15 @@
             <div class="formulario">
               <label for="Senha">Digite a sua senha</label>
               <div class="icons">
-                <i class=""></i>
+              <i class="eye-outline"></i>
+
                 <input type="password" name="senha" placeholder="Senha">
               </div>
             </div>
+
+            <?php  if($erro): ?>
+            <?= '<p class="invalida">Senha ou email incorreto</p>' ?>
+            <?php endif; ?>
             <div class="btn_login">
               <button type="submit">Entrar</button>
             </div>

@@ -1,12 +1,4 @@
 
-<?php  
-    session_start();
-    if($_SESSION['logado']){
-  }
-else{
-  return redirect('login');
-  }
- ?>
 
 <!DOCTYPE html>
 <html lang="en">
