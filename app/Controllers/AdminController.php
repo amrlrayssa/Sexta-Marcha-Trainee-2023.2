@@ -106,6 +106,7 @@ class AdminController
 
         ];
         App::get('database')->edit('posts', $_POST['id'] ,$parameters);
+        header('Location: /admin/lista_posts');
     }
 
 }
