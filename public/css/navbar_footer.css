@@ -14,7 +14,7 @@ a {
 .nav_NavBar{
     background-color: #831C21;
     width: 100%;
-    height: 90px;
+    height: 110px;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -24,9 +24,11 @@ a {
 }
 
 .nav_NavBar img{
-    height: 80%;
+    height: 90%;
     width: 250px;
     margin-left: 20px;
+    margin-top:30px;
+    margin-bottom: 20px;
 
 }
 
@@ -75,9 +77,6 @@ a {
     height: 30px;
     width: 15px;
 }
-
-
-
 /*Animação do sublinado da lista de páginas*/
 
 .page a::before{
@@ -127,9 +126,8 @@ a {
 .redes_footer img{
     display: inline-block;
     margin-right: 10px;
-
 }
-/*Resposividade da Navbar*/
+
 
 @media (max-width: 750px){
     .hamburger{
@@ -137,6 +135,7 @@ a {
         z-index: 1;
         float: right;
         margin-right: 18px;
+        margin-bottom: 15px;
     }
     .nav-lista{
         position: fixed;
@@ -178,15 +177,27 @@ a {
     .nav_NavBar img{
         width: 30%;
     }
+    .hamburger.active::before {
+        transform: rotate(135deg) translate(-5px, -5px);
+    }
+    
+    .hamburger.active::after {
+        transform: rotate(-135deg) translate(-5px, 5px);
+    }
+    .hamburger.active::before {
+        transform: rotate(135deg) translate(-5px, -5px);
+    }
+    
+    .hamburger.active::after {
+        transform: rotate(-135deg) translate(-5px, 5px);
+    }
 }
 @media only screen and (max-width:500px){
 
+
+
 }
-
-
-
 /*CSS do Footer*/
-
 
 footer{
     width: 100%;
@@ -257,10 +268,6 @@ footer .footer-box{
 .logo-c{
     height: 50px;
 }
-/* .main{
-    height: 650px;
-} */
-
 
 /*Responsividade do Footer*/
 
