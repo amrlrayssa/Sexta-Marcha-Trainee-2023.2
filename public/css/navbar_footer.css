@@ -71,8 +71,9 @@ a {
 .login_navBar, .login_navBar:hover{
     transition: 0.3s;
 }
-.logo-c{
+.p-c img{
     height: 30px;
+    width: 15px;
 }
 
 
@@ -119,6 +120,15 @@ a {
     transition: 0.3s;
 }
 
+.redes_footer{
+    white-space: nowrap;
+}
+
+.redes_footer img{
+    display: inline-block;
+    margin-right: 10px;
+
+}
 /*Resposividade da Navbar*/
 
 @media (max-width: 750px){
@@ -207,12 +217,21 @@ footer .footer-box{
     font-size: 30px;
     padding-top: 3.5px;
 }
+.redes_footer{
+    white-space: nowrap;
+}
 
+.redes_footer img{
+    display: inline-block;
+    margin-right: 10px;
+
+}
 .footer-box .redes_footer img{
     width: 35px;
     height: 35px;
     margin-right: 15px;
     margin-bottom: 60px;
+
 }
 
 .footer-box li{
