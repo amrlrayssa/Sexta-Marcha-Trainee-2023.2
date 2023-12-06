@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-    if($_SESSION['logado']){
+    if(isset($_SESSION['logado'])){
       return redirect('admin_dashboard');
   }
 else{
@@ -23,7 +23,7 @@ else{
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="/public/css/login.css">
-  <title>Sexta Marcha</title>
+  <title>Sexta Marcha - Login</title>
 </head>
 
 <body>
@@ -53,12 +53,22 @@ else{
             <div class="formulario">
               <label for="Senha">Digite a sua senha</label>
               <div class="icons">
-                <i class=""></i>
+              <i class="eye-outline"></i>
+
                 <input type="password" name="senha" placeholder="Senha">
               </div>
             </div>
+            
+            <?php  if($erro): ?>
+            <?= '<p class="invalida">Senha ou email incorreto</p>' ?>
+            <?php endif; ?>
+            <div class="botoes">
+            <div class="home">
+           <a href="/"> <button  type="button">Home</button> </a>
+            </div>
             <div class="btn_login">
               <button type="submit">Entrar</button>
+            </div>  
             </div>
           </div>
         </form>

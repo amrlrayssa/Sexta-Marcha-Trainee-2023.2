@@ -9,7 +9,7 @@
     <link rel = "preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel = "stylesheet">
     <link rel = "stylesheet" href = "/public/css/PostList.css">
-    <title> Sexta Marcha - PostList </title>
+    <title> Sexta Marcha - Lista de posts </title>
 </head>
 <body>
     <?php require('navbar.html'); ?>
@@ -30,21 +30,24 @@
         </div>
         
         <?php foreach($posts as $post): ?>
-        <div class = "conteinerf">
-            
-            <div class = "Post Post1" >
+            <div class = "conteinerf">
                 
+                <div class = "Post Post1" >
+                    <form action = "/postlist/pvu" method = "post">
+                    
                     <img class = "imagem" src = <?php echo $post->imagem; ?> />
                     
-                    <div class = "text-content">
+                    <div class = "text-content" id="pagina<?= $post->id?>">
                         <h2> <?php echo $post->titulo?> </h2>
                         <p> <?php echo substr($post->conteudo, 0, 100) . "...";?> </p>
                         <div class = "button-conteinerf">
-                            <button class = "LeiaMais" > LER MAIS ></button>
+                            <input type="hidden" name="id" value="<?= $post->id ?>">
+                            <button type="submit" class = "LeiaMais"> LER MAIS ></button>
                         </div>
                         
                     </div>
-          
+                    
+                    </form>
                 </div>
           
         </div>

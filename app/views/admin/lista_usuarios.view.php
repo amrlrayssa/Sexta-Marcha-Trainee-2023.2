@@ -14,7 +14,7 @@ else{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sexta Marcha</title>
+    <title>Sexta Marcha - Lista de usuários</title>
     <link rel="shortcut icon" href="/public/assets/logo_sem_bordas_w1i_icon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@ else{
             <div class="cardtitle">
                 <b class="p">Lista de Usuários</b>
                 <button type="button" class="btn btn-outline-warning" id="openCreatPost"onclick="openmodal('modal')"><b>Criar Usuário</b></button>
-                <button type="button" class="button2" id="openCreatPostM" onclick="openmodal('modal')"><b>+</b></button>
+                <button type="button" class="button2 btnr" id="openCreatPostM" onclick="openmodal('modal')"><b>+</b></button>
             </div>
             
             <div class="tabela">
@@ -58,9 +58,9 @@ else{
                             <td class="t1_5th"><?php echo $user->nome ?></td>
                             <td class="t2th"><?php echo $user->email ?></td>
 
-                            <td class="t3th"><button type="button" class="btn btn-outline-light" id="openVerPost"onclick="openmodal('modal_ver<?= $user->id?>')">Visualizar</button><button
-                                    type="button" class="btn btn-outline-info" id="openEditPost" onclick="openmodal('modal_edicao<?= $user->id?>')">Editar</button><button type="button"
-                                    class="btn btn-outline-danger" id="openRmvPost"onclick="openmodal('modal_rmv<?= $user->id?>')">Excluir</button></td>
+                            <td class="t3th"><button type="button" class="btn btn-outline-light btnd" id="openVerPost"onclick="openmodal('modal_ver<?= $user->id?>')">Visualizar</button><button
+                                    type="button" class="btn btn-outline-info btnd" id="openEditPost" onclick="openmodal('modal_edicao<?= $user->id?>')">Editar</button><button type="button"
+                                    class="btn btn-outline-danger btnd" id="openRmvPost"onclick="openmodal('modal_rmv<?= $user->id?>')">Excluir</button></td>
     
                             <!--Icons-->
                             <td class="t3th-icons">

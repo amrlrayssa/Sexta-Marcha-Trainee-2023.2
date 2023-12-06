@@ -15,7 +15,7 @@
 .navegacao {
     position: fixed; /* Fixa a barra de navegação à janela do navegador */
     inset: 20px 0 20px 20px; /* Define margens internas */
-    width: 75px; /* Define a largura da barra de navegação */
+    width: 80px; /* Define a largura da barra de navegação */
     background: #fff; /* Define a cor de fundo da barra de navegação */
     transition: 0.5s; /* Adiciona uma transição suave de 0.5 segundos */
     display: flex; /* Define o modelo de exibição flexível */
@@ -28,7 +28,7 @@
 /* Estilos para a barra de navegação quando está aberta */
 .navegacao.open {
     width: 280px; /* Amplia a largura quando a barra de navegação está aberta */
-    height: 600px;
+    height: 430px;
 }
 
 
@@ -86,8 +86,9 @@
 .navegacao ul {
     display: flex; /* Define o modelo de exibição flexível para a lista */
     flex-direction: column; /* Define a direção de exibição como coluna */
-    gap: 10px; /* Define o espaço entre os elementos */
+    /* gap: 10px; Define o espaço entre os elementos */
     width: 100%;
+    margin-right: 30px;
 }
 
 /* Estilos para os itens de lista */
@@ -96,18 +97,19 @@
     position: relative; /* Define a posição relativa */
     width: 100%;
     height: 60px;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     transition: 0.5s; /* Adiciona uma transição suave */
 }
-.icon{
+/* .iconSideBar{
     margin-right: 70px;
-}
+} */
 
 
 
 /* Estilos para o item de lista ativo */
 .navegacao ul li.ativa {
     transform: translateX(30px); /* Move o item de lista para a direita */
+    transition: 0.5s;
     
 }
 
@@ -124,7 +126,7 @@
 }
 
 /* Estilos para o ícone dentro do item de lista */
-.navegacao ul li a .icon {
+.navegacao ul li a .iconSideBar {
     position: relative; /* Define a posição relativa */
     display: block; /* Define o modelo de exibição como bloco */
     min-width: 55px;
@@ -134,16 +136,17 @@
     border-radius: 10px; /* Adiciona borda arredondada */
     font-size: 1.75em;
     color: #222; /* Define a cor do ícone */
+    
 }
 
 /* Estilos para o ícone quando o item de lista está ativo */
-.navegacao ul li.ativa a .icon {
+.navegacao ul li.ativa a .iconSideBar {
     color: #fff; /* Define a cor do ícone quando ativo */
     background: var(--clr); /* Usa uma variável CSS como cor de fundo */
 }
 
 /* Estilos para o efeito de fundo do ícone quando o item de lista está ativo */
-.navegacao ul li a .icon::before {
+.navegacao ul li a .iconSideBar::before {
     content: ''; /* Adiciona um conteúdo vazio para criar um elemento de fundo */
     position: absolute; /* Define a posição absoluta */
     top: 10px;
@@ -151,13 +154,13 @@
     width: 100%;
     height: 100%;
     background: var(--clr); /* Usa uma variável CSS como cor de fundo */
-    filter: blur(8px); /* Aplica um desfoque ao fundo */
+    filter: blur(8px); /* Aplica um desfoq  ue ao fundo */
     opacity: 0; /* Define a opacidade inicial */
-    transition: 0.5s; /* Adiciona uma transição suave */
+    transition: 0.1s; /* Adiciona uma transição suave */
 }
 
 /* Estilos para o efeito de fundo do ícone quando o item de lista está ativo */
-.navegacao ul li.ativa a .icon::before {
+.navegacao ul li.ativa a .iconSideBar::before {
     opacity: 0.5s; /* Ajusta a opacidade do fundo */
 }
 
@@ -192,6 +195,7 @@
     .navegacao {
         height: 60px;
         border-radius: 15px;
+        margin-right: 50px;
     }
     .navegacao.open {
         height: auto;

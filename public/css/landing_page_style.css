@@ -211,7 +211,9 @@ ul {
   filter: none;
   transition: filter 0.5s;
 }
-
+.mais-noticias{
+  margin-left: 180px;
+}
 .mais-noticias button {
   background-color: #C60000;
   color: #ffffff;
@@ -267,6 +269,9 @@ ul {
     text-align: left;
   }
 
+  header img{
+    margin-top: 80px;
+  }
   .quadrado {
     width: 90%;
     margin-bottom: 10%;

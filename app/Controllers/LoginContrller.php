@@ -9,9 +9,10 @@ class LoginController
 
     public function view()
     {
+        $erro =false;
+        return view('/site/login',compact('erro'));
 
-        return view('/site/login');
-    }
+        }
     public function login(){
 
     $email = $_POST["email"];
@@ -35,10 +36,9 @@ class LoginController
 
         header('Location: /admin_dashboard');
     } else {    
-        $erro = [
-            'erro' => "Usuário ou senha inválidos",
-        ];
-        return view('/site/login', $erro);
+        $erro = true;
+        return view('/site/login',compact('erro'));
+            
     }
 }
 

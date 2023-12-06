@@ -15,7 +15,7 @@ else{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sexta Marcha</title>
+    <title>Sexta Marcha - Lista de posts</title>
     <link rel="shortcut icon" href="/public/assets/logo_sem_bordas_w1i_icon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,7 +79,12 @@ else{
     
                 <div class = "form-group" >
                     <label for = "autor" > Autor:</label>
-                    <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" value="<?php echo $post->autor ; ?>" >
+                    <select class = "form-control" id = "autor" name = "autor" required>
+                        <option value = ""> --Selecione o autor-- </option>
+                        <?php foreach($users as $user) : ?>
+                            <option value = "<?=$user->id?>"> <?=$user->nome?> </option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
     
                 <div class = "form-group" >
@@ -141,7 +146,13 @@ else{
         
                 <div class = "modal_ver_conteudo" >
                     <h3>Autor:</h3>
-                    <p><?php echo $post->autor; ?></p>
+                    <?php foreach($users as $user) : ?>
+                         <?php if($post->autor == $user->id): ?>
+                            <p>
+                                <?= $user->nome ?>    
+                            </p>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
         
                 <div class = "modal_ver_conteudo" >
@@ -151,7 +162,21 @@ else{
         
                 <div class = "modal_ver_conteudo">
                     <h3>Conteudo:</h3>
-                    <p><?php echo nl2br($post->conteudo); ?></p>
+                    <p>
+                    <?php
+                        $texto = $post->conteudo;
+                        $tamanhoLimite = 120;
+
+                        if (strlen($texto) > $tamanhoLimite) {
+                            $textoLimitado = substr($texto, 0, $tamanhoLimite) . "...";
+                        } else {
+                            $textoLimitado = $texto;
+                        }
+
+                        echo $textoLimitado;
+                    ?>
+
+                    </p>
                 </div>
 
                     <div class="modal_ver_conteudo_img">
@@ -207,22 +232,26 @@ else{
                     </div>
                     
                     <form action = "/admin/lista_posts/create" method = "post" enctype = "multipart/form-data">
-                    
                         <div class = "form-group" >
                             <label for = "titulo" > Titulo:</label>
                             <input type = "text" class = "form-control" id = "titulo" name ="titulo" placeholder = "Digite o titulo" required>
                         </div>
-            
+                        
                         <div class = "form-group" >
                             <label for = "autor" > Autor:</label>
-                            <input type = "text" class = "form-control" id = "autor" name = "autor" placeholder = "Digite o autor" required>
+                            <select class = "form-control" id = "autor" name = "autor" required>
+                                <option value = ""> --Selecione o autor-- </option>
+                                <?php foreach($users as $user) : ?>
+                                    <option value = "<?=$user->id?>"> <?=$user->nome?> </option>
+                                <?php endforeach; ?>
+                            </select>
                         </div>
-            
+                        
                         <div class = "form-group" >
                             <label for = "data"> Data de Criação:</label>
                             <input type = "date" class = "form-control" id = "data" name = "data" placeholder = "Digite a data" required style="width: 55%;">
                         </div>
-            
+                        
                         <div class = "form-group">
                             <label for = "conteudo" id = "label-centered" > Conteudo:</label>
                             <textarea class = "form-control" id = "conteudo" name = "conteudo" placeholder = "Digite o post" required style = "height: 100%; width: 100%;"></textarea>
