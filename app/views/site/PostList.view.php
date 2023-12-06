@@ -8,6 +8,8 @@
     <link rel = "preconnect" href="https://fonts.googleapis.com">
     <link rel = "preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel = "stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel = "stylesheet" href = "/public/css/PostList.css">
     <title> Sexta Marcha - Lista de posts </title>
 </head>
@@ -53,6 +55,30 @@
         </div>
         <?php endforeach; ?>  
     </div>
+
+    <div class="pagi">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                        <a class="page-link" href="?pagina=<?= $page > 1 ? $page - 1 : 1 ?>" aria-label="<<">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                        </li>
+                        <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++) : ?>
+                        <li class="page-item">
+                            <a class="page-link text-dark" href="?pagina=<?= $page_number ?>">
+                                <?= $page_number ?>
+                            </a>
+                        </li>
+                        <?php endfor; ?>
+                        <li class="page-item">
+                        <a class="page-link" href="?pagina=<?= $page < $total_pages ? $page + 1 : $total_pages ?>" aria-label=">>">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
     
     <div class = "right-side" >
         
@@ -80,7 +106,8 @@
         document.getElementById('search-form').submit();
     });
     </script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 <script src = "https://kit.fontawesome.com/46c6a48072.js" crossorigin = "anonymous"></script>
 <?php require('footer.html'); ?>    
 </body>
