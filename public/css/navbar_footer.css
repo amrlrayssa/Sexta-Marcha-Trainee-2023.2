@@ -20,6 +20,8 @@ a {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    border-bottom: white solid 1px;
+    
     
 }
 
@@ -204,6 +206,7 @@ footer{
     background: #831C21;
     display: flex;
     box-shadow: 8px 0 10px grey;
+    border-top: white solid 1px;
     
 }
 

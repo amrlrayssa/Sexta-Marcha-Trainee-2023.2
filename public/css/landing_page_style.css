@@ -21,7 +21,7 @@ header {
 
 header img {
   width: 50%;
-  margin-top: 40px;
+  margin-top: 65px;
 
 }
 
@@ -238,6 +238,10 @@ ul {
   .quadrado {
     height: 380px;
   }
+  header img {
+    width: 50%;
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 915px) {
@@ -276,6 +280,10 @@ ul {
     height: 400px;
 
   }
+  header img {
+    width: 50%;
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -298,6 +306,10 @@ ul {
 
   .sobre p {
     font-size: 22px;
+  }
+  header img {
+    width: 50%;
+    margin-top: 50px;
   }
 
 }
@@ -323,11 +335,53 @@ ul {
   .quadrado {
     height: 360px;
   }
-}
-
-@media (max-width: 300px) {
+  header img {
+    width: 50%;
+    margin-top: 50px;
+  }
+} 
+@media (max-width:412px){
   header img {
     width: 70%;
+    margin-top: 100px;
+  }
+
+  .conteudo p {
+    font-size: 16px;
+  }
+
+  .sobre p {
+    font-size: 18px;
+  }
+
+  .quadrado {
+    height: 370px;
+  }
+}
+
+@media (max-width: 375px) {
+  header img {
+    width: 70%;
+    margin-top: 100px;
+  }
+
+  .conteudo p {
+    font-size: 16px;
+  }
+
+  .sobre p {
+    font-size: 18px;
+  }
+
+  .quadrado {
+    height: 370px;
+  }
+
+}
+@media (max-width:540px){
+  header img {
+    width: 70%;
+    margin-top: 100px;
   }
 
   .conteudo p {
