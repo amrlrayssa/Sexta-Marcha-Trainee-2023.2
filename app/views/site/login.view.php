@@ -23,7 +23,7 @@ else{
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="/public/css/login.css">
-  <title>Sexta Marcha</title>
+  <title>Sexta Marcha - Login</title>
 </head>
 
 <body>
