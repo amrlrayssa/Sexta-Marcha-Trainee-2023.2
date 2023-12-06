@@ -42,7 +42,7 @@ else{
                 <table class="tb">
                     <thead>
                         <tr>
-                            <th class="t1th">Id</th>
+                            <th class="t1th">ID</th>
                             <th class="t1_5th">Usuário</th>
                             <th class="t2th">Email</th>
                             <th class="t3th">Ação</th>
