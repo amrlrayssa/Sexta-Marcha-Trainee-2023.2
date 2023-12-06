@@ -19,7 +19,6 @@ body {
     margin: 0;
     padding: 0;
     z-index: 1;
-    margin-top: 30px;
     
 }
 
@@ -67,7 +66,6 @@ body {
     display: inline-block;
     background-image: url(/public/assets/Tiretexture.png);
     background-color: #831C21;
-    margin-top: 3%;
     width: 100%;
     padding-top: 2%;
     padding-bottom: 2%;

@@ -16,6 +16,7 @@
     position: fixed; /* Fixa a barra de navegação à janela do navegador */
     inset: 20px 0 20px 20px; /* Define margens internas */
     width: 80px; /* Define a largura da barra de navegação */
+    height: 70%;
     background: #fff; /* Define a cor de fundo da barra de navegação */
     transition: 0.5s; /* Adiciona uma transição suave de 0.5 segundos */
     display: flex; /* Define o modelo de exibição flexível */
