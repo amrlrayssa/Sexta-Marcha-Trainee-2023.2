@@ -3,12 +3,13 @@
     
  ?>
 
+<?php foreach($posts as $post) : ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sexta Marcha</title>
+    <title>Sexta Marcha - <?= $post->titulo ?></title>
     <link rel="stylesheet" href="/public/css/pvu.css">
     <link rel="shortcut icon" href="/public/assets/logo_sem_bordas_w1i_icon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +21,6 @@
     <main>
     <?php require('navbar.html'); ?>
 
-        <?php foreach($posts as $post) : ?>
         <div class="cardtitle">
             <div class="square1">
                 <h1><b><?= $post->titulo ?></b></h1>

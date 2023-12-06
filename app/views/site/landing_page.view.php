@@ -20,7 +20,6 @@
       alt="imagem do logo do sexta marcha">
     <img id="mini-logo" src="../../../public/assets/logo_sem_bordas.png" alt="logo sem bordas do sexta marcha">
   </header>
-
   <div class="container">
     <aside></aside>
     <section>
@@ -51,33 +50,31 @@
           </div>
         </div>
       </div>
-      <?php foreach ($posts as $post): ?>
-        <div class="noticias">
-          <div class="linha">
-            <div class="quadrado">
-              <div class="imagem"><img src=<?php echo $post->imagem; ?> class="efeito-imagem">
-              </div>
-              <div class="titulo">
-                <h1>NOTICÍAS</h1>
-              </div>
-              <div class="conteudo">
-                <p>
-                  <?php echo substr($post->conteudo, 0, 100) . "..."; ?>
-                </p>
-              </div>
+      <div class="noticias">
+        <?php foreach ($posts as $post): ?>
+          <div class="quadrado">
+            <div class="imagem"><img src=<?php echo $post->imagem; ?> class="efeito-imagem">
+            </div>
+            <div class="titulo">
+              <h1>
+                <?php echo $post->titulo ?>
+              </h1>
+            </div>
+            <div class="conteudo">
+              <p>
+                <?php echo substr($post->conteudo, 0, 100) . "..."; ?>
+              </p>
             </div>
           </div>
-          
+        <?php endforeach; ?>
+        <div class="mais-noticias">
+        <form action = "/postlist" method = "GET">
+          <button type="submit" class="botao-noticias">MAIS NOTICIAS ></button>
+        </form>
         </div>
-      <?php endforeach; ?>
-      <a href="admin/lista_posts">
-      <div class="mais-noticias">
-          <button class="botao-noticias">MAIS NOTICIAS ></button>
-        </div></a>
+      </div>
     </section>
   </div>
   <?php require('footer.html'); ?>
 </body>
-
-
 </html>
