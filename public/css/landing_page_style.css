@@ -146,19 +146,14 @@ ul {
   padding-top: 2%;
 }
 
-
 .noticias {
-  justify-content: left;
+  justify-content: space-between;
   margin-top: 8%;
   margin-left: 20%;
   margin-right: 5%;
-
-}
-
-.linha {
+  margin-bottom: 5%;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 10%;
+  flex-wrap: wrap;
 }
 
 .quadrado {
@@ -167,6 +162,8 @@ ul {
   background-color: #fff;
   box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+  margin-bottom: 10%;
+
 }
 
 .imagem {
@@ -194,6 +191,7 @@ ul {
 .titulo h1 {
   margin-left: 10px;
   font-size: 20px;
+  text-transform: uppercase;
 }
 
 .conteudo {
@@ -225,6 +223,9 @@ ul {
   font-family: 'Quicksand', sans-serif;
   cursor: pointer;
   margin-bottom: 10%;
+
+
+
 }
 
 .mais-noticias button:hover {
@@ -232,11 +233,34 @@ ul {
   transition: 0.5s;
 }
 
-@media (max-width: 1100px) {
+
+@media (max-width: 1511px) {
   .quadrado {
-    height: 380px;
+    height: 400px;
   }
 }
+
+
+@media (max-width: 1211px) {
+  .quadrado {
+    height: 420px;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .quadrado {
+    height: 430px;
+  }
+}
+
+
+@media (max-width: 983px) {
+  .quadrado {
+    height: 440px;
+  }
+}
+
 
 @media (max-width: 915px) {
   .post {
@@ -250,6 +274,7 @@ ul {
 
   .titulo h1 {
     font-size: 26px;
+
   }
 
   .conteudo p {
@@ -272,6 +297,15 @@ ul {
 
   }
 }
+
+
+@media(max-width: 630px) {
+  .quadrado {
+    height: 440px;
+
+  }
+}
+
 
 @media (max-width: 500px) {
   #logo {
@@ -297,6 +331,13 @@ ul {
 
 }
 
+@media(max-width: 443px) {
+  .quadrado {
+    height: 470px;
+
+  }
+}
+
 @media (max-width: 440px) {
   .cardpost {
     width: 90%;
@@ -316,11 +357,11 @@ ul {
   }
 
   .quadrado {
-    height: 360px;
+    height: 430px;
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 333px) {
   header img {
     width: 70%;
   }
@@ -334,6 +375,24 @@ ul {
   }
 
   .quadrado {
-    height: 370px;
+    height: 440px;
+  }
+}
+
+@media (max-width: 280px) {
+  header img {
+    width: 70%;
+  }
+
+  .conteudo p {
+    font-size: 16px;
+  }
+
+  .sobre p {
+    font-size: 18px;
+  }
+
+  .quadrado {
+    height: 480px;
   }
 }
