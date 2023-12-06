@@ -18,12 +18,9 @@
 <body>
 
     <main>
-<<<<<<< HEAD
     <?php require('navbar.html'); ?>
-        
-=======
+
         <?php foreach($posts as $post) : ?>
->>>>>>> 3c34d2ea00b7e482039db08134fb83a63a92cc91
         <div class="cardtitle">
             <div class="square1">
                 <h1><b><?= $post->titulo ?></b></h1>

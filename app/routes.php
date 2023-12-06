@@ -35,3 +35,4 @@ use App\Core\Router;
     $router->get('buscapost', 'PostListController@search');
 
 ?>
+    
