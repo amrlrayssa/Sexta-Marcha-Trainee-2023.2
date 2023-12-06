@@ -211,9 +211,7 @@ ul {
   filter: none;
   transition: filter 0.5s;
 }
-.mais-noticias{
-  margin-left: 180px;
-}
+
 .mais-noticias button {
   background-color: #C60000;
   color: #ffffff;

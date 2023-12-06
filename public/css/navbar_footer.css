@@ -1,7 +1,7 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Quicksand', sans-serif;   
+    font-family: 'Quicksand', sans-serif;
 }
 
 /*CSS da NavBar*/
@@ -11,7 +11,7 @@ a {
 }
 
 
-.nav_NavBar{
+.nav_NavBar {
     background-color: #831C21;
     width: 100%;
     height: 110px;
@@ -21,20 +21,17 @@ a {
     align-items: center;
     z-index: 10;
     border-bottom: white solid 1px;
-    
-    
+
+
 }
 
-.nav_NavBar img{
-    height: 90%;
-    width: 250px;
+.nav_NavBar img {
+    height: 70%;
     margin-left: 20px;
-    margin-top:30px;
-    margin-bottom: 20px;
 
 }
 
-.nav-lista{
+.nav-lista {
     display: flex;
     gap: 32x;
     list-style: none;
@@ -42,7 +39,7 @@ a {
     margin-right: 20px;
 }
 
-.nav-lista a{
+.nav-lista a {
     position: relative;
     font-size: 22px;
     color: white;
@@ -51,7 +48,7 @@ a {
     margin-left: 40px;
 }
 
-.login_navBar{
+.login_navBar {
     text-align: center;
     width: 180px;
     font-size: 22px;
@@ -66,22 +63,25 @@ a {
 
 /*Animação do botão*/
 
-.login_navBar:hover{
+.login_navBar:hover {
     scale: 1.05;
     color: black;
     background-color: white;
 }
 
-.login_navBar, .login_navBar:hover{
+.login_navBar,
+.login_navBar:hover {
     transition: 0.3s;
 }
-.p-c img{
+
+.p-c img {
     height: 30px;
     width: 15px;
 }
+
 /*Animação do sublinado da lista de páginas*/
 
-.page a::before{
+.page a::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -91,18 +91,19 @@ a {
     background: white;
 }
 
-.page a:hover::before{
+.page a:hover::before {
     width: 100%;
 }
 
-.page a::before, .page a:hover::before{
+.page a::before,
+.page a:hover::before {
     transition: 0.3s;
 }
 
 
 /*Animação Menu de Hamburguer*/
 
-.hamburger{
+.hamburger {
     display: none;
     border: none;
     background: none;
@@ -110,7 +111,8 @@ a {
     cursor: pointer;
 }
 
-.hamburger::before, .hamburger::after{
+.hamburger::before,
+.hamburger::after {
     content: " ";
     display: block;
     width: 30px;
@@ -121,25 +123,26 @@ a {
     transition: 0.3s;
 }
 
-.redes_footer{
+.redes_footer {
     white-space: nowrap;
 }
 
-.redes_footer img{
+.redes_footer img {
     display: inline-block;
     margin-right: 10px;
 }
 
 
-@media (max-width: 750px){
-    .hamburger{
+@media (max-width: 750px) {
+    .hamburger {
         display: block;
         z-index: 1;
         float: right;
         margin-right: 18px;
         margin-bottom: 15px;
     }
-    .nav-lista{
+
+    .nav-lista {
         position: fixed;
         top: 0;
         left: 0;
@@ -156,65 +159,69 @@ a {
         pointer-events: none;
     }
 
-    .nav_NavBar.active .nav-lista{
+    .nav_NavBar.active .nav-lista {
         clip-path: circle(1500px at 90% -15%);
         pointer-events: all;
     }
 
-    .nav_NavBar.active .hamburger{
+    .nav_NavBar.active .hamburger {
         position: fixed;
         top: 26px;
         right: 16px;
         border-top-color: transparent;
     }
 
-    .nav_NavBar.active .hamburger::before{
+    .nav_NavBar.active .hamburger::before {
         transform: rotate(135deg);
     }
 
-    .nav_NavBar.active .hamburger::after{
+    .nav_NavBar.active .hamburger::after {
         transform: rotate(-135deg);
         top: -7px;
     }
-    .nav_NavBar img{
-        width: 30%;
-    }
+
     .hamburger.active::before {
         transform: rotate(135deg) translate(-5px, -5px);
     }
-    
+
     .hamburger.active::after {
         transform: rotate(-135deg) translate(-5px, 5px);
     }
+
     .hamburger.active::before {
         transform: rotate(135deg) translate(-5px, -5px);
     }
-    
+
     .hamburger.active::after {
         transform: rotate(-135deg) translate(-5px, 5px);
     }
 }
-@media only screen and (max-width:500px){
 
-
-
+@media (max-width: 320px) {
+    .nav_NavBar img {
+        height: 50%;
+    }
 }
+
+
+@media only screen and (max-width:500px) {}
+
 /*CSS do Footer*/
 
-footer{
+footer {
     width: 100%;
     background: #831C21;
     display: flex;
     box-shadow: 8px 0 10px grey;
     border-top: white solid 1px;
-    
+
 }
 
-footer img{
+footer img {
     width: 100%;
 }
 
-footer .footer-box{
+footer .footer-box {
     width: 100%;
     min-height: 150px;
     padding: 45px;
@@ -222,25 +229,27 @@ footer .footer-box{
     margin-right: 100px;
 }
 
-.footer-box h2{
+.footer-box h2 {
     font-size: 30px;
     margin-bottom: 20px;
 }
 
-.footer-box h3{
+.footer-box h3 {
     font-size: 30px;
     padding-top: 3.5px;
 }
-.redes_footer{
+
+.redes_footer {
     white-space: nowrap;
 }
 
-.redes_footer img{
+.redes_footer img {
     display: inline-block;
     margin-right: 10px;
 
 }
-.footer-box .redes_footer img{
+
+.footer-box .redes_footer img {
     width: 35px;
     height: 35px;
     margin-right: 15px;
@@ -248,72 +257,105 @@ footer .footer-box{
 
 }
 
-.footer-box li{
+.footer-box li {
     list-style: none;
     font-size: 25px;
     margin: 5px 0px;
 }
 
-.footer-box a{
+.footer-box a {
     text-decoration: none;
     color: white;
 }
 
-.footer-box .logo-c{
-    margin-top: 10px;
-    width: 130px;
+.footer-box .logo-c {
+    width: 50%;
+    margin-top: 1%;
 }
 
-.footer-box .p-c{
+.footer-box .p-c {
     font-size: 15px;
 
-}
-.logo-c{
-    height: 50px;
 }
 
 /*Responsividade do Footer*/
 
-@media (max-width: 1000px){
-    footer{
-        flex-direction: column;   
+@media (max-width: 1000px) {
+    footer {
+        flex-direction: column;
     }
-    footer .footer-box{
+
+    footer .footer-box {
         width: 100%;
         height: 45%;
         text-align: center;
         padding: 0px;
-        margin-top: 40px;  
+        margin-top: 40px;
     }
-    .footer-box li{
+
+    .footer-box li {
         text-align: center;
         align-items: center;
         justify-content: center;
     }
-    .footer-box h3{
+
+    .footer-box h3 {
         display: block;
     }
-    .footer-box img{
+
+    .footer-box img {
         width: 100%;
         width: 250px;
     }
-    .footer-box.redes_footer img{
+
+    .footer-box.redes_footer img {
         width: 35px;
         height: 35px;
         margin-right: 15px;
     }
-    .redes_footer{
+
+    .redes_footer {
         margin-left: 15px;
-    }   
+    }
+
+    .footer-box .logo-c {
+        width: 20%;
+        margin-bottom: 2%;
+    
+    }
+    
 }
 
-@media (max-width: 280px){
-    .footer-box.redes_footer img{
+
+@media (max-width: 810px) {
+    
+    .footer-box .logo-c {
+        width: 25%;
+        margin-bottom: 2%;
+    
+    }
+
+}
+
+
+@media (max-width: 630px) {
+    
+    .footer-box .logo-c {
+        width: 30%;
+        margin-bottom: 2%;
+    
+    }
+
+}
+
+@media (max-width: 280px) {
+    .footer-box.redes_footer img {
         width: 30px;
         height: 30px;
         margin-right: 15px;
     }
-    .footer-box h3{
+
+    .footer-box h3 {
         font-size: 25px;
         display: block;
     }
