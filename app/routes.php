@@ -17,8 +17,8 @@ $router->post('admin/lista_usuarios/create', 'UserController@create');
 $router->post('admin/lista_usuarios/delete', 'UserController@delete');
 $router->post('admin/lista_usuarios/update', 'UserController@edit');
 
-    //post individual
-    $router->post('postlist/pvu' , 'pvuController@view');
+//post individual
+$router->post('postlist/pvu' , 'pvuController@view');
 
 //landing page
 $router->get('', 'landing_pageController@view');
