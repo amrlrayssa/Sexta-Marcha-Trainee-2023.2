@@ -53,7 +53,8 @@
       <div class="noticias">
         <?php foreach ($posts as $post): ?>
           <div class="quadrado">
-            <div class="imagem"><img src=<?php echo $post->imagem; ?> class="efeito-imagem">
+            <div class="imagem"><a href='pvu?id=<?= $post->id ?>'><img src=<?php echo $post->imagem; ?>
+                  class="efeito-imagem"></a>
             </div>
             <div class="titulo">
               <h1>
@@ -68,13 +69,14 @@
           </div>
         <?php endforeach; ?>
         <div class="mais-noticias">
-        <form action = "/postlist" method = "GET">
-          <button type="submit" class="botao-noticias">MAIS NOTICIAS ></button>
-        </form>
+          <form action="/postlist" method="GET">
+            <button type="submit" class="botao-noticias">MAIS NOTICIAS ></button>
+          </form>
         </div>
       </div>
     </section>
   </div>
   <?php require('footer.html'); ?>
 </body>
+
 </html>
