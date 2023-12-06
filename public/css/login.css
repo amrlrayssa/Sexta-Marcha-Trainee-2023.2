@@ -124,8 +124,8 @@ body {
 }
 
 .btn_login:hover{
-    cursor: default;
-}
+    width: 280px;
+  }
 
 /* Estilo para o container da logo */
 .logo {
@@ -189,7 +189,7 @@ body {
   }
 
   .home:hover{
-    cursor: default;
+    width: 280px;
   }
 
   .home a{
@@ -222,6 +222,7 @@ body {
     padding-bottom: 10px;
     /* Cor do ícone */
 }
+
 
 /* Estilo para o texto dentro dos campos de entrada */
 .icons input {

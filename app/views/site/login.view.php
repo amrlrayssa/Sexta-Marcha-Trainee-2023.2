@@ -53,9 +53,8 @@ else{
             <div class="formulario">
               <label for="Senha">Digite a sua senha</label>
               <div class="icons">
-              <i class="eye-outline"></i>
-
-                <input type="password" name="senha" placeholder="Senha">
+              <ion-icon name="eye-outline"></ion-icon>
+              <input type="password" name="senha" placeholder="Senha">
               </div>
             </div>
             
