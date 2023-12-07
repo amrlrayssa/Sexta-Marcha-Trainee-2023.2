@@ -97,6 +97,7 @@ body{
     color: #FFFFFF; 
     font-size: 24px; 
     z-index: 1;
+    margin-right: 1%;
     cursor: pointer;
   }
   
@@ -289,6 +290,15 @@ body{
     .Post .imagem{
         height: 120px;
     }
+    
+}
+
+@media screen and (max-width: 999px) {
+    .Searchbar .icons i {
+        
+        margin-right: 2%;
+        
+      } 
     
 }
 

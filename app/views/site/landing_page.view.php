@@ -51,23 +51,36 @@
         </div>
       </div>
       <div class="noticias">
-        <?php foreach ($posts as $post): ?>
+        <?php
+        $post_limit = 0;
+        $posts = array_reverse($posts);
+        foreach($posts as $post):
+          if($post_limit >= 6) {
+            break;
+          }
+          ?>
           <div class="quadrado">
-            <div class="imagem"><a href='pvu?id=<?= $post->id ?>'><img src=<?php echo $post->imagem; ?>
-                  class="efeito-imagem"></a>
-            </div>
-            <div class="titulo">
-              <h1>
-                <?php echo $post->titulo ?>
-              </h1>
-            </div>
-            <div class="conteudo">
-              <p>
-                <?php echo substr($post->conteudo, 0, 100) . "..."; ?>
-              </p>
-            </div>
+            <form action="/postlist/pvu" method="post">
+              <div class="imagem">
+                <input type="hidden" name="id" value="<?= $post->id ?>">
+                <img src="<?= $post->imagem; ?>" class="efeito-imagem">
+                <button type="submit" class="LeiaMais"></button>
+              </div>
+              <div class="titulo">
+                <h1>
+                  <?php echo $post->titulo ?>
+                </h1>
+              </div>
+              <div class="conteudo">
+                <p>
+                  <?php echo substr($post->conteudo, 0, 100)."..."; ?>
+                </p>
+              </div>
+            </form>
           </div>
-        <?php endforeach; ?>
+          <?php
+          $post_limit++;
+        endforeach; ?>
         <div class="mais-noticias">
           <form action="/postlist" method="GET">
             <button type="submit" class="botao-noticias">MAIS NOTICIAS ></button>
