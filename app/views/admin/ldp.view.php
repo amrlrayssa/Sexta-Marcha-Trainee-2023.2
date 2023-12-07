@@ -165,7 +165,7 @@ else{
                     <p>
                     <?php
                         $texto = $post->conteudo;
-                        $tamanhoLimite = 120;
+                        $tamanhoLimite = 89;
 
                         if (strlen($texto) > $tamanhoLimite) {
                             $textoLimitado = substr($texto, 0, $tamanhoLimite) . "...";
