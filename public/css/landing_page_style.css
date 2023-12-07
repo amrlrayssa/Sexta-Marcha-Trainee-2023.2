@@ -12,7 +12,7 @@ body {
 header {
   background-color: #831c21;
   width: 100%;
-  padding-top: 4%;
+  padding-top: 5%;
   padding-bottom: 4%;
   text-align: center;
   align-items: center;
@@ -305,10 +305,6 @@ ul {
     font-size: 22px;
   }
 
-  .linha {
-    display: block;
-    justify-content: center;
-  }
 }
 
 @media(max-width: 730px) {

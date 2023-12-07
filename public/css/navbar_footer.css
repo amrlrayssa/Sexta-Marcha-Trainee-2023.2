@@ -14,7 +14,7 @@ a {
 .nav_NavBar {
     background-color: #831C21;
     width: 100%;
-    height: 110px;
+    height: 80px;
     position: fixed;
     display: flex;
     justify-content: space-between;

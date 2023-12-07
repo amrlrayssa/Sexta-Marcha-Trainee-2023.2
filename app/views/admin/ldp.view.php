@@ -32,7 +32,7 @@ else{
     <div class="page" id="page">
     <div class="container">
         <div class="cardtitle">
-            <b class="p">Lista de posts</b>
+            <b class="p">Lista de Posts</b>
             <button type="button" class="btn btn-outline-warning btnd" id="openCreatPost"><b id="alsocreat" onclick="openmodal('modal')">Criar Post</b></button>
             <button type="button" class="btn btn-outline-warning btnr" id="openCreatPostM" onclick="openmodal('modal')"><b>+</b></button>
         </div>
@@ -41,7 +41,7 @@ else{
             <table class="tb">
                 <thead>
                     <tr>
-                        <th class="t1th">Id</th>
+                        <th class="t1th">ID</th>
                         <th class="t2th">Post</th>
                         <th class="t3th">Ação</th>
                     </tr>

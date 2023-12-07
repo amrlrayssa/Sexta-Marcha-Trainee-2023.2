@@ -124,7 +124,7 @@ body {
 }
 
 .btn_login:hover{
-    width: 280px;
+    background-color: #831C21;
   }
 
 /* Estilo para o container da logo */
@@ -189,7 +189,7 @@ body {
   }
 
   .home:hover{
-    width: 280px;
+    background-color: #831C21;
   }
 
   .home a{

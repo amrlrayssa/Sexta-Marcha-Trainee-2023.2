@@ -10,7 +10,6 @@
     <link href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel = "stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel = "stylesheet" href = "/public/css/landing_page_style.css">
         <link rel = "stylesheet" href = "/public/css/PostList.css">
     <title> Sexta Marcha - Lista de Posts </title>
 </head>
@@ -20,7 +19,7 @@
 
         <div class = "o_header">
             <div class = "o_header_plus">
-                <h1>POSTS MAIS RELEVANTES</h1>
+                <h1>LISTA DE POSTS</h1>
             </div>    
             <div class="Searchbar">
                 <div class="icons">
@@ -33,50 +32,34 @@
             </div>
         </div>
 
-            <div class="noticias">
-        <?php foreach ($posts as $post): ?>
+        <div class="noticias">
+        <?php
+        $posts = array_reverse($posts);
+        foreach($posts as $post):
+          ?>
           <div class="quadrado">
             <form action="/postlist/pvu" method="post">
-            <div class="imagem" >
-                <img src="<?php echo $post->imagem; ?>" class="efeito-imagem">
-            </div>
-            <div class="titulo">
-              <h1>
-                <?php echo $post->titulo ?>
-              </h1>
-            </div>
-            <div class="conteudo">
-              <p>
-                <?php echo substr($post->conteudo, 0, 123) . "..."; ?>
-              </p>
-            </div>
-            <div class = "button-conteinerf">
+              <div class="imagem">
                 <input type="hidden" name="id" value="<?= $post->id ?>">
-                <button type="submit" class = "LeiaMais"> LER MAIS ></button>
-            </div>
+                <img src="<?= $post->imagem; ?>" class="efeito-imagem">
+                <button type="submit" class="LeiaMais"></button>
+              </div>
+              <div class="titulo">
+                <h1>
+                  <?php echo $post->titulo ?>
+                </h1>
+              </div>
+              <div class="conteudo">
+                <p>
+                  <?php echo substr($post->conteudo, 0, 100)."..."; ?>
+                </p>
+              </div>
             </form>
+          </div>
+          <?php
+        endforeach; ?>
         </div>
-        <?php endforeach; ?>
-    
-    <div class = "right-side" >
-        
-        <div class = "PostFixed" id="efeito-imagem">
-            <div class = "BGRedFixed" >
-                <div class = "LinhaCinza" >
-                    <div class = "BGWhite" >
-          
-                    <img class = "AyrtonPodium" src = "/public/assets/ayrton-Podium.png" />
-                    
-                    <div class = "text-fixed">
-                        <p>Senna comemorando ao vencer heroicamente com a Sexta Marcha</p>
-                        <h2> Interlagos, 24/03/1991 </h2>  
-                    </div>  
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</div> 
+     
 
     <div class="pagi">
         <nav aria-label="Page navigation example">
